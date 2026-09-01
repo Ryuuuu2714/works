@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAB 公式Wiki - 麻雀同好会異能力戦線</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wiki-container">
+        <!-- 制御用ラジオボタン（CSSの兄弟結合子を機能させるため、コンテンツ群と同じ階層に配置） -->
+        <input type="radio" name="tab" id="tab-home" class="tab-radio" checked>
+        <input type="radio" name="tab" id="tab-ability" class="tab-radio">
+        <input type="radio" name="tab" id="tab-join" class="tab-radio">
+        <input type="radio" name="tab" id="tab-rules" class="tab-radio">
+
+        <!-- ヘッダー -->
+        <header class="wiki-header">
+            <h1>MAB <span>-Mahjang club Ability Battle royale-</span></h1>
+            <p>麻雀同好会専用 マイクラ自作プラグインゲームサーバー 公式Wiki</p>
+        </header>
+
+        <div class="wiki-main-wrapper">
+            <!-- 左サイドメニュー -->
+            <nav class="wiki-sidebar">
+                <div class="menu-title">MENU</div>
+                <ul class="menu-list">
+                    <li><label for="tab-home" class="menu-label">HOME</label></li>
+                    <li><label for="tab-rules" class="menu-label">RULES (基本ルール)</label></li>
+                    <li><label for="tab-ability" class="menu-label">ABILITY (異能一覧)</label></li>
+                    <li><label for="tab-join" class="menu-label">JOIN (参加手順)</label></li>
+                </ul>
+            </nav>
+
+            <!-- メインコンテンツ領域 -->
+            <main class="wiki-content-area">
+                
+                <!-- HOME -->
+                <div id="content-home" class="tab-content">
+                    <h2>更新履歴</h2>
+                    <div class="section-box">
+                        <ul class="update-list">
+                            <li>[2026.09.01] サーバーWikiを公開しました。</li>
+                        </ul>
+                    </div>
+                    
+                    <h2>はじめに</h2>
+                    <div class="section-box">
+                        <p>このサイトは、東野琉之介が考案・開発したマインクラフトの自作プラグインと、それを導入したマルチプレイゲームサーバーである
+                        <b>【麻雀同好会異能力戦線：MAB】</b>の公式Wikiです。<br>
+                        このゲームはルールや能力の詳細な仕様を、文章量・情報量削減のためにゲーム内で確認できないよう省略しています。<br>
+                        したがって「MAB」をプレイする前やプレイ中などに、この公式Wikiを確認することを強くお勧めします。<br>
+                        また、ルールや能力の仕様はアップデートにより予告なく変更されることが多いため「更新履歴」を確認しておくこともお勧めします。<br>
+                        (P.S. 実はこのサイトには小ネタが仕組んであります。暇なときにでも探してみてネ)</p>
+                    </div>
+
+                    <h2>動機・目的</h2>
+                    <div class="section-box">
+                        <p>麻雀同好会と遊んでいたレンタルマイクラマルチサーバーの期限が切れてから数カ月が経ったとき。<br>
+                        「メンバーと通話しながら気軽にみんなで遊べるゲームが欲しいな～」と常々思っていた僕は、どうせならプログラミングの知識を活かして「マインクラフトで、異能バトル漫画風なバトロワゲームの自作プラグインを作ればおもろいのでは？」
+                        と思い立ち、制作を進めていくことを決めました。<br>
+                        そこから、マイクラ公式の大規模アプデに振り回されたり、そもそも学生生活が忙しすぎたりなど紆余曲折を経て、生成AIフル活用により正式実装レベルにまでこぎつけることができました。<br>
+                        （Special Thanks：良きデバッグテストプレイヤー「かえるこうはい」）</p>
+                    </div>
+
+                    <h2>コンセプト</h2>
+                    <div class="section-box">
+                        <p>このゲームのコンセプトは<b>「弓 × 異能 × バトロワ」</b>のマイクラプラグイン。<br>
+                        お互いの持つ異能を駆使しながら、弓矢でヘルスを削り合い、最後の1人になるまで生き残るバトロワサーバー。<br>
+                        ただ、麻雀同好会はメンバーが自分を含めて最大でも5人であるため、異能を駆使したバトロワを十分に楽しめつつ、1ゲームはそこまで長引かないようなカジュアルなゲームシステムを目指しました。</p>
+
+                        <p>（ちなみに、ゲームタイトルは「麻雀同好会異能力戦線」の英名である「Mahjang-club Ability Battle-royale」の頭文字をとって「MAB」としている。
+                            少人数の仲間内だけで遊ぶゲームということで、「仲のいい友達」という意味のマブと音が一緒であり、かつ非常にシンプルなネーミングなのでプログラミング的にも記述コストが低くお気に入り）</p>
+                    </div>
+                </div>
+
+                <!-- ABILITY -->
+                <div id="content-ability" class="tab-content">
+                    <h2>異能（アビリティ）データ一覧</h2>
+                    <div class="section-box">
+                        <p>
+                            <h3>用語説明：</h3>
+                            <b>【No.】：</b><br>
+                                    内部処理に必要な異能固有のナンバリング。<br>
+                                    たいていは東野琉之介が異能の「熟語」と「パッシブ」「アクティブ」の原案を決定した順番に数字が振られており、特に深い意味はない。<br>
+                            <br>
+                            <b>【異能名】：</b><br>
+                                    その異能の異能効果に応じた「二字熟語」が割り当てられている。<br>
+                                    一目でどんな効果か想像できて(主観)、奇を衒いすぎずシンプルで(主観)、それでいてカッコいい熟語(超主観)という基準に基づいて命名されている。<br>
+                            <br>
+                            <b>【パッシブ】：</b><br>
+                                    「パッシブ」は一般に、その異能力者が何かしら特定の操作を行わずとも、常に発動することのできる能力のことをさす。異能によっては必ずしも常に発動するわけではない。<br>
+                            <br>
+                                <b>【アクティブ】：</b><br>
+                                    「アクティブ」は一般に、その異能力者が何かしら特定の操作を行うことで、任意に発動することのできる能力のことをさす。多くの場合「アクティブ」の能力にはクールダウンが発生する。<br>
+                                    異能によっては必ずしも任意に発動するわけではない。<br>
+                        </p>
+                        
+                        <div class="ability-accordion-list">
+                            <!-- 異能01 -->
+                            <details class="ability-card">
+                            <summary class="ability-header">
+                            <span class="ability-no">No.01</span>
+                            <span class="ability-name">【疾風】</span>
+                            <img src="images/diamond_boots.png" alt="疾風_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「疾走」</div>
+                <ul class="skill-list">
+                    <li>常に移動速度が通常の1.5倍になる。</li>
+                    <li>走り続けている間、1秒毎に1ずつ「疾風ゲージ」が増加していく。</li>
+                    <li>走っていない間、0.5秒毎に1ずつ「疾風ゲージ」が減少していく。</li>
+                    <li>「疾風ゲージ」は最大15まで増加する。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <!-- 変更前 -->
+<div class="skill-title active-title">アクティブ：「韋駄天」</div>
+                <ul class="skill-list">
+                    <li>「疾風ゲージ」が15の状態の時「颯(ハヤテ)」を纏う。</li>
+                    <li>「颯」を纏っている間、一度だけ被ダメージを0にする。</li>
+                    <li>一度被ダメージを受けると「颯」は解除され「疾風ゲージ」が0にリセットされる。</li>
+                </ul>
+            </div>
+        </div>
+    </details>
+
+    <!-- 異能02 -->
+    <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.02</span>
+            <span class="ability-name">【浮遊】</span>
+            <img src="images/wind_charge.png" alt="浮遊_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「浮足立つ思い」</div>
+                <ul class="skill-list">
+                    <li>常に跳躍力が通常の2倍になる。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「スカイウォーク」</div>
+                <ul class="skill-list">
+                    <li>空中でジャンプキーを押すことでさらに飛び上がることができる。</li>
+                    <li>「スカイウォーク」によって飛び上がった後、再度「スカイウォーク」を発動するには一度地面に着地する必要がある。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.03</span>
+            <span class="ability-name">【転移】</span>
+            <img src="images/ender_pearl.png" alt="転移_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「三十六計逃げるに如かず」</div>
+                <ul class="skill-list">
+                    <li>1ゲームに一度だけ、残り体力が2ハート以下になった際に、収縮エリア外を除いたバトルフィールド上のランダムな座標へ転送される。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「テレポーテーション」</div>
+                <ul class="skill-list">
+                    <li>しゃがみながら矢を放つことで、その着弾地点にテレポートする。</li>
+                </ul>
+            </div>
+        </details>
+
+                <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.04</span>
+            <span class="ability-name">【隠密】</span>
+            <img src="images/firework_star.png" alt="隠密_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「抜き足差し足」</div>
+                <ul class="skill-list">
+                    <li>メインハンドに何も持っていない状態のとき、完全に透明化する。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「忍法目眩まし」</div>
+                <ul class="skill-list">
+                    <li>しゃがみながら矢を放つと、その矢によってダメージを与えた他プレイヤーに2秒間の盲目効果を付与する。</li>
+                    <li>「忍法目眩まし」を発動してから、再度「忍法目眩まし」を発動可能になるまで8秒間のクールダウンが発生する。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.05</span>
+            <span class="ability-name">【再生】</span>
+            <img src="images/apple.png" alt="再生_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「リジェネ」</div>
+                <ul class="skill-list">
+                    <li>2秒毎に0.5ハート分の自動回復が付与される。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「リバイブ」</div>
+                <ul class="skill-list">
+                    <li>残り体力が2ハート以下になった際に、収縮エリア外を除いたバトルフィールド上のランダムな座標へ転送され、同時に体力が即時全回復する。</li>
+                    <li>「リバイブ」を発動してから、再度「リバイブ」を発動可能になるまで300秒間のクールダウンが発生する。</li>
+                </ul>
+            </div>
+        </details>
+
+                <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.06</span>
+            <span class="ability-name">【精密】</span>
+            <img src="images/spyglass.png" alt="精密_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「寸分の狂いなく」</div>
+                <ul class="skill-list">
+                    <li>放った矢が速度を保ったまま、重力を無視して直進する。</li>
+                    <li>放った矢は10秒で消滅する。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「狙いを定めて」</div>
+                <ul class="skill-list">
+                    <li>弓矢を構えながら5秒間しゃがみ続けることで、「チャージショット」を放つことができる。</li>
+                    <li>「チャージショット」では与ダメージがハート3個分である即着弾を放つことができる。</li>
+                    <li>「チャージショット」の射程距離は100ブロックである。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.07</span>
+            <span class="ability-name">【分析】</span>
+            <img src="images/enchanted_book.png" alt="分析_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「異能ハカセ」</div>
+                <ul class="skill-list">
+                    <li>常に画面右側に「自身から最も近い他プレイヤーの情報」が表示されている。</li>
+                    <li>「自身から最も近い他プレイヤーの情報」として表示される情報は「他プレイヤーの名前」「異能名」「現在体力」「自身からの相対距離」である。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：無し</div>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.08</span>
+            <span class="ability-name">【勇者】</span>
+            <img src="images/diamond_sword.png" alt="勇者_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「英雄の証明」</div>
+                <ul class="skill-list">
+                    <li>矢の与ダメージがハート1個分になる。</li>
+                    <li>「聖剣」を所持している。</li>
+                    <li>「聖剣」での与ダメージがハート2個分になる。</li>
+                    <li>「聖剣」を手に持っている間、移動速度が通常の1.2倍になる。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「正義の味方」</div>
+                <ul class="skill-list">
+                    <li>他プレイヤーを「聖剣」で倒すと体力が即時全回復する。</li>
+                    <li>他プレイヤーを倒したことがある他プレイヤーに対して「聖剣」の与ダメージが通常の2倍になる。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.09</span>
+            <span class="ability-name">【吸血】</span>
+            <img src="images/spider_eye.png" alt="吸血_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「人ならざるモノ」</div>
+                <ul class="skill-list">
+                    <li>他プレイヤーにダメージを与える毎に「吸血ゲージ」が1ずつ増加していく。</li>
+                    <li>「吸血ゲージ」は最大10まで増加する。</li>
+                    <li>「ヴァンパイアファング」を所持している。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「Call of the Night」</div>
+                <ul class="skill-list">
+                    <li>「ヴァンパイアファング」を使用することで「吸血ゲージ」を全て消費し「変身状態」となる。</li>
+                    <li>「変身状態」では消費した「吸血ゲージ」の値に応じた能力を解放する。<br><br>
+        
+                        消費値1～4：移動速度と跳躍力が通常の1.5倍になる。<br>
+                        消費値5～9：消費値1～4状態の能力に加えて、体力の最大値が通常の2倍になり、即時回復する。<br>
+                        消費値10：消費値5～9状態の能力に加えて、移動速度がさらに2倍になり、跳躍力がさらに4倍になり、近接での与ダメージがハート2個分になり、エリトラを自動的に装備する。<br><br>
+
+                    <li>いずれの能力も効果時間は20秒間であり、能力使用後は、再度「ヴァンパイアファング」を使用可能になるまで180秒間のクールダウンが発生する。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.10</span>
+            <span class="ability-name">【爆破】</span>
+            <img src="images/tnt.png" alt="爆破_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「ジェーンは教会で眠った」</div>
+                <ul class="skill-list">
+                    <li>放った矢が赤色に発光する。</li>
+                    <li>矢の与ダメージがハート3個分になる。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「ボンっ」</div>
+                <ul class="skill-list">
+                    <li>しゃがむ毎に足元に爆発を発生させ、目線の方向に推進力を得ることができる。</li>
+                    <li>赤色の矢の爆発は矢を中心とした半径3ブロック範囲内にハート0.5個分のダメージを与える。</li>
+                    <li>しゃがむ毎に、自らは0.5ハート分のダメージを受ける。</li>
+                    <li>しゃがむことで着弾地点に残留している赤色の矢が爆発する。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.11</span>
+            <span class="ability-name">【決闘】</span>
+            <img src="images/iron_sword.png" alt="決闘_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「正々堂々」</div>
+                <ul class="skill-list">
+                    <li>「デュエル・フィールド」にいる全てのプレイヤーの体力の最大値をハート5個分に固定する。</li>
+                    <li>「デュエル・フィールド」にいる全てのプレイヤーの全ての異能効果を無効化する。ただし「パッシブ：正々堂々」に限りその対象ではない。</li>
+                    <li>「デュエル・フィールド」にいる全てのプレイヤーの全ての所持アイテムを一時的に削除する。</li>
+                    <li>「デュエル・フィールド」にいる全てのプレイヤーの近接での与ダメージを通常の2倍に上昇させる。</li>
+                    <li>「デュエル・フィールド」から帰還したプレイヤーに一時的に削除していた所持アイテムを返却する。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「決闘者の矜持」</div>
+                <ul class="skill-list">
+                    <li>近接でダメージを与えた他プレイヤーを「デュエル・フィールド」と呼ばれる専用のフィールドに転送し、同時に自身も「デュエル・フィールド」に転送する。</li>
+                    <li>「デュエル・フィールド」にいるプレイヤーのうちどちらか一方が倒れるか、転送から60秒間が経過すると「デュエル・フィールド」にいる全てのプレイヤーが収縮エリア外を除いたバトルフィールド上のランダムな座標へ転送される。</li>
+                    <li>一度「アクティブ：決闘者の矜持」を発動してから、再度「アクティブ：決闘者の矜持」を発動するまで300秒間のクールダウンが発生する。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.12</span>
+            <span class="ability-name">【削除】</span>
+            <img src="images/writable_book.png" alt="削除_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「新生」</div>
+                <ul class="skill-list">
+                    <li>「ブラックノート」を所持している。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title special-title">特殊パッシブ：「死神の目」</div>
+                <ul class="skill-list">
+                    <li>体力の最大値が通常の0.5倍になる。</li>
+                    <li>常に画面右側に「自身から最も近い他プレイヤーの異能名」が表示される。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「新世界の神」</div>
+                <ul class="skill-list">
+                    <li>「ブラックノート」を使用すると、ゲームに参加している他プレイヤーの一覧を参照することができる。</li>
+                    <li>プレイヤーの一覧から任意の1人を選択するとMABに登場する全ての異能名が表示され、その中から任意の異能を1つ選択することができる。</li>
+                    <li>もし選択した異能が、選択したプレイヤーの異能と一致していた場合、選択された他プレイヤーは40秒後に「パッシブ」と「アクティブ」の異能効果を無効化される。</li>
+                    <li>「アクティブ：新世界の神」によって無効化された異能効果は、そのゲーム中に再度有効化されることはない。</li>
+                    <li>異能の選択をゲーム中で計4回間違えるとそれ以降「ブラックノート」を使用することができなくなる。</li>
+                    <li>「ブラックノート」をもって6秒間しゃがみ続けると、「特殊パッシブ：死神の目」を解放することができる。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.13</span>
+            <span class="ability-name">【豪運】</span>
+            <img src="images/emerald.png" alt="豪運_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「Smile of Lady Luck」</div>
+                <ul class="skill-list">
+                    <li>残り体力が2ハート以下になった際に、7％の確率で収縮エリア外を除いたバトルフィールド上のランダムな座標へ転送され、同時に体力が即時全回復する。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「ラッキーセブン」</div>
+                <ul class="skill-list">
+                    <li>攻撃をする毎に77％の確率で矢の与ダメージがハート3個分になる。</li>
+                    <li>攻撃を受ける毎に77％の確率で被ダメージが0.75倍になる。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.14</span>
+            <span class="ability-name">【模倣】</span>
+            <img src="images/music_disc_tears.png" alt="模倣_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「Ctrl + C」</div>
+                <ul class="skill-list">
+                    <li>他プレイヤーにダメージを与える毎に「アビリティディスク」を1枚取得する。</li>
+                    <li>「アビリティディスク」には「アビリティディスク：疾風」のようにダメージを与えた他プレイヤーの異能名がついている。</li>
+                    <li>同じ異能名をもつ「アビリティディスク」は同時に3枚まで所持することができる。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「Ctrl + V」</div>
+                <ul class="skill-list">
+                    <li>「アビリティディスク」を使用することで、その「アビリティディスク」がもつ異能名の「パッシブ」「アクティブ」の異能効果を30秒間使用することができる。</li>
+                    <li>「アビリティディスク」を使用すると、模倣した「パッシブ」「アクティブ」の異能効果に必要な専用アイテムも30秒間配布される。</li>
+                    <li>ただし、インベントリに専用アイテム分の空きがなかった場合、専用アイテムはその場にドロップする。</li>
+                    <li>「アビリティディスク」は一度使用すると一枚消滅する。</li>
+                    <li>「アビリティディスク」を使用してから、再度「アビリティディスク」を使用可能になるまで30秒間のクールダウンが発生する。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.15</span>
+            <span class="ability-name">【商人】</span>
+            <img src="images/Block_of_Emerald.png" alt="商人_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「積立資産運用」</div>
+                <ul class="skill-list">
+                    <li>ゲーム開始から5秒毎に「コイン」が1ずつ増加していく。</li>
+                    <li>「DFD(デイリーファストデバイス)」を所持している。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「ラストマイル」</div>
+                <ul class="skill-list">
+                    <li>「DFD」を使用することで「マーケット」を参照することができる。</li>
+                    <li>「マーケット」にはゲーム中のチェストから入手できる全てのアイテムに加え、専用の特別なアイテムである「マーケットアイテム」が表示されている。</li>
+                    <li>それぞれのアイテムには「値段」がつけられており「値段」と同数の「コイン」と引き換えることで、任意のアイテムを取得することができる。</li>
+                    <li>全ての「マーケットアイテム」は一度使用すると消滅するが、「値段」と同数の「コイン」があれば「マーケット」から何度でも引き換えることができる。</li>
+                    <li>なお「マーケット」で引き換えたアイテムは、他プレイヤーも使用することができる。</li><br>
+
+                    <b>「マーケットアイテム」一覧</b><br><br>
+
+                        <li>「ゾーンエネルギー」：30コイン</li>
+                        使用することで、15秒間移動速度と跳躍力が1.5倍になり、1秒毎に1ハート分の自動回復が付与される。<br><br>
+
+                        <li>「バウンティ・ポスター」：45コイン</li>
+                        使用することで、ゲームに参加している他プレイヤーの一覧が参照できる。<br>
+                        その一覧から任意の他プレイヤーを1人選択することで、そのプレイヤーを「指名手配」することができる。<br>
+                        「指名手配」してから60秒間のうちにそのプレイヤーを倒すことで、145コインを入手する。<br><br>
+
+                        <li>「ポータブルテレポーター」：45コイン</li>
+                        使用することで、収縮エリア外を除いたバトルフィールド上のランダムな座標に転送することができる。<br><br>
+
+                        <li>「煙玉」：60コイン</li>
+                        使用することで、10秒間完全に透明化する。<br><br>
+            
+                        <li>「ガン・スミス・チケット」：60コイン</li>
+                        購入することで自身の弓を「精密」の異能効果と同じ効果を持つ弓に強化できる。<br>
+                        なお「ガン・スミス・チケット」によって強化された弓は「チャージショット」を放つまでのしゃがみ時間が8秒間となっている。<br><br>
+
+                        <li>「エクスカリバー・レプリカ」：60コイン</li>
+                        他プレイヤーにハート2個分のダメージを与える剣。<br><br>
+
+                        <li>「ファーストボム」：60コイン</li>
+                        購入することで自身の放つ矢を「爆破」の異能効果と同じ効果を持つ矢に強化できる。<br>
+                        なお「ファーストボム」によって強化された矢は通常の与ダメージであり、またしゃがむ毎にハート0.5個分のダメージを受けるが、目線の先の推進力は得ない。<br><br>
+
+                        <li>「タイマーリセッター」：60コイン</li>
+                        使用することで、自身を中心とした半径15ブロック以内に存在する他プレイヤーの異能効果に強制的なクールダウンを発生させる。<br>
+                        同時に、自らの異能効果のクールダウンが即座に0秒になる。<br><br>
+
+                        <li>「銀の弾丸」：90コイン</li>
+                        「吸血」の異能力者に対して特攻を持つ矢が一発だけ装填されたクロスボウ。<br>
+                        使用することで通常の矢のように「銀の弾丸」を放つことができる。<br>
+                        「銀の弾丸」は「ヴァンパイアファング」を使用した「変身状態」の「吸血」の異能力者に対してハート66個分のダメージを与える。<br><br>
+
+                        <li>「ノートの切れ端」：90コイン</li>
+                        「削除」の異能力者がもつ「ブラックノート」と同じ異能効果をもつアイテム。<br>
+                        使用することでゲームに参加している他プレイヤーの一覧を参照することができ、プレイヤーの一覧から任意の1人を選択するとMABに登場する全ての異能名が表示され、<br>
+                        その中から任意の異能を1つ選択することができる。もし選択した異能が、選択したプレイヤーの異能と一致していた場合、<br>
+                        選択された他プレイヤーは40秒後に「パッシブ」と「アクティブ」の異能効果を無効化される。<br><br>
+
+                        <li>「神殺しの槍」：90コイン</li>
+                        「聖域」の異能力者に対して特攻を持つトライデント。<br>
+                        使用することで通常のトライデントのように「神殺しの槍」を一度だけ放つことができる。<br>
+                        「神殺しの槍」は「聖域」の異能力者に対してハート99個分のダメージを与える。<br>
+                        「神殺しの槍」は「聖域」の異能効果を無効化し、「アクティブ：絶対恐怖領域」によって展開される「心の壁」の影響を一切受けない。<br><br>
+
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.16</span>
+            <span class="ability-name">【逆境】</span>
+            <img src="images/blaze_powder.png" alt="逆境_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「背水の陣」</div>
+                <ul class="skill-list">
+                    <li>体力が残り3ハート以下になると、その時点から15秒間、移動速度と跳躍力、矢と近接の与ダメージが通常の2倍になる。</li>
+                    <li>体力が残り3ハート以下になると、その時点から15秒間、全ての被ダメージを無効化する。</li>
+                    <li>体力が残り3ハート以下になってから15秒間のうちに他プレイヤーを1人も倒すことができなければ、その時点で即死する。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：無し</div>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.17</span>
+            <span class="ability-name">【賭博】</span>
+            <img src="images/bowl.png" alt="賭博_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「ギャンブラー」</div>
+                <ul class="skill-list">
+                    <li>「賽と器」を所持している。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title special-title">特殊パッシブ：「ラッキーライダー」</div>
+                <ul class="skill-list">
+                    <li>自らを中心とした半径60ブロック以内に「豪運」の異能力者が存在する場合「賽と器」を使用して表示される数字の出目が「777」に固定される。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「チンチロリン」</div>
+                <ul class="skill-list">
+                    <li>「賽と器」を使用することで、画面に3つ並んだ1～6のランダムな数字を表示する。</li>
+                    <li>それらの3つの数字の出目によって異なる能力を解放する。</li>
+                    ピン・ニゾウ・サンタ：60秒間、移動速度と跳躍力が通常の1.5倍になる。<br>
+                    ヨツヤ・ゴケ・ロッポウ：60秒間、与ダメージが通常の1.5倍、被ダメージが通常の0.75倍になる。<br>
+                    シゴロ：最大体力がハート5個分増加し、体力が即時全回復する。<br>
+                    アラシ：60秒間、移動速度と跳躍力、与ダメージが通常の2倍、被ダメージが通常の0.5倍になる。<br>
+                    ピンゾロ：60秒間、「アラシ」の効果に加えてダメージを与えた他プレイヤーの移動速度を通常の0.5倍にし、そのプレイヤーを発光させる。<br>
+                    ヒフミ：30秒間、移動速度と跳躍力が通常の0.3倍になる。<br><br>
+
+                    スリーセブン：77秒間、移動速度と素手での与ダメージが通常の7倍になる。<br><br>
+                    <li>「賽と器」を使用してから、再度「賽と器」を使用可能になるまで30秒間のクールダウンが発生する。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.18</span>
+            <span class="ability-name">【聖域】</span>
+            <img src="images/glow_berries.png" alt="聖域_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「アダムの子」</div>
+                <ul class="skill-list">
+                    <li> 「生命の実」を所持している。</li>
+                    <li>ゲーム開始時に「活動時間」が91.3秒に設定される。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「絶対恐怖領域」</div>
+                <ul class="skill-list">
+                    <li>「生命の実」を使用することで「心の壁」を展開することができる。</li>
+                    <li>「心の壁」を展開している間、全ての被ダメージを無効化する。</li>
+                    <li>「心の壁」を展開している間、自身を中心とした半径3ブロック内に他プレイヤーは放った矢や異能効果を含め一切干渉することができない。</li>
+                    <li>「生命の実」を再度使用することで「心の壁」は任意のタイミングで解除することができる。</li>
+                    <li>「心の壁」を展開している間、「活動時間」が展開時間に対応して減少していく。</li>
+                    <li>「活動時間」が0秒になると強制的に「心の壁」は解除され、再度「生命の実」を使用することができなくなる。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.19</span>
+            <span class="ability-name">【念視】</span>
+            <img src="images/ender_eye.png" alt="念視_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「サイコメトリー」</div>
+                <ul class="skill-list">
+                    <li>ゲーム開始から60秒経つ毎に、全ての他プレイヤーの座標に「残留思念」を発生させる。</li>
+                    <li>「残留思念」は「念視」の異能力者以外には見ることができない。</li>
+                    <li>「残留思念」は発生してから経過時間に応じて色が変わり、90秒後に消滅する。</li>
+                        0～30秒：赤色<br>
+                        31～60秒：橙色<br>
+                        61～90秒：青色<br>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「千里眼」</div>
+                <ul class="skill-list">
+                    <li>5秒間しゃがみ続けた後、そのまましゃがみ続けている間、全ての他プレイヤーに光の柱が立ち、他プレイヤーの方角に光線が伸びる。</li>
+                    <li>他プレイヤーの方角に伸びる光線は他プレイヤーとの相対距離によって色が変化する。</li>
+                    <li>この光の柱と光線は「念視」の異能力者以外に見ることはできない。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.20</span>
+            <span class="ability-name">【速射】</span>
+            <img src="images/spectral_arrow.png" alt="速射_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「ガンマンの極意」</div>
+                <ul class="skill-list">
+                    <li>弓を最大まで引ききる時間が通常の0.5倍である。</li>
+                    <li>50%の確率で矢を消費しない。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「早撃ちの名人」</div>
+                <ul class="skill-list">
+                    <li>しゃがみながら弓を引き続けている間、矢を連射し続ける。</li>
+                </ul>
+            </div>
+        </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.21</span>
+            <span class="ability-name">【採掘】</span>
+            <img src="images/iron_pickaxe.png" alt="採掘_アイコン" class="ability-icon">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「マインクラフター」</div>
+                <ul class="skill-list">
+                    <li>「採掘者の心」を所持している。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「いつもの日常」</div>
+                <ul class="skill-list">
+                    <li>「採掘者の心」を使用することで、60秒間「サバイバルモード」になることができる。</li>
+                    <li>「採掘者の心」を使用することで、「土ブロック」が64個と「採掘者のツルハシ」が付与される。</li>
+                    <li>「サバイバルモード」では地形の破壊やブロックの設置が可能となる。</li>
+                    <li>「サバイバルモード」が解除されると、設置したブロックは破壊され、破壊したブロックは元に戻り、「採掘者のツルハシ」は回収される。</li>
+                    <li>「採掘者の心」を使用してから、再度「採掘者の心」を使用可能になるまで120秒間のクールダウンが発生する。</li>
+                </ul>
+            </div>
+        </div>
+        </details>
+
+    <!-- 残りの異能も上記の details タグの塊をコピーして追加してください -->
+</div>
+                    </div>
+                </div>
+
+                <!-- JOIN -->
+<div id="content-join" class="tab-content">
+    <h2>サーバー参加手順</h2>
+    <div class="section-box">
+        <ol class="step-list">
+            <li>
+                「Minecraftのバージョンを合わせる」<br>
+                本サーバーは「Java版 1.21.11 release」で稼働しています。<br>
+            </li>
+            <li>
+                「Minecraftのランチャーから起動構成を設定する」<br>
+                「Java版 1.21.11 release」のマルチプレイに参加するための起動構成を設定します。<br>
+                「起動構成」を選択したのち「新規作成」から下記画像の画面で設定します。<br>
+                設定する必要があるのは「バージョン」のみ。「名前」「アイコン」などはお好みです。
+                <img src="images/join_step1.png" alt="起動構成でバージョン1.21.11を選択する画面" class="step-image">
+            </li>
+            <li>
+                「サーバーアドレスの追加」<br>
+                「マルチプレイ」から「サーバーを追加」を選択し、以下のIPアドレスを入力してください。<br>
+                設定する必要があるのは「サーバーアドレス」のみ。「サーバー名」はお好みです。<br>
+                <code class="inline-code">jakarta-jump.tun.ply.gg</code><br>
+                <img src="images/join_step2.png" alt="サーバーアドレス入力画面" class="step-image">
+            </li>
+
+            <li>
+                「テクスチャファイルの配置」<br>
+                （Windowsの場合）PCの「エクスプローラー」「C:\Users\(ユーザ名)\AppData\Roaming\.minecraft\resourcepacks」へ以下のZipファイルをダウンロード後に配置してください。<br>
+                Zipファイルを展開する必要はありませんが、「Appdataフォルダ」や「.minecraftフォルダ」はデフォルトで非表示になっている可能性があります。<br>
+                (非表示になっていたり、場所がわからない場合は「.minecraft 場所」とでもググってください)<br>
+                <a href="MAB_pack.zip" download="MAB_pack.zip" download style="color: #009dff;">◇テクスチャファイルをダウンロードする</a>
+
+            </li>
+
+            <li>
+                「ゲーム内でのテクスチャファイルの適用」<br>
+                 MABサーバーに参加したら「設定」から「リソースパック」を開き、画面左側の「MAB_pack.zip」を右側の「選択中」に来るようにクリックして「完了」<br>
+                <img src="images/join_step3.png" alt="リソースパック適用画面" class="step-image">
+            </li>
+            <li>
+                ※このサーバーは私のPC上のワールドデータをホスティングしてるので常時開放ではありません。<br>
+                質問があれば東野まで気軽にどうぞ。<br>
+            </li>
+        </ol>
+    </div>
+</div>
+
+                <!-- RULES -->
+                <div id="content-rules" class="tab-content">
+                    <h2>ゲーム進行</h2>
+                    <div class="section-box">
+                        <ol>
+                            <li>サーバー参加後、「ロビー」にてゲームの開始を待機する。(このとき任意で「異能予約」をすることができる)</li>
+                            <li>ゲーム開始後、予約した異能 or ランダムに抽選された異能が各プレイヤーに与えられる。(異能は重複しない)</li>
+                            <li>弓矢や近接・異能を駆使して他プレイヤーのヘルスをゼロに減らし、最後のプレイヤーになるまで生き残れば勝利</li>
+                            <li>1ゲーム約13分想定であり、15分時点で強制終了する(決着がついていない場合、引き分けとなる)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="content-rules-basic" class="tab-content">
+                    <h2>基本仕様</h2>
+                    <div class="section-box">
+                        <ul class="rules-list">
+                            <li>ゲーム開始後、全プレイヤーに「<b>弓</b>」「<b>矢3本</b>」「<b>エリアコンパス</b>」が配布される</li>
+                            <li>「<b>エリアコンパス</b>」は常に収縮エリアの中心を差している</li>
+                            <li>「<b>収縮エリア</b>」のダメージは<b>毎秒<font color ="#FF4f4f">ハート0.5個分</font></b>(フェーズごとに不変)</li>
+                            <li>プレイヤーの画面右側に表示されている「<b>MABパネル</b>」には「<b>異能のCD(クールダウン)</b>」「<b>残り人数</b>」「<b>現在地の収縮エリア状況</b>」が表示されている</li>
+                            <li>全プレイヤーの<b>初期体力は<font color ="#FF4f4f">ハート10個分</font></b></li>
+                            <li>全プレイヤーの<b>初期与ダメージは弓：<font color ="#FF4f4f">ハート2個分</font>、近接：<font color ="#FF4f4f">ハート0.5個分</font></b></li>
+                            <li>ただし、上記初期ステータスは各プレイヤーの異能・アイテム使用状況によってはその限りでない。</li>
+                            <li>弓矢や近接・異能を駆使して他プレイヤーのヘルスをゼロに減らし、<b>最後のプレイヤーになるまで生き残れば勝利</b></li>
+                            <li><b>1ゲーム約13分想定</b>であり、15分時点で強制終了する(決着がついていない場合、引き分けとなる)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="content-rules-items" class="tab-content">
+                    <h2>アイテム仕様</h2>
+                    <div class="section-box">
+                        <ul class="rules-list">
+                            <li><b>矢</b>：<br>
+                                なんの変哲もないただの矢。地面や壁に刺さっているものは再回収できない</li>
+                            <li><b>包帯</b>：<br>
+                                チェストから手に入る回復アイテム。回復量は<b><font color ="#FF4f4f">ハート1個分</font></b>で使用時間は<b>1.2秒間</b></li>
+                            <li><b>医療キット</b>：<br>
+                                チェストから手に入る回復アイテム。回復量は<b><font color ="#FF4f4f">ハート4個分</font></b>で使用時間は<b>4.5秒間</b></li>
+                            <li><b>シールド</b>：<br>
+                                チェストから手に入る強化アイテム。使用により<b><font color ="#FFC800">ハート2個分</font></b>の使い捨ての体力を得る。使用時間は<b>3.0秒間</b><br>重ねて使用でき、<b><font color ="#FFC800">ハート10個分</font></b>まで増やせる。上限に達している場合は使用できない</li>
+                            <li><b>注射器</b>：<br>
+                                チェストから手に入る強化アイテム。使用により<b><font color ="#FF4f4f">ハート2個分</font></b>の最大体力を得る。使用時間は<b>4.0秒間</b><br>効果は試合終了まで持続し、重ねて使用すると<b><font color ="#FF4f4f">ハート10個分</font></b>まで増やせる。上限に達している場合は使用できない</li>  
+                            <li><b>アドレナリン</b>：<br>
+                                チェストから手に入る強化アイテム。使用により<b>15秒間の<font color ="#00AEEF">移動速度1.4倍</font></b>、<b><font color ="#00AE95">跳躍力1.4倍</font></b>、<b><font color ="#FF4f4f">継続的な再生能力</font></b>を得る。使用時間は<b>2.5秒間</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+    <!-- 隠しギミック用スクリプト -->
+    <script src="script.js"></script>
+</body>
+</html>
