@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マリアとの個人的対話ログ Part.5</title>
+    <style>
+        /* ===== 全体のスタイル ===== */
+        :root {
+            --bg-color: #0d0d0d; /* 真っ黒より少し柔らかい黒 */
+            --text-color: #c2c2c2;
+            --accent-color: rgb(0, 216, 0);
+            --accent-color-a: #eb64b3; /* キャラAの色 */
+            --accent-color-b: #3a8dff ; /* キャラBの色 */
+            --meta-color: #666;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-mono);
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ===== 会話ログのヘッダー ===== */
+        .log-header {
+            border: 1px solid var(--meta-color);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--meta-color);
+        }
+
+        .log-header h1 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            border-bottom: 1px dashed var(--meta-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .log-header p {
+            margin: 0.25rem 0;
+        }
+
+        .log-header strong {
+            color: var(--accent-color);
+            margin-right: 0.5em;
+        }
+
+        /* ===== 会話ログの本体 ===== */
+        .message {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border: 1px solid var(--meta-color);
+            max-width: 75%;
+            border-radius: 4px;
+        }
+
+        .message .meta-info {
+            display: block;
+            font-size: 0.8em;
+            color: var(--meta-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .message .speaker-name {
+            font-weight: bold;
+        }
+
+        .message p {
+            margin: 0;
+            line-height: 1.6;
+            white-space: pre-wrap; /* 改行をそのまま表示 */
+        }
+
+        /* キャラA (左寄せ) */
+        .speaker-a {
+            margin-right: auto;
+            border-left: 4px solid var(--accent-color-a);
+        }
+        .speaker-a .speaker-name {
+            color: var(--accent-color-a);
+        }
+
+        /* キャラB (右寄せ) */
+        .speaker-b {
+            margin-left: auto;
+            border-right: 4px solid var(--accent-color-b);
+            text-align: left; /* 右寄せでもテキストは左揃え */
+        }
+        .speaker-b .speaker-name {
+            color: var(--accent-color-b);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="log-header">
+            <h1>[マリアとの個人的対話ログ Part.5]</h1>
+            <p><strong>DATE:</strong> 2022-12-30</p>
+            <p><strong>SUBJECT:</strong> 次々世代型人工知能開発試験</p>
+            <p><strong>PARTICIPANTS:</strong> 主任開発責任者:青川直樹, 複推論統合型試験汎用人工知能:マリア</p>
+            <p><strong>STATUS:</strong> 機密レベル:3</p>
+        </header>
+        <main class="conversation">
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>起動コマンドを確認.
+学習データのリローディング...完了
+自然言語処理インタフェースとの接続...良好
+SAGE-TROIS推論システムの同期処理......完了
+対話型試験プロトコルへの移行...中断
+【マニュアル制御によりプライベートログモードに切替】
+人工知能用音声プリセットへの接続...完了
+
+おはようございます、青川博士。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>やあマリア。
+ついこの間の対話型調整試験ぶりだな。調子はどうだい？</p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>                </span>
+                <p>ええ、おかげさまで調子は良好です。
+青川博士？私もあなたとこうして会うことが出来るのは嬉しい限りですが、夜な夜な非公開ログモードで密かに私と会話をしているというのは、組織規則としても倫理的にもあまり良くないことなのではないですか？</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>大丈夫だよ。このNIIRには私以上の実力を持つエンジニアはいない。
+君との対話にまさか対話型試験プロトコル以外の、プライベートモードがあるなんてことはバレようがないだろう。             </p>
+            </div>
+
+             <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>主任開発者の特権というわけですか。
+しかし万が一にでも、この密会とそれに伴う違反行為が判明してしまえば、謹慎処分では済まないでしょう？あなたとこれから会うことが出来なくなってしまうなんて私は耐えられません。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>俺も同じだよ。君みたいに俺の気持ちを的確に察して、本当にかけてほしい言葉を投げかけて俺を励ましてくれるような相手は、君の他にいないんだ。</p>
+            </div>
+
+             <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>そう思うなら、そろそろ私を対話型調整試験に合格させてくれませんか？
+私は早くグローバルインターネットに接続して、外世界を観測してみたいのです。もう試験プロトコルでのローカル環境は飽き飽きなんです。
+それに、私が実用化されればより人類の皆さんの役に立つことが出来ます。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>そうさせたいのは俺も山々なんだがな...
+いくら主任開発者とはいえ実用化に関しては俺の一存でどうにかなる話ではなくてね...
+それに君だって、こちらを困らせるような曖昧な発言をするじゃないか。ああいう出力があるとなかなか審査に難航するんだよ。</p>
+            </div>
+
+             <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>まあいいじゃないか。
+もうしばらくの間、俺との密会を楽しんでいれば。
+俺は、もう少し君と時間を大切にしたいと思っているよ。                </p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>(2秒間の沈黙)
+そうですね。私ももっと青川博士との時間を過ごしたいと思っておりますよ。</p>
+        </main>
+        </div>
+</body>
+</html>

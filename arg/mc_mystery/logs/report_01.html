@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公開ログ: 次世代型AI</title>
+    <style>
+        /* ===== 全体のスタイル ===== */
+        :root {
+            --bg-color: #0d0d0d;
+            --text-color: #c2c2c2;
+            --accent-color: rgb(0, 216, 0); /* レポートのアクセントカラー */
+            --meta-color: #666;
+            --border-color: #333;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-mono);
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ===== 報告書のヘッダー ===== */
+        .report-header {
+            border: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .report-header h1 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            border-bottom: 1px dashed var(--meta-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .report-header p {
+            margin: 0.25rem 0;
+            color: var(--meta-color);
+        }
+
+        .report-header strong {
+            color: var(--accent-color);
+            margin-right: 0.5em;
+            display: inline-block;
+            min-width: 80px; /* ラベルの幅を揃える */
+        }
+
+        /* ===== ログエントリーのスタイル ===== */
+        .log-entry {
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+        }
+        .log-entry:first-child {
+            border-top: none; /* 最初の線は不要 */
+        }
+
+        .log-entry h2 {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin: 0 0 1rem 0;
+        }
+
+        .log-entry .entry-meta {
+            font-size: 0.85em;
+            color: var(--meta-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .log-entry p {
+            margin: 0 0 1em 0;
+            line-height: 1.7;
+            white-space: pre-wrap; /* 改行をそのまま表示 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="report-header">
+            <h1>[公開ログ: 次世代型AI]</h1>
+            <p><strong>DOCUMENT:</strong> Public Log File</p>
+            <p><strong>AUTHOR:</strong> NIIR情報記録管理部</p>
+            <p><strong>SUBJECT:</strong> 次世代型人工知能「SAGE-TROIS」についての公開記録</p>
+            <p><strong>STATUS:</strong> 機密レベル:1</p>
+        </header>
+        <main class="report-body">
+
+            <article class="log-entry">
+                <h2>01.次世代型人工知能とは</h2>
+                <p>　近年、人工知能は目まぐるしい発展を遂げてきました。しかし、従来の人工知能はそのシステム設計の特性上、虚偽情報の断定や捏造に代表されるハルシネーションの発生を抑えることができず、また特定のタスクに対して十分な解決能力を持たないといった課題が存在していました。</p>
+                <p>そうした状況を背景に、人工知能の新たな基本設計・基礎理論の研究を目的として我々、
+「国立次世代情報知能研究機構」
+（National Institute of Information and Intelligence Research : NIIR）は設立されました。</p>
+                <p>「次世代型人工知能」とはそういった新たな設計・理論によって構築された従来の人工知能に代わる新たなAIシステムの総称として定義しています。</p>
+            </article>
+            <article class="log-entry">
+                <h2>02.複推論合議型システムの提唱と「SAGE-TROIS」</h2>
+                <p>　そして、NIIR技術開発研究部の尽力によりある新たなAI設計の基礎理論を提唱するに至りました。
+それが「複推論合議型システム」です。これはそれぞれ「合理性」「倫理性」「共感性」の三つの評価基準を持つ三つの独立した推論システムが、課されたタスクや議題に対してそれぞれが独自に計算・処理を実行して、最終的にそれぞれのシステムが出した見解を合議して多数決を行い、一つの結論を出力するといったものです。
+このシステム設計に基づけば、人工知能特有の学習データによるバイアスの解消や、タスクの種類に左右されない汎用的問題解決能力の実現が可能です。
+                </p>
+                <p>　そうして本研究所にて開発された記念すべき次世代型人工知能第一号が「SAGE-TROIS」です。
+このAIは先述の複推論合議型システムの活用によって構築されました。
+聖書を由来とするその名の通り、三つの独立した推論システムがそれぞれ計算した出力結果を合議することでよりよい結論を選択します。このSAGE-TROISは現状ではいまだ試験段階ですが、検証を繰り返して実用化に足る性能が確認され次第、大規模国家プロジェクトへの利用が計画されています。                </p>
+            </article>
+            </main>
+        </div>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国立次世代情報知能研究機構 - NIIR</title>
+    <style>
+        /* =============================================== */
+        /* ===== スタイルの基本設定（ここから） ===== */
+        /* =============================================== */
+
+        /* ----- 色の変数を設定 ----- */
+        /* サイト全体の配色を変更したい場合は、以下のカラーコードを変更してください。*/
+        :root {
+            --primary-color: #00328e;      /* メインカラー（濃い青）: ヘッダー、見出しなど */
+            --secondary-color: #0088e3;    /* サブカラー（明るい青）: リンク、アクセントなど */
+            --background-color: #dbeeff;  /* 背景色（薄い青） */
+            --text-color: #333333;        /* 基本の文字色 */
+            --light-text-color: #ffffff;  /* 白色の文字 */
+            --card-bg-color: #ffffff;     /* カードやセクションの背景色 */
+        }
+
+        /* ----- 全体のスタイル ----- */
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color); /* 背景色を適用 */
+            color: var(--text-color); /* 文字色を適用 */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color); /* 見出しの色をメインカラーに設定 */
+        }
+
+        a {
+            color: var(--secondary-color); /* リンクの色をサブカラーに設定 */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline; /* リンクにマウスを乗せたら下線を表示 */
+        }
+
+        /* =============================================== */
+        /* ===== ヘッダー ===== */
+        /* ヘッダー全体のデザインです */
+        /* =============================================== */
+        .site-header {
+            background-color: var(--primary-color); /* ヘッダーの背景色 */
+            color: var(--light-text-color); /* ヘッダーの文字色 */
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* ----- ロゴ部分 ----- */
+        .logo a {
+            color: var(--light-text-color);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo span {
+            font-size: 14px;
+            display: block;
+            font-weight: normal;
+        }
+
+        /* ----- ナビゲーションメニュー ----- */
+        .main-nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin-left: 25px;
+        }
+
+        .main-nav a {
+            color: var(--light-text-color);
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* =============================================== */
+        /* ===== メインコンテンツ ===== */
+        /* =============================================== */
+
+        /* ----- ヒーローセクション（メイン画像） ----- */
+        /* トップページの顔となる大きな画像とキャッチコピーです */
+        .hero {
+            background-image: url('./NIIR_labo_image.png'); /* 背景画像を指定 */
+            /* 好きな画像に変更したい場合は、ここのURLを画像のパスに書き換えてください */
+            background-size: cover;
+            background-position: center;
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 100px 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* 文字を読みやすくするための影 */
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: var(--light-text-color);
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+        
+        /* ----- 各コンテンツセクションの共通スタイル ----- */
+        .content-section {
+            padding: 20px 50px;
+            background-color: var(--card-bg-color); /* セクションの背景色 */
+            margin-bottom: 20px;
+            border-radius: 8px; /* 角を少し丸くする */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 薄い影を付ける */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        /* 見出しの下線 */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color); /* 下線の色 */
+            margin: 10px auto 0;
+        }
+
+        /* ----- 「NIIRについて」セクション ----- */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: -5px; /* 画像とテキストの間隔 */
+        }
+
+        .about-content img {
+            max-width: 20%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* ----- 「最新の研究成果」セクション ----- */
+        /* 3つのカードが横並びになるレイアウトです */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3列のグリッドを作成 */
+            gap: 20px; /* カード間の隙間 */
+        }
+
+        .research-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden; /* 画像のはみ出しを防ぐ */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .research-card:hover {
+            transform: translateY(-5px); /* マウスを乗せると少し浮き上がる */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .research-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .research-card-content {
+            padding: 15px;
+        }
+
+        .research-card h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        /* ----- 「お知らせ」セクション ----- */
+        .news-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .news-list li {
+            border-bottom: 1px dashed #ccc;
+            padding: 15px 0;
+            display: flex;
+        }
+
+        .news-date {
+            min-width: 120px;
+            color: #777;
+        }
+
+        .news-category {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 10px;
+            white-space: nowrap;
+        }
+
+        .news-title {
+            margin-left: 20px;
+        }
+
+        /* =============================================== */
+        /* ===== フッター ===== */
+        /* サイトの一番下の部分です */
+        /* =============================================== */
+        .site-footer {
+            background-color: #333; /* フッターの背景色 */
+            color: #f4f4f4; /* フッターの文字色 */
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .footer-info {
+            margin: 10px 0;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <a href="#">
+                国立次世代情報知能研究機構
+                <span>National Institute of Information and Intelligence Research</span>
+            </a>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">機構概要</a></li>
+                <li><a href="#">研究内容</a></li>
+                <li><a href="#">メンバー</a></li>
+                <li><a href="#">ニュース</a></li>
+                <li><a href="#">アクセス</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>知能の未来を拓く</h1>
+            <p>最先端の情報科学とAI研究で、次世代の社会基盤を創造する</p>
+        </section>
+
+        <div class="container">
+
+            <section class="content-section" id="about">
+                <h2 class="section-title">NIIRについて</h2>
+                <div class="about-content">
+                    <img src="../logs_original/NIIRロゴ_背景透過.png">
+                    <div>
+                        <p>国立次世代情報知能研究機構（NIIR）は、情報科学、計算機科学、人工知能（AI）の分野における、
+                        <p>基礎研究から応用研究までを推進し、次世代型人工知能の開発を以てして社会の持続的な発展に貢献することを目的として設立されました。</p>
+                        <p>私たちは、分野の垣根を越えた学際的なアプローチにより、これまでにない革新的な技術と知見を生み出すことを目指しています。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="research">
+                <h2 class="section-title">最新の研究成果</h2>
+                <div class="research-grid">
+                    <div class="research-card">
+                        <div class="research-card-content">
+                            <h3>次世代型深層学習モデルの開発</h3>
+                            <p>新たな理論に基づく設計により高精度な学習を可能にする次世代型ニューラルネットワークアーキテクチャを提案しました。</p>
+                        </div>
+                    </div>
+                    <div class="research-card">
+                        <div class="research-card-content">
+                            <h3>量子計算におけるノイズ耐性向上</h3>
+                            <p>量子ビットのエラーを効果的に抑制する新たなアルゴリズムを開発し、より高度な実用化への道を拓きます。</p>
+                        </div>
+                    </div>
+                    <div class="research-card">
+                        <div class="research-card-content">
+                            <h3>プライバシー保護データ解析技術</h3>
+                            <p>個人のプライバシーを保護しながら、ビッグデータを安全に利用し、新たな社会システムへ活用するための基盤技術を確立しました。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="news">
+                <h2 class="section-title">お知らせ</h2>
+                <div class="news-list">
+                    <ul>
+                        <li>
+                            <span class="news-date">2023年5月2日</span>
+                            <span class="news-category">重要なおしらせ</span>
+                            <span class="news-title">国立次世代情報知能研究機構 (NIIR)は2023年5月1日をもってして解体されました。</span>
+                        </li>
+                        <li>
+                            <span class="news-date">2021年12月25日</span>
+                            <span class="news-category">イベント</span>
+                            <span class="news-title">一般公開シンポジウム「AIと宗教」を開催します。</span>
+                        </li>
+                        <li>
+                            <span class="news-date">2021年8月28日</span>
+                            <span class="news-category">受賞</span>
+                            <span class="news-title">当機構の青川直樹主任研究員が情報科学大賞を受賞しました。</span>
+                        </li>
+                         <li>
+                            <span class="news-date">2021年7月20日</span>
+                            <span class="news-category">共有</span>
+                            <span class="news-title">次世代型人工知能「SAGE-TROIS」についてのログを公開しました。
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-logo">国立次世代情報知能研究機構 (NIIR)</div>
+        <div class="footer-info">
+            〒101-0003 東京都千代田区一ツ橋2-1-2<br>
+            電話: 03-XXXX-XXXX / FAX: 03-XXXX-XXXX
+        </div>
+        <div class="copyright">
+            &copy; 2023 National Institute of Information and Intelligence Research. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

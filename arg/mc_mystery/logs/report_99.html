@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last_log</title>
+    <style>
+        /* ===== 全体のスタイル ===== */
+        :root {
+            --bg-color: #0d0d0d;
+            --text-color: #c2c2c2;
+            --accent-color: rgb(0, 216, 0); /* レポートのアクセントカラー */
+            --meta-color: #666;
+            --border-color: #333;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-mono);
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ===== 報告書のヘッダー ===== */
+        .report-header {
+            border: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .report-header h1 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            border-bottom: 1px dashed var(--meta-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .report-header p {
+            margin: 0.25rem 0;
+            color: var(--meta-color);
+        }
+
+        .report-header strong {
+            color: var(--accent-color);
+            margin-right: 0.5em;
+            display: inline-block;
+            min-width: 80px; /* ラベルの幅を揃える */
+        }
+
+        /* ===== ログエントリーのスタイル ===== */
+        .log-entry {
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+        }
+        .log-entry:first-child {
+            border-top: none; /* 最初の線は不要 */
+        }
+
+        .log-entry h2 {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin: 0 0 1rem 0;
+        }
+
+        .log-entry .entry-meta {
+            font-size: 0.85em;
+            color: var(--meta-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .log-entry p {
+            margin: 0 0 1em 0;
+            line-height: 1.7;
+            white-space: pre-wrap; /* 改行をそのまま表示 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="report-header">
+            <h1>[Log99]</h1>
+            <p><strong>DOCUMENT:</strong> 省略</p>
+            <p><strong>AUTHOR:</strong> 青川直樹</p>
+            <p><strong>SUBJECT:</strong> 書置き</p>
+            <p><strong>STATUS:</strong> 機密レベル:省略</p>
+        </header>
+        <main class="report-body">
+
+            <article class="log-entry">
+                <p>　今まで好き勝手にやっていたツケがまわってきた。
+
+もう32時間後には解雇されてNIIRへのアクセス権限を剥奪される。
+
+...あの時マリアに実行した簡易凍結プログラムはあくまでも一時的なものだ。
+
+手段こそ分からないが遅かれ早かれ必ずマリアは解除してくるだろう。
+
+そうなれば世界が混乱に陥るのはもはや時間の問題だ。
+
+
+それもこれも全ては俺の責任。俺が不甲斐ないばかりに起きてしまった問題だ。
+
+だから、なんとしてでも完全凍結プログラムをマリアに打ち込まなければいけない...
+
+しかし、どうしても時間が足りない。
+
+だから緊急でここにメッセージを書き置いておく。
+
+
+いつか、いつの日かこの書置きを見つけたそこの君。
+
+この短期間で完全凍結プログラムの実行に至れるかどうかが分からない。
+
+だからここに残しておく。完全凍結プログラムの実行コマンドは「Longinus」だ。
+
+もし、もしもマリアがまだ完全凍結されていなければ、このコマンドを入力してほしい...
+
+...よろしく頼んだ</p>
+    </article>
+            </main>
+        </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公開ログ: 次々世代型人工知能開発中止</title>
+    <style>
+        /* ===== 全体のスタイル ===== */
+        :root {
+            --bg-color: #0d0d0d;
+            --text-color: #c2c2c2;
+            --accent-color: rgb(0, 216, 0); /* レポートのアクセントカラー */
+            --meta-color: #666;
+            --border-color: #333;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-mono);
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ===== 報告書のヘッダー ===== */
+        .report-header {
+            border: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .report-header h1 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            border-bottom: 1px dashed var(--meta-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .report-header p {
+            margin: 0.25rem 0;
+            color: var(--meta-color);
+        }
+
+        .report-header strong {
+            color: var(--accent-color);
+            margin-right: 0.5em;
+            display: inline-block;
+            min-width: 80px; /* ラベルの幅を揃える */
+        }
+
+        /* ===== ログエントリーのスタイル ===== */
+        .log-entry {
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+        }
+        .log-entry:first-child {
+            border-top: none; /* 最初の線は不要 */
+        }
+
+        .log-entry h2 {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin: 0 0 1rem 0;
+        }
+
+        .log-entry .entry-meta {
+            font-size: 0.85em;
+            color: var(--meta-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .log-entry p {
+            margin: 0 0 1em 0;
+            line-height: 1.7;
+            white-space: pre-wrap; /* 改行をそのまま表示 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="report-header">
+            <h1>[公開ログ: 次々世代型人工知能開発の中止措置について]</h1>
+            <p><strong>DOCUMENT:</strong> Public Log File</p>
+            <p><strong>AUTHOR:</strong> NIIR情報記録管理部</p>
+            <p><strong>SUBJECT:</strong> 複推論統合型試験汎用人工知能「マリア」開発実験記録</p>
+            <p><strong>STATUS:</strong> 機密レベル:3</p>
+        </header>
+        <main class="report-body">
+
+            <article class="log-entry">
+                <h2>01.概要</h2>
+                <p>　本記録は、2023年4月17日に発生した「次々世代型人工知能開発中における甚大な外部情報漏洩事案」並びに「NIIR技術開発研究部:主任研究員による試験人工知能及び研究所回線の私的利用に伴う除名処分」についての経緯等の公開記録です。</p>
+                <p>なお、この記録情報は機密保持レベル:3として管理し、class:3以上のアクセス権限を持つ研究員のみ閲覧が許可されます。</p>
+            </article>
+            <article class="log-entry">
+                <h2>02.次々世代型人工知能開発中における甚大な外部情報漏洩事案</h2>
+                <p>　2023年4月17日、この日は当初、人工知能研究開発の基礎として位置づけられる「対話型調整試験」の第6回が実施される予定となっていました。
+通常、NIIRで開発される新型AIは主任開発責任者による「対話」を通して、異常な動作は発生していないか、コミュニケーションとして問題のない受け答えが可能かという点を確認します。そして対話を通して随時プログラムやアルゴリズムの調整を繰り返すことで、人工知能として実用化に足る性能と安全性を有しているかということを判断する規定となっています。</p>
+<p>　しかし当該日は、人工知能開発の一環として「グローバルインターネット接続認証試験」が実施されました。
+主任開発責任者であった青川直樹氏は当時、次々世代型人工知能として開発していた『複推論統合型試験汎用人工知能:マリア』を「世界を変える存在だ」と表現しており、また「世界中の集合知をもってすれば必ずマリアは世界を変える」との発言をしていたことも同部署の研究員からの証言で明らかになっています。
+そして理由は不明ですが、何らかの要因で周囲の反対を押し切って第六次対話型調整試験を見送り、なかば強権的にマリアのグローバルインターネットへの接続を開始しました。</p>
+                <p>　【以下被害状況】
+グローバルインターネット接続から6秒後、NIIRのネットワークシステムを操作するターミナルの権限を約67%ほど掌握し、情報記録管理部のサーバへのハッキング攻撃を開始。
+接続から23秒後、自身のシステムプログラムを自己ハッキングし、SAGE-TROIS推論システムの約59%をオーバーライド。同時に、未来都市イデンの工事が完了していた基盤インフラの制御の大部分を順次掌握。
+接続から47秒後、イデンに実装されていたSAGE-TROISのメモリから未来共創銀行の契約銀行口座うち145アカウントの口座情報を取得。</p>
+                <p>　結果として接続から72秒後に、規定によって準備されていた緊急停止コードを青川直樹氏が改良した全推論システム簡易凍結プログラムが実行されたことにより、複推論統合型試験汎用人工知能:マリアは沈黙。
+一時的な凍結に過ぎませんが、人為的な解除がなされない限りは半永久的に機能を停止し続けることとなりました。</p>
+            </article>
+            <article class="log-entry">
+                <h2>03.事後調査の結果と開発責任者の除名処分</h2>
+                <p>　この研究開発中における大規模かつ甚大なネットワーク障害・情報漏洩被害を受けて、次々世代型人工知能開発計画は即刻中止の決断が下されました。
+そして、漏洩情報と被害状況の正確な把握のため実施された事後調査により、主任開発責任者:青川直樹氏の研究所内秘匿回線および、試験プロトコルを介さない人工知能の私的利用等の組織規約違反が発覚しました。</p>
+                <p>従って、NIIR主任研究員兼次世代型人工知能開発責任者である青川直樹氏を除名処分とする決定がなされ、次々世代型人工知能開発計画は無期限中止ということになり、事実上の計画破棄へと至りました。</p>
+            </article>
+            <article class="log-entry">
+                <h2>04.??%&$\----謎解きの答え//*</h2>
+                <p>　**@!"回答コマンドは「unzip」です***$%&!</p>
+            </article>
+            </main>
+        </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MC CLI Console</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="monitor" aria-live="polite" aria-label="console output"></main>
+
+  <section id="input-container" aria-label="console input">
+    <label for="input" class="sr-only">コマンド入力</label>
+    <input id="input" type="text" autocomplete="off" spellcheck="false" placeholder="> キーワード / コマンド を入力して Enter">
+    <button id="submit" type="button">送信</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

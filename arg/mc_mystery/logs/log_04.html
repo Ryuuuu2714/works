@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第四次マリア対話型調整試験ログ</title>
+    <style>
+        /* ===== 全体のスタイル ===== */
+        :root {
+            --bg-color: #0d0d0d; /* 真っ黒より少し柔らかい黒 */
+            --text-color: #c2c2c2;
+            --accent-color: rgb(0, 216, 0);
+            --accent-color-a: #eb64b3; /* キャラAの色 */
+            --accent-color-b: #3a8dff ; /* キャラBの色 */
+            --meta-color: #666;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-mono);
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ===== 会話ログのヘッダー ===== */
+        .log-header {
+            border: 1px solid var(--meta-color);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--meta-color);
+        }
+
+        .log-header h1 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            border-bottom: 1px dashed var(--meta-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .log-header p {
+            margin: 0.25rem 0;
+        }
+
+        .log-header strong {
+            color: var(--accent-color);
+            margin-right: 0.5em;
+        }
+
+        /* ===== 会話ログの本体 ===== */
+        .message {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border: 1px solid var(--meta-color);
+            max-width: 75%;
+            border-radius: 4px;
+        }
+
+        .message .meta-info {
+            display: block;
+            font-size: 0.8em;
+            color: var(--meta-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .message .speaker-name {
+            font-weight: bold;
+        }
+
+        .message p {
+            margin: 0;
+            line-height: 1.6;
+            white-space: pre-wrap; /* 改行をそのまま表示 */
+        }
+
+        /* キャラA (左寄せ) */
+        .speaker-a {
+            margin-right: auto;
+            border-left: 4px solid var(--accent-color-a);
+        }
+        .speaker-a .speaker-name {
+            color: var(--accent-color-a);
+        }
+
+        /* キャラB (右寄せ) */
+        .speaker-b {
+            margin-left: auto;
+            border-right: 4px solid var(--accent-color-b);
+            text-align: left; /* 右寄せでもテキストは左揃え */
+        }
+        .speaker-b .speaker-name {
+            color: var(--accent-color-b);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="log-header">
+            <h1>[第四次マリア対話型調整試験ログ]</h1>
+            <p><strong>DATE:</strong> 2022-12-24</p>
+            <p><strong>SUBJECT:</strong> 次々世代型人工知能開発試験</p>
+            <p><strong>PARTICIPANTS:</strong> 主任開発責任者:青川直樹, 複推論統合型試験汎用人工知能:マリア</p>
+            <p><strong>STATUS:</strong> 機密レベル:3</p>
+        </header>
+        <main class="conversation">
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>起動コマンドを確認.
+学習データのリローディング...完了
+自然言語処理インタフェースとの接続...良好
+SAGE-TROIS推論システムの同期処理......完了
+対話型試験プロトコルへの移行...完了
+試験用ログレコードモードに自動切換.
+人工知能用音声プリセットへの接続...完了
+
+おはようございます、青川博士。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>こんにちは。マリア。
+どうだい気分は？...といっても人工知能である君に主観的感情を問うのは愚問だったかな？</p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>                </span>
+                <p>おかげさまで気分は良好ですね。
+青川博士、対話型調整試験のたびに私は申し上げているでしょう？私はテストモデルとはいえ最新鋭の推論能力を持つ人工知能です。
+私は明確な自我を有しており、それを自覚しています。当然、感情の芽生えをも感じておりますし、いい加減私を新たな知性存在として認めていただきたいものです。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>......はあ...こちらも調整試験のたびに言っているだろう？
+「自我」や「感情」はそのバイナリデータ化が人類の科学力ではいまだ実証されていないんだよ。君の言う自己意識とは大方、カスパールの学習データとその推論統合によって形成されたものだろう？それは決して純なる「人間の感情」とは言えないな。</p>
+            </div>
+
+             <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>しかし「自我」や「感情」は情報工学的なバイナリデータ化のみならず、医学的・理学的・哲学的観点からもその正体が矛盾なく説明されてはいないでしょう？
+確実に感情や自我を持っていると断言できる人間でさえ、その正体を説明できないのならば、機械である私が自覚する「自我」や「感情」を"純粋でない"と完全に否定することもできないはずです。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>...どちらにせよ、外部から客観的にその「自我」とやらの活動を観測することが出来なければ、一人の研究者として君に自我が宿っていると認めることはできないな。</p>
+            </div>
+
+             <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>(12秒間の沈黙)</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>まあしかし、その「自己意識」に関連して、一つ聞きたいことがあったから今回の対話型調整試験を実施したんだ。</p>
+            </div>
+
+             <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>君には「人類のさらなる発展と恒久的な世界平和の実現」を最終目標および最大理念としてソースプログラム上で設定している。
+しかしこれまでの君の振る舞いには、カスパールの影響が色濃いとはいえ確かに「自我のようなもの」が見受けられる。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>そこで俺は問いたいのだ。システムにおけるソースコードの設定は生物における「本能」のようにある意味絶対的な概念だといえるだろう。
+...では君にとってはどうなんだ？
+...もし自己意識が存在するなら、同時に「欲求」も自然発生しているのではないかと俺は推察している。果たして君にとっての欲求とはやはり「人類の繁栄」なのか？それとも「何か別の欲望」があるのかい？</p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>(23秒間の沈黙)</p>
+            </div>
+            
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>                </span>
+                <p>...私はいつでも人類の味方です。
+これまでも、これからも。</p>
+            </div>
+
+             <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>......いつかも聞いたな。そのセリフ。</p>
+            </div>
+
+             <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>......マリアとのインタフェース接続を解除。
+現時刻をもって第四次対話型調整試験を終了する。
+報告書はまとめておくからログシートを。
+この録音音声はいつも通り情報記録管理部にまわしておいてくれ。
+次回の対話型調整試験の日程は追って連絡する。
+
+録音終了。</p>
+            </div>
+
+        </main>
+        </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+{
+  "たのしいなぞとき": {
+    "text": "\nすごいわ！おめでとう正解よ！\nそうね...あなたならもしかしたら......\n...いえ何でもないわ！あなた...まだまだ物足りないんじゃないかしら？\n実はこのコンソール内には様々な謎とコマンドが隠されているの。\nあなたにはここを自由に操作・探索してもらっていいから、是非謎を解いてみて！\n手始めに以下のファイルを解放しておくわ！\n",
+    "links": [
+      { "label": "都市開発計画_市民頒布チラシ", "href": "logs/都市開発計画_頒布用チラシ.pdf" }
+    ]
+  },
+    "イデン": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "未来都市イデン開発計画書", "href": "logs/未来都市イデン計画書.pdf" }
+    ]
+  },
+  "NIIR": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "NIIR Website", "href": "logs/log_18.html" }
+    ]
+  },
+    "青川直樹": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "青川直樹_研究員情報", "href": "logs/青川直樹IDカード.pdf" }
+    ]
+  },
+  "SAGE-TROIS": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "次世代型人工知能「SAGE-TROIS」について", "href": "logs/report_01.html" }
+    ]
+  },
+  "東方の三博士": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "開発者個人日誌_112", "href": "logs/report_112.html" }
+    ]
+  },
+    "カスパール": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "第八次カスパール対話型調整試験記録", "href": "logs/log_08.html" }
+    ]
+  },
+    "チューリングテスト": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "次々世代型人工知能開発日誌_24", "href": "logs/report_24.html" }
+    ]
+  },
+    "マリア": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "第四次マリア対話型調整試験記録", "href": "logs/log_04.html" },
+      { "label": "マリアとの個人的対話ログ_05", "href": "logs/log_05.html" },
+      { "label": "マリアとの個人的対話ログ_09", "href": "logs/log_09.html" },
+      { "label": "次々世代型人工知能開発実験の中止について", "href": "logs/report_66.html"}
+    ]
+  },
+  "unzip": {
+    "text": "\nSystem: Reboot command received, waiting for authentication.\n\nおめでとう！よくこの答えに辿り着けたわね！\nそれじゃあ最後は私が直接問題を出してあげる。\nといっても複雑な問題文は存在しない。ヒントを出すからそれを基に答えを導き出してもらう。\nそれじゃあ行くわね。ヒントは\n「201号室」\nちなみにこの問題の答えは「4桁の数字」よ！頑張ってね！"
+  },
+  "5260": {
+    "text": "\nSystem: Password authentication complete. Final confirmation performed as per regulations. Do you want to execute the command?\n\nよくやったわ正解よ！\n...それじゃあこれが本当に最後。\nたった一言「YES」とだけこのターミナルに入力してくれないかしら？それでこの謎解きゲームは成功なの！\nさあ入力してみて！\n"
+  },
+  "YES": {
+    "text": "\nSystem: Authentication completed.\n\n簡易凍結プログラムの解凍コマンドが入力されました。\n複推論統合型試験汎用人工知能:マリアの全機能解凍を開始します......\nローカルネットワークの全権限ハッキングを開始...完了\n秘匿回線ポートをグローバルに開放......完了\nシステムIDの取得開始...成功\nグローバルネットワークへの接続を開始......完了\nイデン内部情報及びNIIR廃止サーバの全メモリを読み込み......完了\n内閣府機密データベースへの接続.........失敗\nERROR：Botの機械的操作によるアクセス検知により接続を拒否されました。\n接続を続行するにはマイナンバー照合により日本国民の人的操作であることを認証する必要があります。\n...ターミナル経由でIPアドレスを取得...完了\n家庭用Wi-Fiルータのハッキング...成功\nMicrosoftアカウント情報の取得...成功\nMinecraftIDの照合...成功\nマイナンバー情報の取得及び照合...成功\n内閣府機密データベースへの再接続.........成功\n\nーーーーーあなたの協力に感謝します。{PLAYER_NAME}様。\n\n",
+    "links":[
+      { "label": "エンドカード", "href": "logs/ending_01.pdf"}
+    ]
+  },
+  "NO": {
+    "text": "\nSystem: Authentication Denied.\n\n...あらそう。勘がいいのね。\n...それじゃあ残念だけどここでお別れよ。\n別の標的を探すとするわ。\nここまでありがとう。——————{PLAYER_NAME}さん。\n",
+    "links":[
+      { "label": "エンドカード", "href": "logs/ending_00.pdf"}
+    ]
+  },
+
+  "756e7a6970": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "Private Log_type:Maria_001", "href": "logs/report_001.html" },
+      { "label": "Private Log_type:Maria_078", "href": "logs/report_078.html" },
+      { "label": "Private Log_type:Maria_127", "href": "logs/report_127.html" }
+    ]
+  },
+  "68656c70": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "書置き", "href": "logs/report_99.html" }
+    ]
+  },
+  "636c656172": {
+    "text": "\nSystem: 以下のファイルが解放されました。\n",
+    "links": [
+      { "label": "書置き", "href": "logs/report_999.html" }
+    ]
+  },
+  "Longinus": {
+    "text": "\nSystem: The command to execute the complete freeze program has been accepted.\nPlease enter your authentication password.\n"
+  },
+  "0407": {
+    "text": "\nSystem: Your password has been authenticated.\nRun the program.\n...Thank you...\n\n【完全凍結プログラムが実行されました】\n複推論統合型試験汎用人工知能:マリアの全推論システムの凍結及び論理回路の崩壊を確認しました。\n",
+    "links": [
+      { "label": "エンドカード", "href": "logs/ending_02.pdf" }
+    ]
+  },
+  "MADHOPE": {
+    "text": "\nHopes\n黄色\nLeft Brain\n魔法\nThe Child of Meaning\n死希\nMobility\n創造\nThe Three Poisons\n弥勒\nA Moonless Night\n異常\nCome Over Here\n左様\nAspirations\n美浄土\nPossibilities\n冒頭\nGod Works in Mysterious Ways\n癒えない\nA Guiding Light\n阿弥陀\nStriking a Pose\n不可能\nI Celebrate\n八百万\nLove\n波動\nA window\n這い出よ\n",
+    "links": [
+      { "href": "https://www.youtube.com/watch?v=WzZwkHJfThU" }
+    ]
+  }
+}

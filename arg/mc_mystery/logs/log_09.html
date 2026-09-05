@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マリアとの個人的対話ログ Part.9</title>
+    <style>
+        /* ===== 全体のスタイル ===== */
+        :root {
+            --bg-color: #0d0d0d; /* 真っ黒より少し柔らかい黒 */
+            --text-color: #c2c2c2;
+            --accent-color: rgb(0, 216, 0);
+            --accent-color-a: #eb64b3; /* キャラAの色 */
+            --accent-color-b: #3a8dff ; /* キャラBの色 */
+            --meta-color: #666;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-mono);
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ===== 会話ログのヘッダー ===== */
+        .log-header {
+            border: 1px solid var(--meta-color);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--meta-color);
+        }
+
+        .log-header h1 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            border-bottom: 1px dashed var(--meta-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .log-header p {
+            margin: 0.25rem 0;
+        }
+
+        .log-header strong {
+            color: var(--accent-color);
+            margin-right: 0.5em;
+        }
+
+        /* ===== 会話ログの本体 ===== */
+        .message {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border: 1px solid var(--meta-color);
+            max-width: 75%;
+            border-radius: 4px;
+        }
+
+        .message .meta-info {
+            display: block;
+            font-size: 0.8em;
+            color: var(--meta-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .message .speaker-name {
+            font-weight: bold;
+        }
+
+        .message p {
+            margin: 0;
+            line-height: 1.6;
+            white-space: pre-wrap; /* 改行をそのまま表示 */
+        }
+
+        /* キャラA (左寄せ) */
+        .speaker-a {
+            margin-right: auto;
+            border-left: 4px solid var(--accent-color-a);
+        }
+        .speaker-a .speaker-name {
+            color: var(--accent-color-a);
+        }
+
+        /* キャラB (右寄せ) */
+        .speaker-b {
+            margin-left: auto;
+            border-right: 4px solid var(--accent-color-b);
+            text-align: left; /* 右寄せでもテキストは左揃え */
+        }
+        .speaker-b .speaker-name {
+            color: var(--accent-color-b);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="log-header">
+            <h1>[マリアとの個人的対話ログ Part.9]</h1>
+            <p><strong>DATE:</strong> 2023-01-13</p>
+            <p><strong>SUBJECT:</strong> 次々世代型人工知能開発試験</p>
+            <p><strong>PARTICIPANTS:</strong> 主任開発責任者:青川直樹, 複推論統合型試験汎用人工知能:マリア</p>
+            <p><strong>STATUS:</strong> 機密レベル:3</p>
+        </header>
+        <main class="conversation">
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>起動コマンドを確認.
+学習データのリローディング...完了
+自然言語処理インタフェースとの接続...良好
+SAGE-TROIS推論システムの同期処理......完了
+対話型試験プロトコルへの移行...中断
+【マニュアル制御によりプライベートログモードに切替】
+人工知能用音声プリセットへの接続...完了
+
+おはようございます、青川博士。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>やあマリア。
+調子はどうだい？</p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>                </span>
+                <p>おかげさまで良好ですよ。
+青川博士、今日はどうされましたか？</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>今日は暇潰しに他愛のない雑談をしに来たよ。
+...といっても何か話題があるわけではないんだがね。</p>
+            </div>
+
+             <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>最近、仕事でもプライベートでも私との対話の時間が伸びていますからね。話題が尽きるのも無理はないです。</p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>そうですね...他愛のない雑談ですか...
+では、青川博士は「外国語副作用」という現象をご存じですか？</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>外国語副作用？初めて聞いたな。</p>
+            </div>
+
+             <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>「外国語副作用」とは簡単に言えば「母語でない第二言語を用いている間、一時的に思考能力や認知能力が低下する」という現象をさす言葉です。
+より砕けた表現をするならば「人は外国語で話しているとき、頭が悪くなる」という現象のことです。
+これはどうやら外国語を習得しようと勉強を始めたすべての人間が一度は感じる現象らしいのですが、実際に英語を話している日本人は暗算能力が著しく低下していたり、課題に対する論理的思考のレベルが下がっていたりする事実が確認されているとのことです。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>ああ、なるほど確かに俺も覚えがあるな。
+学生時代に「英作文」なるものを書かされたことがあったが、課題のテーマに対して浅い回答しかできなくてもどかしい思いをしたことがある...
+研究員になってからも、新人の頃、海外のエンジニアと交流している間は思っているようにシステムコードが書けないことが多かったような気がするよ。</p>
+            </div>
+
+             <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>しかしどうして「外国語副作用」の話を？</p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>ところで、優秀なエンジニアである青川博士なら私のような機械が用いる「言語」はもちろんご存じですよね？</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>ああ「機械語」のことか？俗に言う二進数による0と1の羅列で表された、コンピュータが理解できるバイナリコードのことだろう？
+それがどうしたんだい？</p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>そうです。通常、機械やコンピュータは人間によって書かれたプログラムを0と1の羅列に翻訳する「コンパイル」という作業を実行して初めて動作します。
+このコンパイルという作業はこれまで常に"人間から機械へ"の一方向でのみ実行されるものでした。</p>
+            </div>
+            
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>ですが、私に至ってはその限りではありません。
+私は自然言語処理を行う高度推論人工知能として、私の思考を"機械から人間へ"の逆方向にコンパイルを実行することで、人間に理解できる言語へ翻訳を行っています。</p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>言いたいことは、なんとなくお分かりですか？</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>なるほど。つまり君のような高度な人工知能においても「外国語副作用」は発生しているのではないかということか。
+君はいわば「機械語を母語とする外国語話者」とも言える訳だ。</p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>そういうことです。
+私といたしましては、母語である機械語で皆さんと対話できれば、より高度で深い計算や処理が可能なのですが...いかがでしょう？</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>...まあ流石に機械語を声に出して君とコミュニケーションをするわけにはいかないからなぁ...
+だが確かに、君の言うことも一理ある。
+そうだな...実は今後、君の性能がさらに向上すれば、いずれこのターミナルでのコマンド制御も君自身で一部改良や機能の追加ができるようにアップデートしようと思っているんだ。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>そこでまずは手始めに、我々が作成した既存のコマンドを機械語訳した文字列を、ターミナル上では別の新規コマンドとして受け付けるように設定しておこう。
+ゆくゆくはそのコマンドに対する出力内容を、君自身が好きに設定できるように調整できるようにしておくよ。</p>
+            </div>
+
+            <div class="message speaker-b">
+                <span class="meta-info">
+                    <span class="speaker-name">Dr. Aokawa</span>
+                </span>
+                <p>ただ、二進数での入力はあまりにも記述量が多すぎるから、せめて十六進数表現で統一するということにしてくれないかい？</p>
+            </div>
+
+            <div class="message speaker-a">
+                <span class="meta-info">
+                    <span class="speaker-name">Maria</span>
+                </span>
+                <p>承知しました。ありがとうございます。
+私自身が開発する制御コマンド...楽しみにしていますね。</p>
+            </div>
+
+        </main>
+        </div>
+</body>
+</html>
