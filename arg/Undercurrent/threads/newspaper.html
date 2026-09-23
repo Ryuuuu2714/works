@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夕日新聞 切り抜き</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .newspaper-ui {
+    background-color: #e8e4d9;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 2.5rem;
+    font-family: 'Shippori Mincho', serif;
+    color: #2c2c2c;
+    
+    /* 修正箇所：flexを解除し、純粋なブロック要素として扱う */
+    display: block;
+    writing-mode: vertical-rl;
+    
+    /* この高さに到達すると、自動的に左へ新しい行が作られます */
+    height: 500px; 
+  }
+
+  .np-headline {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+    
+    /* 修正箇所：縦書きにおける見出しと本文の余白・境界線を再設定 */
+    padding-left: 1.5rem;
+    margin-left: 1.5rem;
+    border-left: 2px solid #2c2c2c;
+    
+    text-shadow: 0px 0px 1px rgba(44, 44, 44, 0.4);
+  }
+
+  .np-body {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.8;
+    
+    /* 修正箇所：column-countを削除し、自然な折り返しに任せる */
+    text-align: justify;
+    text-justify: inter-character;
+  }
+
+  .np-body p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-indent: 1em;
+  }
+</style>
+</head>
+<body>
+
+<div class="newspaper-ui">
+  <h1 class="np-headline">富山市の大学生が失踪<br>　神隠しか？依然捜査続く</h1>
+  <div class="np-body">
+    <p>富山県警は二〇〇四年五月二〇日(木)、富山市内在住の大学生である有野ユウスケ氏(十九歳)が行方不明となっていることを公表した。
+        警察の発表によると、同氏が勤めるアルバイトを無断欠勤したことから失踪が発覚し、富山駅周辺での目撃情報を最後に消息を絶っているということで、
+        周辺地域に住む人々だけでなく、公共交通機関などに対しても広い情報提供を求めている。</p>
+    <p>また、同氏の住むアパートの自室に残置されていたノートパソコンには失踪直前に記録したとされるプライベートチャットサービスでのメッセージや、
+        インターネット掲示板で都市伝説を調べていた痕跡が残されており、警察は「内容からは相当な錯乱状態であったことが伺える」との見解を示している。</p>
+    <p>さらに警察庁は、同様の行方不明事案が連続して発生していることを受けて、大規模犯罪の可能性も視野に入れて捜査を続けていく方針である。</p>
+  </div>
+</div>
+
+</body>
+</html>

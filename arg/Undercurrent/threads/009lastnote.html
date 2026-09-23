@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hidden_log.txt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
+<style>
+  /* 全体の無機質なベース設定 */
+  body {
+    background-color: #030303; /* 完全な黒ではなく、モニターの電源が入っている微かな明度を持たせる */
+    color: #c8c8c8; /* 白飛びを抑えた、劣化したようなグレー */
+    font-family: "ＭＳ ゴシック", "MS Gothic", monospace; /* 等幅フォントでテキストファイル感を強制 */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    /* スマホでの折り返しを許可 */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* CRTモニター特有の微細なノイズと走査線をCSSで再現 */
+  .crt-screen {
+    position: relative;
+    min-height: 100vh;
+  }
+  .crt-screen::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none; /* テキスト選択の邪魔にならないようにする */
+  }
+
+  /* テキストをそのままベタ打ちするためのコンテナ */
+  .raw-text {
+    white-space: pre-wrap; /* HTMLタグを使わず、改行やスペースをそのまま反映させるアプローチ */
+    font-size: 14px;
+    text-shadow: 0 0 2px rgba(200, 200, 200, 0.3); /* 古いモニターの微かな発光（ブラウン管の滲み）を表現 */
+  }
+
+  /* 異常性を際立たせるための点滅アニメーションクラス */
+  .glitch {
+    animation: blink 4s infinite step-end;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    95% { opacity: 0; }
+  }
+
+  /* 2026年に書き換えられた痕跡 */
+  .modified {
+    color: #8A2A2A;
+  }
+
+  /* 最後の一語（img/scrawl.png があればそれを、なければ手書き風フォントを重ねて表示）
+     ★ 何度も上書きしたような重なりにしてある。濃さは opacity、傾きは rotate で調整 */
+  .scrawl-wrap {
+    position: relative;
+    margin: 30px 0 140px;
+    min-height: 200px;
+    text-align: center;
+    opacity: 0;
+    animation: appear 7s ease-in 3s forwards;   /* ★ ゆっくり滲み出てくる */
+  }
+  @keyframes appear { to { opacity: 1; } }
+  .scrawl-wrap img {
+    max-width: 66%;
+    filter: grayscale(1) contrast(1.6) brightness(0.75);
+    transform: rotate(-3deg);
+  }
+  .scrawl-stack {
+    display: none;
+    position: relative;
+    height: 200px;
+  }
+  .scrawl-stack span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    white-space: nowrap;
+    font-family: "Yuji Boku", serif;
+    color: #6E1F1F;                              /* ★ 乾いた血のような赤黒 */
+    letter-spacing: 0.06em;
+  }
+  .s1 { font-size: 74px; opacity: 0.80; transform: translate(-50%, -50%) rotate(-4deg); filter: blur(0.4px); animation: waver 9s ease-in-out infinite; }
+  .s2 { font-size: 66px; opacity: 0.30; transform: translate(-46%, -58%) rotate(4deg);  filter: blur(1.2px); }
+  .s3 { font-size: 92px; opacity: 0.14; transform: translate(-55%, -42%) rotate(-11deg); filter: blur(2.4px); }
+  .s4 { font-size: 54px; opacity: 0.22; transform: translate(-38%, -32%) rotate(8deg);  filter: blur(0.8px); }
+  @keyframes waver { 0%, 100% { opacity: 0.80; } 45% { opacity: 0.62; } 47% { opacity: 0.86; } }
+
+  @media (max-width: 768px) {
+    .scrawl-stack { height: 150px; }
+    .s1 { font-size: 52px; } .s2 { font-size: 46px; } .s3 { font-size: 64px; } .s4 { font-size: 38px; }
+    body {
+      padding: 10px;
+    }
+    .raw-text {
+      font-size: 12px; /* スマホ画面では一度に目に入る情報量を確保するため縮小 */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="crt-screen">
+  <div class="raw-text">
+[SYSTEM_LOG: 2004-05-15 23:20:02]
+File Open: voice_memo.mp3
+(以下、システムにより文字起こしされたボイスデータの記録)
+
+
+もうだめだ
+
+いや、落ち着け。順番に残す。順番に。
+俺は失敗した。それだけは分かってる。
+
+知るべきじゃなかった。
+冗談でも、安易に触れるべきじゃなかった。
+
+
+澱み、というのは、人の悪感情が煮詰まった場所に溜まるものだ。
+そこまでは調べてあった。下調べの段階で。
+水の周りにしか、出ないと思ってた。
+高を括ってた。俺が。
+
+いつからだ。いつから携帯がおかしかった？
+携帯がおかしくなって、それで、それでようやく
+違う、そうじゃなくて
+
+俺の携帯だ。俺が松川にいったとき、持ってたから。
+澱みは、俺の携帯に、目をつけた。
+それでネットに来た。それだけだ。それだけのはずだった。
+
+負の感情が集まる場所に溜まる。それが澱みの性質なら
+ネット掲示板ほど都合のいい場所はない
+そんなの、分かりきってたことじゃないか
+なんで気づかなかった
+
+「オドノテ」を作ったのは俺だ。
+ただのおふざけだった。友人たちとの身内ノリだったんだ。
+それが、澱みが定着するための、ちょうどいい器になってしまった、俺が作ってしまった、俺が置いたんだ。
+知った人間から、順番に。
+順番に。
+
+牛の首と、同じだ。
+いや違う。あれより悪い。
+牛の首は聞くだけで終わる。
+牛の首は「知っちゃいけない」ことを楽しむだけの都市伝説だ。
+
+これは、オドノテは、知った奴が、
+元ネタの「澱み」を知ったやつが、また誰かに知らせようとする。
+面白がって、広げようとする。
+しった人間は、真相を知ろうとして、澱みに魅入られる、
+そしてまた、狂ってしまう。
+
+
+友人たちが消えた。順番に。
+俺のせいだ。俺が広げたから。
+
+もう時間がない
+たぶんもうない
+
+これを残している俺は、まだ俺なんだろうか
+さっきから同じことばっかり話している気がする
+気がするだけならいい
+気がするだけなら
+
+
+富岩運河に行く。展望台まで。
+なんで展望台なのか。
+とにかく高いところだ
+水から遠い所へいかなきゃ
+ネットの情報にすがったんだ。
+
+意趣返し、
+呪い返しの意味で、牛ヶ首神社のお札も
+買って持ってきた。
+
+なんでもいい。
+とにかく方法があるなら早く試さないと。
+
+はやく
+
+もう
+
+いかないと
+
+<span class="glitch">...手？</span>
+<span class="glitch" style="color: #666;">[EOF - Connection Lost]</span>
+
+
+<span class="modified">[SYSTEM_LOG: 2026-04-17 21:40:08]
+File Modified.
+Transcription failed.
+[以下、手書きにつき転記不能]</span>
+  </div>
+
+  <!-- ★ 最後の一語：自分で手書きした画像を img/scrawl.png に置けば、それが表示される
+       置かない場合は、下の文字を手書き風フォントで4重に重ねて表示する（文字は変更可） -->
+  <div class="scrawl-wrap">
+    <img src="../img/scrawl.png" alt="" onerror="this.style.display='none'; document.getElementById('scrawl-stack').style.display='block';">
+    <div class="scrawl-stack" id="scrawl-stack">
+      <span class="s3">ひがしの</span>
+      <span class="s2">ヒガシノ</span>
+      <span class="s4">ひがしの</span>
+      <span class="s1">ヒガシノ</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

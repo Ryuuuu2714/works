@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAME CLEAR - 電子の澱む川底で</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Shippori+Mincho:wght@500;800&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 40px 16px 80px;
+    background-color: #0B0B0B;
+    color: #DDDDDD;
+    font-family: "Shippori Mincho", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;                     /* 傾けた紙で横スクロールが出ないように */
+  }
+
+  /* 茶封筒の中身（2004年に用意されていた「ドッキリ大成功」の紙） */
+  .paper {
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+    padding: 36px 20px 24px;
+    background-color: #F2EBDD;
+    border: 10px solid #B48A55;              /* 茶封筒から半分出ている感じ */
+    transform: rotate(-2deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    animation: appear 1.5s ease-out;
+  }
+  .paper .hand {
+    font-family: "Yomogi", cursive;
+    font-size: 60px;
+    line-height: 1.2;
+    color: #2A1A0A;
+  }
+  .paper .tag {
+    margin-top: 18px;
+    font-family: "ＭＳ ゴシック", "MS Gothic", monospace;
+    font-size: 12px;
+    color: #6A5030;
+  }
+
+  .clear {
+    margin-top: 48px;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    color: #EEEEEE;
+    opacity: 0;
+    animation: appear 2s ease-in 1.5s forwards;
+  }
+  .title {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #AAAAAA;
+    opacity: 0;
+    animation: appear 2s ease-in 2.5s forwards;
+  }
+  .thanks, .credit, .disclaimer {
+    opacity: 0;
+    animation: appear 2s ease-in 3.5s forwards;
+  }
+  .thanks { margin-top: 36px; font-size: 16px; }
+  .credit { margin-top: 20px; font-size: 14px; color: #999999; }
+  .disclaimer { margin-top: 28px; max-width: 420px; font-size: 12px; line-height: 1.7; color: #777777; }
+  .last {
+    margin-top: 60px;
+    font-size: 15px;
+    color: #7A0000;
+    opacity: 0;
+    animation: appear 5s ease-in 10s forwards;
+  }
+  @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+
+  @media (max-width: 480px) {
+    .paper .hand { font-size: 46px; }
+    .clear { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="paper">
+    <div class="hand">ドッキリ<br>大成功</div>
+    <div class="tag">押-10 茶封筒の内容物（平成16年4月17日設置・未発見）</div>
+  </div>
+
+  <div class="clear">GAME CLEAR</div>
+  <div class="title">電子の澱む川底で</div>
+
+  <div class="thanks">Thank you for playing</div>
+  <div class="credit">作・案内　東野 琉之介</div>
+  <div class="disclaimer">
+    この物語はフィクションです。<br>
+    実在の地名・施設・団体が登場しますが、<br>
+    作中の人物・出来事とは一切関係ありません。
+  </div>
+
+</body>
+</html>

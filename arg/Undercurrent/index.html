@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>富山県内過去スレ保管庫 - 検索ポータル</title>
+  <style>
+    /* ベーススタイル */
+    body { 
+      background-color: #EFEFEF; 
+      color: #000; 
+      font-family: "MS PGothic", "ＭＳ Ｐゴシック", sans-serif; 
+      margin: 0; 
+      padding: 0; 
+    }
+    #header { 
+      background-color: #FFF; 
+      border-bottom: 2px solid #ccc; 
+      padding: 10px; 
+      text-align: center; 
+    }
+    h1 { 
+      color: #CC0000; 
+      font-size: 24px; 
+      margin: 0; 
+    }
+    
+    /* レイアウトコンテナ */
+    #container { 
+      display: flex; 
+      max-width: 1000px; 
+      margin: 20px auto; 
+      flex-direction: row; 
+      box-sizing: border-box;
+    }
+    
+    /* サイドバー */
+    #sidebar { 
+      width: 200px; 
+      background-color: #D6D6D6; 
+      padding: 15px; 
+      border: 1px solid #AAA; 
+      font-size: 13px; 
+      box-sizing: border-box;
+    }
+    
+    /* メインコンテンツ（検索エリア） */
+    #main { 
+      flex: 1; 
+      padding: 20px; 
+      background-color: #FFF; 
+      border: 1px solid #AAA; 
+      margin-left: 10px; 
+      box-sizing: border-box;
+    }
+    
+    /* 検索セクション */
+    .search-section { 
+      text-align: center; 
+      padding: 20px 10px; 
+      border-bottom: 1px dashed #AAA; 
+    }
+    #search-input { 
+      width: 60%; 
+      padding: 8px; 
+      font-size: 16px; 
+      border: 1px solid #777; 
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    #search-button { 
+      padding: 8px 15px; 
+      font-size: 16px; 
+      cursor: pointer; 
+    }
+    
+    /* 検索結果表示エリア */
+    #results { margin-top: 30px; }
+    .thread-link { 
+      color: #0000FF; 
+      text-decoration: underline; 
+      font-weight: bold; 
+      font-size: 16px; 
+      display: block; 
+      margin-bottom: 5px; 
+      word-wrap: break-word; 
+    }
+    .thread-desc { font-size: 12px; color: #666; margin-bottom: 15px; }
+    .error { color: #FF0000; font-weight: bold; }
+
+    /* スマートフォン用レスポンシブ対応 */
+    @media (max-width: 768px) {
+      h1 { font-size: 18px; }
+      #container { 
+        flex-direction: column-reverse; /* 検索窓を上に、サイドバーを下に配置 */
+        margin: 10px; 
+      }
+      #sidebar { 
+        width: 100%; 
+        margin-top: 15px; 
+      }
+      #main { 
+        margin-left: 0; 
+        padding: 15px; 
+      }
+      #search-input { 
+        width: 90%; /* スマホ画面では検索窓を広くする */
+      }
+      #search-button {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="header">
+  <h1>富山県内過去スレ保管庫</h1>
+</div>
+
+<div id="container">
+  <!-- サイドバー（スマホでは画面下部に移動します） -->
+  <div id="sidebar">
+    <p>■カテゴリ一覧</p>
+    <ul>
+      <li>地元板</li>
+      <li>オカルト板</li>
+      <li>歴史・民俗板</li>
+      <li>事件・事故板</li>
+      <li>etc...</li>
+    </ul>
+    <p style="margin-top:20px;">■お知らせ</p>
+    <span style="font-size:11px;">2004/05/16：<br>サーバー移転しました。</span><br><br>
+    <span style="font-size:11px;">（★印はエクストラスレッドです）</span>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <div id="main">
+    <div class="search-section">
+      <p>キーワードを入力して過去ログを検索してください。</p>
+      <input type="text" id="search-input" placeholder="">
+      <br>
+      <button id="search-button">検索</button>
+    </div>
+
+    <div id="results">
+      <!-- 検索結果がここに表示される -->
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

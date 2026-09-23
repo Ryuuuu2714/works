@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>捜査資料照会システム</title>
+<style>
+  /* ====== Windows 2000 風の業務システム ====== */
+  body {
+    margin: 0;
+    background-color: #3A6EA5;            /* 当時のデスクトップの青 */
+    color: #000000;
+    font-family: "MS UI Gothic", "Meiryo UI", "Meiryo", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .mirror-note {
+    background-color: #FFFFE1;
+    border-bottom: 1px solid #999999;
+    font-size: 12px;
+    padding: 6px 12px;
+    color: #333333;
+  }
+  .window {
+    max-width: 760px;
+    margin: 16px auto;
+    background-color: #D4D0C8;
+    border: 2px outset #FFFFFF;
+    box-shadow: 2px 2px 0 #404040;
+  }
+  .titlebar {
+    background: linear-gradient(90deg, #0A246A, #A6CAF0);
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .titlebar .btns span {
+    display: inline-block;
+    width: 16px; height: 14px;
+    margin-left: 2px;
+    background-color: #D4D0C8;
+    color: #000000;
+    border: 1px outset #FFFFFF;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+  }
+  .nav {
+    padding: 6px 8px;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 3px 8px;
+    background-color: #D4D0C8;
+    border: 2px outset #FFFFFF;
+  }
+  .nav a:active { border-style: inset; }
+  .content { padding: 10px; }
+  .panel {
+    background-color: #FFFFFF;
+    border: 2px inset #FFFFFF;
+    padding: 12px;
+  }
+  h2 {
+    font-size: 17px;
+    margin: 0 0 10px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #0A246A;
+    color: #0A246A;
+  }
+  h3 {
+    font-size: 14px;
+    margin: 16px 0 6px;
+    color: #0A246A;
+  }
+  a { color: #0000CC; }
+  .row {
+    display: flex;
+    border-bottom: 1px dotted #AAAAAA;
+    padding: 5px 0;
+  }
+  .row .k { flex: 0 0 8.5em; font-weight: bold; color: #333333; }
+  .row .v { flex: 1; min-width: 0; }
+  .card {
+    background-color: #F4F4F4;
+    border: 1px solid #808080;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+  }
+  .gate {
+    background-color: #FFF4F4;
+    border: 1px solid #CC0000;
+    padding: 10px;
+    margin-top: 8px;
+  }
+  .notice {
+    background-color: #FFFFE1;
+    border: 1px solid #999999;
+    padding: 8px 10px;
+    margin: 10px 0;
+  }
+  .result { margin-top: 12px; }
+  ul.menu { padding-left: 1.4em; }
+  ul.menu li { margin-bottom: 6px; }
+  .field { display: block; margin-top: 10px; }
+  input[type=text], input[type=password] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 4px 0;
+    padding: 6px;
+    font: inherit;
+    font-size: 16px;                       /* iPhoneで入力時に拡大されない大きさ */
+    background-color: #FFFFFF;
+    border: 2px inset #FFFFFF;
+    border-radius: 0;
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 5px 16px;
+    font: inherit;
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    background-color: #D4D0C8;
+    border: 2px outset #FFFFFF;
+    border-radius: 0;
+    cursor: pointer;
+  }
+  .btn:active { border-style: inset; }
+  .btn:disabled { color: #808080; }
+  .err { color: #CC0000; font-size: 13px; min-height: 1em; }
+  .ok { color: #006400; font-weight: bold; }
+  .muted { color: #555555; font-size: 13px; }
+  .creep { color: #7A0000; }
+  .redact {
+    background-color: #000000;
+    color: #000000;
+    padding: 0 2px;
+    user-select: none;
+  }
+  .stamp {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 0 6px;
+    border: 2px solid #CC0000;
+    color: #CC0000;
+    font-size: 13px;
+    font-weight: bold;
+    transform: rotate(-6deg);
+  }
+  /* 上申書などの本文 */
+  .doc {
+    margin: 8px 0;
+    line-height: 1.9;
+  }
+  /* 余白の手書き */
+  .margin-note {
+    margin-top: 22px;
+    padding: 12px;
+    border: 1px dashed #999999;
+    color: #3A2A2A;
+    font-family: "Yu Mincho", "游明朝", "MS PMincho", serif;
+    line-height: 1.9;
+    transform: rotate(-0.6deg);
+  }
+  /* 資料の下に残る閲覧記録 */
+  .viewlog {
+    margin-top: 18px;
+    padding-top: 6px;
+    border-top: 1px dotted #AAAAAA;
+    color: #777777;
+    font-size: 12px;
+  }
+  .blink { animation: blink 1.2s step-end infinite; }
+  @keyframes blink { 50% { opacity: 0.2; } }
+  table.log { border-collapse: collapse; width: 100%; font-size: 13px; }
+  table.log th, table.log td {
+    border: 1px solid #999999;
+    padding: 4px;
+    text-align: left;
+    vertical-align: top;
+  }
+  table.log th { background-color: #E8E8E8; }
+
+  /* ====== スマホ用 ====== */
+  @media (max-width: 600px) {
+    .window { margin: 0; border: none; box-shadow: none; }
+    .content { padding: 6px; }
+    .panel { padding: 10px; }
+    .row { flex-direction: column; }
+    .row .k { flex: none; }
+    table.log thead { display: none; }
+    table.log tr { display: block; border: 1px solid #999999; margin-bottom: 8px; }
+    table.log td { display: block; border: none; border-bottom: 1px dotted #CCCCCC; }
+    table.log td::before { content: attr(data-l) "："; font-weight: bold; color: #333333; }
+  }
+</style>
+</head>
+<body>
+
+<div class="mirror-note">※このページは、流出データをもとに有志が再構成した富山県警データ照会システムのミラーサイトです。</div>
+
+<div class="window">
+  <div class="titlebar">
+    <span>捜査資料照会システム Ver.2.1</span>
+    <span class="btns"><span>_</span><span>□</span><span>×</span></span>
+  </div>
+  <div id="app"></div>
+</div>
+
+<script src="records.js"></script>
+<script src="db.js"></script>
+</body>
+</html>
