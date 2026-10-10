@@ -127,7 +127,8 @@ body {
 #tab-join:checked ~ .wiki-main-wrapper .wiki-content-area #content-join,
 #tab-rules:checked ~ .wiki-main-wrapper .wiki-content-area #content-rules,
 #tab-rules:checked ~ .wiki-main-wrapper .wiki-content-area #content-rules-basic,
-#tab-rules:checked ~ .wiki-main-wrapper .wiki-content-area #content-rules-items {
+#tab-rules:checked ~ .wiki-main-wrapper .wiki-content-area #content-rules-items,
+#tab-rules:checked ~ .wiki-main-wrapper .wiki-content-area #content-rules-results {
     display: block;
 }
 
