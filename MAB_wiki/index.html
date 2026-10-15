@@ -1361,6 +1361,94 @@
         </div>
         </details>
 
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.32</span>
+            <span class="ability-name">【跳弾】</span>
+            <img src="images/slime_ball.png" alt="跳弾_アイコン" class="ability-icon" onerror="this.style.display='none'">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「オーバーフロッシャー」</div>
+                <ul class="skill-list">
+                    <li>放った矢がブロックに当たると、その入射角にしたがって反射する。</li>
+        <li>矢は3回まで反射し、4回目の着弾でブロックに刺さる。</li>
+        <li>矢は反射する毎に、着弾地点から半径2ブロック以内の他プレイヤーに対してハート0.5個分のダメージを与える。</li>
+        <li>反射した矢が自身に当たることはない。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「チェイン・ストリンガー」</div>
+                <ul class="skill-list">
+                    <li>しゃがみながら放った矢が他プレイヤーに命中すると、そのプレイヤーから半径20ブロック以内に存在する、最も近い別の他プレイヤーに向けて矢が反射する。</li>
+        <li>反射した矢は、そのプレイヤーの方へまっすぐ飛び、現在の矢の0.5倍の与ダメージをもつ。</li>
+        <li>他プレイヤーに命中して反射するのは1回までである（1本の矢が当たるのは2人までである）。</li>
+        <li>しゃがみながら放った矢、および他プレイヤーに命中して反射した矢も「パッシブ：オーバーフロッシャー」の影響を受ける。</li>
+        <li>連射で放った矢は、しゃがんでいても他プレイヤーに命中して反射することはない。</li>
+                </ul>
+            </div>
+        </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.33</span>
+            <span class="ability-name">【誘弾】</span>
+            <img src="images/shulker_shell.png" alt="誘弾_アイコン" class="ability-icon" onerror="this.style.display='none'">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「一方通行」</div>
+                <ul class="skill-list">
+                    <li>放った矢が、常に視線の先へ向かって少しずつ曲がりながら飛ぶ。</li>
+        <li>放った矢が、通常の0.8倍の速さで飛ぶ。</li>
+        <li>放った矢が曲がりながら飛ぶのは放ってから5秒間であり、その後は通常の矢として飛ぶ。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「転回帰還」</div>
+                <ul class="skill-list">
+                    <li>しゃがみ続けている間、半径50ブロック以内に刺さっている自身が過去に放った矢のうち、最も近いものと自身が紫色の直線で結ばれる。</li>
+        <li>紫色の直線は自身にしか見えない。</li>
+        <li>その状態で立ち上がると、矢が直線を辿って自身のもとへ帰還する。</li><br>
+
+        <li>帰還中の矢も他プレイヤーに対して、現在の矢と同じダメージを与え、最初に当たった他プレイヤーで消滅する。</li>
+        <li>帰還中の矢はブロックに当たると、その場に刺さって止まる。</li>
+        <li>帰還した矢は自身に当たると消滅し、再度取得することはできない。</li>
+                </ul>
+            </div>
+        </div>
+        </details>
+
+        <details class="ability-card">
+        <summary class="ability-header">
+            <span class="ability-no">No.34</span>
+            <span class="ability-name">【磁界】</span>
+            <img src="images/lodestone.png" alt="磁界_アイコン" class="ability-icon" onerror="this.style.display='none'">
+        </summary>
+        <div class="ability-body">
+            <div class="skill-section">
+                <div class="skill-title">パッシブ：「マグニート」</div>
+                <ul class="skill-list">
+                    <li>「磁石」を所持している。</li>
+                </ul>
+            </div>
+            <div class="skill-section">
+                <div class="skill-title active-title">アクティブ：「電磁誘導」</div>
+                <ul class="skill-list">
+                    <li>「磁石」を使用することで、半径50ブロック以内に刺さっている矢を一斉に自身の周りに纏うことができる（誰が放った矢でもよい）。</li>
+        <li>纏うことの出来る矢の数は一度に最大5本までである。</li>
+        <li>矢を纏っている間、他プレイヤーからの被ダメージを無効化し、一度無効化するごとに纏っている矢が1本ずつ消滅する。</li>
+        <li>矢を纏っていられるのは60秒間までであり、60秒が経過すると纏っていた矢は落ちて消滅する。</li><br>
+
+        <li>矢を纏っている状態で再度「磁石」を使用すると、視線の先に纏っていた矢を一斉に放つことができる。</li>
+        <li>放った矢も他プレイヤーに対して、現在の矢と同じダメージを与える。同じプレイヤーに複数の矢が当たった場合も、それぞれの矢がダメージを与える。</li>
+        <li>纏っていた矢を放つか、纏っていた矢が全て消滅してから、再度「磁石」を使用できるようになるまで45秒間のクールダウンが発生する。</li>
+                </ul>
+            </div>
+        </div>
+        </details>
+
     <!-- 残りの異能も上記の details タグの塊をコピーして追加してください -->
                         </div>
                     </div>
@@ -1386,7 +1474,7 @@
                             <li>特殊異能が選出されたゲームでは、ゲーム開始時に、特殊異能力者が誰で、その特殊異能が何であるかが全てのプレイヤーに告知される。</li><br>
                             
                             <li>特殊異能力者以外の全てのプレイヤーは、「同陣営」として扱われる。</li>
-                            <li>同陣営のプレイヤーに対しては、盲目・鈍足・発光・足止め・視線の固定・炎上・行動不能・異能の無効化・アイテムの盗難・罠・爆風・指名手配・「魔女裁判」の告発・異能のすり替え・異能の削除・「デュエル・フィールド」への転送・「海賊」の「見聞」による必中の一撃と「王の素質」といった負の異能効果は対象とならずに影響を与えない。</li>
+                            <li>同陣営のプレイヤーに対しては、盲目・鈍足・発光・足止め・視線の固定・炎上・行動不能・異能の無効化・アイテムの盗難・罠・爆風・指名手配・「魔女裁判」の告発・異能のすり替え・異能の削除・「デュエル・フィールド」への転送・「海賊」の「見聞」による必中の一撃と「王の素質」・「跳弾」の反射によるダメージと「チェイン・ストリンガー」による反射といった負の異能効果は対象とならずに影響を与えない。</li>
                             <li>ただし、矢と近接の与ダメージは同陣営のプレイヤーにも与えることができ、「魔術」の「入れ替わり」（位置の入れ替え）や「模倣」による異能のコピーなどの負ではない異能効果も、同陣営のプレイヤーに対して影響を与える。</li>
                             <li>「魔女裁判」の開廷中は例外として、同じ陣営のプレイヤーを含む全てのプレイヤーが行動不能となる。</li><br>
                             
