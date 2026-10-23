@@ -35,6 +35,28 @@ HTML・CSS・JavaScript だけの静的サイトで、GitHub Pages でそのま�
 `data/items.json` は、サーバーのMODのjarから自動で作ったものです（手で直さないでください）。
 MODを足したり版を上げたりしたときは、作り直します。補足はデータではなく `content/item-notes.md` に書きます。
 
+### 作り直し方
+
+`tools/gen_items.py` を、MODのjarがあるサーバー上で動かします（Python 3.11以上）。
+
+```
+python3 -I tools/gen_items.py <modsのフォルダ> <バニラの extra.jar> <NeoForge の universal.jar> <バニラの ja_jp.json> data/items.json
+```
+
+- modsのフォルダ：日常鯖の `mods/`（パックと同じ版のjar）
+- extra.jar：サーバーの `libraries/net/minecraft/server/<版>/server-<版>-extra.jar`
+- universal.jar：サーバーの `libraries/net/neoforged/neoforge/<版>/neoforge-<版>-universal.jar`
+- ja_jp.json：Prism の `assets/indexes/17.json` で `minecraft/lang/ja_jp.json` のハッシュを調べ、`assets/objects/` から取り出したもの
+
+### 動作の確かめ方
+
+`tools/smoke.js` は、ブラウザを模した環境（jsdom）で主な画面を開いて確かめる試験です（Node.js と jsdom が必要）。
+
+```
+node tools/smoke.js <nichijo-wikiのフォルダ>      # 手元のファイルで
+node tools/smoke.js https://ryuuuu2714.github.io/works/nichijo-wiki/   # 公開中のサイトで
+```
+
 ## 公開に関する注意
 
 このサイトは誰でも見られます。サーバーのアドレス、配布用の zip、パスワード、友人の個人情報は書かないでください。
