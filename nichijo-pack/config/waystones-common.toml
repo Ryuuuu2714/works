@@ -58,7 +58,7 @@
 	#Set to false to disable durability loss on warp stones.
 	enableDurability = true
 	#List of warp requirements with comma-separated parameters in parentheses. Conditions can be defined as comma-separated list in square brackets. Will be applied in order.
-	warpRequirements = ["[is_interdimensional] refuse(別の次元へはウェイストーンで転移できません)", "[source_is_warp_stone] refuse(ワープストーンでは転移できません。ウェイストーンを使ってください)", "[is_not_interdimensional] scaled_add_item_cost(distance, irons_spellbooks:arcane_essence, 0.004)", "min_item_cost(irons_spellbooks:arcane_essence, 1)", "max_item_cost(irons_spellbooks:arcane_essence, 8)", "[target_is_global] multiply_item_cost(irons_spellbooks:arcane_essence, 0)", "[source_is_warp_plate] multiply_item_cost(irons_spellbooks:arcane_essence, 0)", "add_cooldown(warp, 300)", "[source_is_warp_plate] multiply_cooldown(warp, 0)"]
+	warpRequirements = ["[is_interdimensional] refuse(別の次元へはウェイストーンで転移できません)", "[source_is_warp_stone] refuse(ワープストーンでは転移できません。ウェイストーンを使ってください)", "[is_not_interdimensional] scaled_add_item_cost(distance, waystones:warp_dust, 0.004)", "min_item_cost(waystones:warp_dust, 1)", "max_item_cost(waystones:warp_dust, 8)", "[target_is_global] multiply_item_cost(waystones:warp_dust, 0)", "[source_is_warp_plate] multiply_item_cost(waystones:warp_dust, 0)", "add_cooldown(warp, 300)", "[source_is_warp_plate] multiply_cooldown(warp, 0)"]
 	#Set to ENABLED to have nearby pets teleport with you. Set to SAME_DIMENSION to have nearby pets teleport with you only if you're not changing dimensions. Set to DISABLED to disable.
 	#Allowed Values: ENABLED, SAME_DIMENSION, DISABLED
 	transportPets = "DISABLED"

@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/waystones-common.toml"
-hash = "4bdbe1829b976e37689bf8de85e150bc28b04faec07cb0322854c71545f9a32d"
+hash = "78bbab695755f0af494dfd848fc4630f99b31c5e39d34f29d6218718f64cddb4"
 
 [[files]]
 file = "mods/apotheosis.pw.toml"
