@@ -1,0 +1,9 @@
+{
+ "apothic_attributes:cooldown_reduction": "クールダウン短縮",
+ "apothic_attributes:cooldown_reduction.desc": "発動する能力や効果のクールダウンを短くする。クールダウンには⌛の記号が付いている。",
+ "attribute.name.generic.gravity.desc": "地面へ向かう加速度（ブロック/秒²）",
+ "attribute.name.generic.step_height.desc": "ジャンプせずに上れる段差の高さ（ブロック）。",
+ "attribute.name.player.block_interaction_range.desc": "ブロックに手が届く距離（ブロック）。",
+ "attribute.name.player.entity_interaction_range.desc": "生き物に手が届く距離（ブロック）。",
+ "comment_id": "ダメージの種類"
+}

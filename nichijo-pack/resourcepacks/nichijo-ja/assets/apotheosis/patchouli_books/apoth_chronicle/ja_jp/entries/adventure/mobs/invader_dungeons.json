@@ -1,0 +1,17 @@
+{
+    "name": "侵略者のダンジョン",
+    "icon": "minecraft:spawner",
+    "category": "apotheosis:adventure/mobs",
+    "flag": "apotheosis:adventure",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "大地の奥深く、古の洞窟には、称号の秘めた力を宿す建造物が隠されている。その力を自由に持ち帰れるならありがたいのだが、あいにく、檻に囚われた侵略者が守っている。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "地下には、こうした建造物がいくつかの種類で存在する。どのダンジョンにも、檻に囚われた侵略者と、戦利品の入ったチェストがいくつかある。檻は近づくと作動し、侵略者を解き放つ。"
+        }
+    ]
+}

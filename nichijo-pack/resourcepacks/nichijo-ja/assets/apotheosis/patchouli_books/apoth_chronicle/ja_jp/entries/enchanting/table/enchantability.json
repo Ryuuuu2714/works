@@ -1,0 +1,16 @@
+{
+    "name": "エンチャント適性",
+    "category": "apotheosis:enchanting/table",
+    "icon": "minecraft:golden_sword",
+    "flag": "apotheosis:enchanting",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "バニラでは、アイテムのエンチャント適性は$(fpower_jajp)に加わる。$(p)Apotheosisではそれをなくし、代わりにエンチャント適性を、付いたエンチャントそれぞれを強める確率として扱う。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "付いたエンチャントはそれぞれ、アイテムのエンチャント適性に応じた確率で、レベルが1つ上がる。$(p)これにより、ふつうの最大レベルを超えることもある。そうしたレベルは、名前に星印が付く。"
+        }
+    ]
+}

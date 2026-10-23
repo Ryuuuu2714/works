@@ -1,0 +1,7 @@
+{
+    "name": "Apothicのモブ",
+    "description": "Apotheosisは、ワールドに現れるモブに特殊な種類をいくつか加える。$(p)この章では、どんなモブがいて、どこで出会えるのかを説明する。",
+    "icon": "apotheosis:boss_summoner",
+    "flag": "apotheosis:adventure",
+    "parent": "apotheosis:adventure/adventure"
+}

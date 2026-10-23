@@ -1,0 +1,7 @@
+{
+ "placebo.cmd.not_found": "%sが見つかりません。",
+ "placebo.cmd.serialize_failure": "書き出しの途中でエラーが起きました。",
+ "placebo.cmd.serialize_success": "%sを%sに保存しました。",
+ "placebo.toggleTrails": "支援者の軌跡の表示切り替え",
+ "placebo.toggleWings": "支援者の翼の表示切り替え"
+}

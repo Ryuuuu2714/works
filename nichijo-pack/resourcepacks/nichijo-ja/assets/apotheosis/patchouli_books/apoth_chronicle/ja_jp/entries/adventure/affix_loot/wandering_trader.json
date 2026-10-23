@@ -1,0 +1,25 @@
+{
+    "name": "行商人",
+    "icon": "minecraft:emerald",
+    "category": "apotheosis:adventure/affix_loot",
+    "flag": "apotheosis:adventure",
+    "sortnum": 10,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "家の庭先にいつの間にか現れる、あの怪しげな商人に会ったことはあるだろうか？$(p)彼らは$(9)行商人$()と呼ばれている。$(p)ふだんはろくでもないガラクタしか売っていない。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "しかしApotheosisは、彼らの品ぞろえに新しい取引を大量に加えるので、相手をする価値が生まれる。$(p)$(9)ビーコン$()や$(9)不死のトーテム$()のほか、ランダムな$(9)称号付きアイテム$()も並ぶ。代金はエメラルドと、そのアイテムの修理素材だ。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(9)頂点$()と$(9)天上界$()では、あらかじめ強力に仕上げられた装備が並ぶこともある。その多くは、Apothic Enchanting か Apothic Spawners が入っていないと出てこない。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "さらにApotheosisでは、行商人がより頻繁に現れ、とどまる時間が短くなり、地下にも出現するようになる（設定で変更できる）。"
+        }
+    ]
+}

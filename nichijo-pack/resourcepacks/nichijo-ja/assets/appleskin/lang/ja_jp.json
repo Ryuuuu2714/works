@@ -1,0 +1,4 @@
+{
+ "appleskin.configuration.showFoodStatsInDebugOverlay": "デバッグ画面に食べ物の数値を表示する",
+ "appleskin.configuration.showFoodStatsInDebugOverlay.tooltip": "trueにすると、デバッグ画面に満腹度・隠し満腹度・消耗度を表示します"
+}

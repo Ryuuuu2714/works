@@ -1,0 +1,10 @@
+{
+ "category.cloth-config.testing": "設定のデモ",
+ "text.cloth-config.boolean.value.false": "§cいいえ",
+ "text.cloth-config.boolean.value.true": "§aはい",
+ "text.cloth-config.disabled_tooltip": "無効（条件を満たしていません）",
+ "text.cloth-config.dropdown.value.unknown": "§c候補はありません",
+ "text.cloth-config.error_cannot_save": "エラー！",
+ "text.cloth-config.testing.1": "あなたはMOD開発者で、%1$sを使ってみたいですか？%2$sで始め方を見てください。%3$sこともできます。",
+ "text.cloth-config.testing.3": "（特に理由はありませんが）ここをクリックしてMinecraftの設定ファイルを開く"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "エリート",
+    "icon": "minecraft:skeleton_skull",
+    "category": "apotheosis:adventure/mobs",
+    "flag": "apotheosis:adventure",
+    "sortnum": 3,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "ワールドのあちこちで、名前の付いたモブや、強化されたモブを見かけることがあるだろう。$(p)それはおそらく$(9)Apothicのエリート$()だ。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "エリートは、ふつうのモブの代わりにランダムで現れる。$(p)侵略者のような派手な登場はしないので、油断は禁物だ。$(p)称号付きアイテムを落とすこともある。"
+        }
+    ]
+}

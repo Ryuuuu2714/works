@@ -1,0 +1,7 @@
+{
+    "name": "ジェムとソケット",
+    "description": "きらめく石は、いつの世も人の目を引くものだ。$(p)Apothicのジェムを探してみよう。称号付きアイテムにはめ込むと、さまざまなボーナスが得られる。",
+    "icon": "apotheosis:gem",
+    "flag": "apotheosis:adventure",
+    "parent": "apotheosis:adventure/adventure"
+}

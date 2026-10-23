@@ -1,0 +1,37 @@
+{
+    "name": "ワールドレベル",
+    "icon": "apotheosis:textures/gui/book/summit_icon.png",
+    "category": "apotheosis:adventure/world_tiers",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(6)ワールドレベル$()は、プレイヤーごとに決まる、世界の強さの段階だ。どんな要素が現れるか、敵がどれだけ強いか、どんなボーナスが得られるかなどが、レベルによって決まる。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "5つのレベル",
+            "text": "レベルは5つあり、上がるごとに世界の難しさも、手に入る報酬も増していく。$(p)$(9)安全地帯$()、$(9)冒険$()、$(9)進撃$()、$(9)頂点$()、$(9)天上界$()の5つだ。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "レベルごとの強化",
+            "text": "それぞれのレベルには強化がある。そのレベルのプレイヤーや、そこで出現したモブにかかる補正だ。$(p)エンチャントの$(eterna_jajp)の上限や、頂点・天上界でのモンスターのダメージ軽減などがある。$(p)一覧は$(l:apotheosis:adventure/world_tiers/select_screen)選択画面$()で見られる。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "レアリティの出やすさ",
+            "text": "ワールドレベルは、レアリティごとの出やすさも決める。$(p)進むにつれて、レアリティの高いアイテム（と侵略者）が増えていく。$(p)正確な確率は$(l:apotheosis:adventure/world_tiers/select_screen)ワールドレベル選択画面$()に表示される。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "ジェム",
+            "text": "ワールドレベルによって、出てくるジェムの種類と、その純度も変わる。$(p)こちらも、純度ごとの詳しい確率は選択画面で見られる。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "その他",
+            "text": "ワールドレベルは、称号や称号付きの戦利品、エリートなど、ほかのものの出やすさも変えることがある。$(p)これらの値はどこにも表示されないが、レベルによって違うものが見つかるかもしれない。"
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+ "command.yungsapi.locate.replaced": "代わりに%1$sを使ってください！",
+ "dataPack.yungsapi.locate_replacer.description": "置き換えたバニラの構造物を、構造物を探すMODから隠す。",
+ "dataPack.yungsapi.locate_replacer.name": "YUNG's APIで置き換えたバニラの構造物"
+}

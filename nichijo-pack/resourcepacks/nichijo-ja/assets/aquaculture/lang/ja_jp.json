@@ -1,0 +1,16 @@
+{
+ "aquaculture.message25": "NullPointerException：Aquaculture.MessageInABottle (String) を null にすることはできません。",
+ "entity.aquaculture.water_arrow": "矢",
+ "tag.item.aquaculture.bobber": "浮き",
+ "tag.item.aquaculture.fish_mount": "魚拓",
+ "tag.item.aquaculture.fishing_line": "釣り糸",
+ "tag.item.aquaculture.hook": "針",
+ "tag.item.aquaculture.tackle_box": "道具箱",
+ "tag.item.aquaculture.tackle_box_green": "道具箱用の緑色の染料",
+ "tag.item.aquaculture.turtle": "カメ",
+ "tag.item.aquaculture.turtle_edible": "食べられるカメ",
+ "tag.item.c.ingots.neptunium": "ネプツニウムインゴット",
+ "tag.item.c.nuggets.neptunium": "ネプツニウム塊",
+ "tag.item.c.storage_blocks.neptunium": "ネプツニウムブロック",
+ "tag.item.c.tools.knife": "ナイフ"
+}

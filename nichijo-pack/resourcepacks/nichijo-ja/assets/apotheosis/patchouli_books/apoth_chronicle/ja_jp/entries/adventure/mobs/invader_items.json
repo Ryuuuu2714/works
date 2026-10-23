@@ -1,0 +1,17 @@
+{
+    "name": "侵略者のアイテム",
+    "icon": "minecraft:ender_chest",
+    "category": "apotheosis:adventure/mobs",
+    "flag": "apotheosis:adventure",
+    "sortnum": 2,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "侵略者は、エンチャントされていることの多い装備に加えて、称号付きアイテムをちょうど1つ身につけている。$(p)この称号付きアイテムは倒すと必ず落とし、レアリティは侵略者と同じになる。$(p)その称号は、ふつうより強い。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "このアイテムこそが侵略者を倒して持ち帰る戦利品であり、その価値は十分にあるだろう。$(p)元の持ち主の形見として、どのアイテムにも、名前の前に侵略者の名前が付いている。"
+        }
+    ]
+}

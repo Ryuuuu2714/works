@@ -1,0 +1,19 @@
+{
+    "name": "ジェム加工",
+    "icon": "apotheosis:gem_cutting_table",
+    "category": "apotheosis:adventure/gems",
+    "flag": "apotheosis:adventure",
+    "sortnum": 5,
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "apotheosis:gem_cutting_table",
+            "text": "$(9)ジェム加工台$()は、$(l:apotheosis:adventure/gems/gems)ジェム$()の等級を上げるのに使う。$(p)ふつうは$(9)ジェムの粉$()、$(9)レアリティ素材$()、同じ純度のジェムがもう1つ必要だ。"
+        },
+        {
+            "title": "等級上げのコスト",
+            "type": "patchouli:text",
+            "text": "ジェムの等級上げのコストは、純度が上がるほど増える。$(p)強いジェムほど、多くの$(9)ジェムの粉$()と、上位の$(9)レアリティ素材$()が要る。$(p)正確なコストはJEIで確かめられる。"
+        }
+    ]
+}

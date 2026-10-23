@@ -1,0 +1,23 @@
+{
+ "apothic_enchanting:max_eterna": "最大エテルナ",
+ "apothic_enchanting:max_eterna.desc": "エンチャント台で使えるエテルナの上限。",
+ "block.apothic_enchanting.apothic_enchanting_table": "Apothicのエンチャント台",
+ "block.apothic_enchanting.apothic_enchanting_table.desc": "見た目だけが違うエンチャント台。",
+ "block.apothic_enchanting.basic_bookshelf": "簡素な本棚",
+ "block.apothic_enchanting.raven_enchanting_table": "大鴉のエンチャント台",
+ "block.apothic_enchanting.raven_enchanting_table.desc": "主なエンチャント属性を、自分で調整できる。",
+ "gui.apothic_enchanting.enchant.eterna.limited": "最大エテルナのステータスにより、%sまでに制限されています",
+ "gui.apothic_enchanting.enchant.eterna.limited.world_tier": "ワールドレベル（CTRL+T）により、%sまでに制限されています",
+ "gui.apothic_enchanting.enchant.stability": "クアンタの安定",
+ "info.apothic_enchanting.leash_no_entity": "捕まえている生き物：なし",
+ "info.apothic_enchanting.leashed_entity": "捕まえている生き物：%s",
+ "item.apothic_enchanting.ender_lead": "エンダーリード",
+ "item.apothic_enchanting.ender_lead.desc": "ほとんどの生き物を捕まえて運べる",
+ "item.apothic_enchanting.flimsy_ender_lead": "脆いエンダーリード",
+ "item.apothic_enchanting.flimsy_ender_lead.desc": "動物を捕まえて運べる",
+ "item.apothic_enchanting.music_disc_arcana": "レコード",
+ "item.apothic_enchanting.music_disc_eterna": "レコード",
+ "item.apothic_enchanting.music_disc_quanta": "レコード",
+ "item.apothic_enchanting.occult_ender_lead": "秘儀のエンダーリード",
+ "item.apothic_enchanting.occult_ender_lead.desc": "ほとんどの生き物を捕まえて運べ、モンスタースポナーに結び付けられる"
+}

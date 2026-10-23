@@ -1,0 +1,6 @@
+{
+ "commands.sophisticatedbackpacks.template.unsupported_host": "テンプレートを使うには、リュックを中心にした連結ストレージのグループが必要です",
+ "gui.sophisticatedbackpacks.buttons.upgrade_switch_disabled": "オフ",
+ "sophisticatedbackpacks.configuration.common": "共通",
+ "sophisticatedbackpacks.configuration.server": "サーバー"
+}

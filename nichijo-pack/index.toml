@@ -5,6 +5,10 @@ file = "config/waystones-common.toml"
 hash = "78bbab695755f0af494dfd848fc4630f99b31c5e39d34f29d6218718f64cddb4"
 
 [[files]]
+file = "config/yosbr/options.txt"
+hash = "e7b5e4951dd78a3b7b54bc4dd753554698b3f1e7b485029ce38cde7c4d2a0684"
+
+[[files]]
 file = "mods/apotheosis.pw.toml"
 hash = "e154d7fb16dc7eb6ace7b88b3896955bb66f58c2daafe93c7ae3327ee418a509"
 metafile = true
@@ -268,3 +272,247 @@ metafile = true
 file = "mods/yungs-better-dungeons.pw.toml"
 hash = "1496ffa30020676979e65921b91e583a2fdc77e50001e2ed55f99edf1a0ae880"
 metafile = true
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/lang/ja_jp.json"
+hash = "e6cbdc248c076250b5817185722c3a53d66edb542fb10a5fb0826144af0ff530"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/adventure/gems.json"
+hash = "55560b96db4e6a30384d379dc8688dc1299510572e04542619fbe89ad6aeeb84"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/adventure/mobs.json"
+hash = "4e1393aa586cd74bb8d34437d52fa49c825662c6b0f09d56b2e10775155e18d9"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/adventure/world_tiers.json"
+hash = "e137d2d3ae34b9cfbd08821b84e4faf3c903c5799b1002bb38ae17a48baeeb5f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/affix_loot/affixes.json"
+hash = "42d8477d76a62d92fdb5fb4bcbc5efac25a37d7356419886d1f41f0440636019"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/affix_loot/wandering_trader.json"
+hash = "e1d58cdba91a24fd2c4e38c4832c720f51b1325874fdbd5e6be662b13f454e55"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/overheal.json"
+hash = "f00b3b4cd1d640e9cc2cc0ec107b1ea995e7caf282188876b2d7c2ad2b1f117f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/gems/gem_case.json"
+hash = "6c8b0fabb8893a9fc552f27b9d0208b8a0d704849d2a100290f39084a6083b31"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/gems/gem_cutting.json"
+hash = "f4bfb18fecf9d96b8d516e2669bfcc27cedacb02306c6764297485c29024cda5"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/gems/gem_dust.json"
+hash = "59cfdefec083cb00d93dee7cb26c6bfdd2866a2b282cad5311091d7cfc39f11b"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/gems/gems.json"
+hash = "5ef6d8692b43b0b1ead648de3de1ba43ce85efc41623a8dd976645eac14212f5"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/mobs/elites.json"
+hash = "c97aef43150990bee777d582558bf995eff4248df3988dc950fd75d5d5350fb5"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/mobs/invader_dungeons.json"
+hash = "3e0e0034b8baa407f5c4dbd8c74224f3db53d25ec2cedf1068f9bb0fdf8b2a08"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/mobs/invader_items.json"
+hash = "9439a673e385b6ebd6b2ce6a037c30120dc46fee2efd6166e9affbb1febe5569"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/mobs/invaders.json"
+hash = "3e3fb6be5021bccc41bc1bff32d9f7a8e9683f5c405104424dadcac565cf80df"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/world_tiers/select_screen.json"
+hash = "dd4ae68890cc8d61ad830c4fe064a358517bbee6f2c12b9b5e9a22e997c3a3c4"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/world_tiers/unlocking_tiers.json"
+hash = "0e987aa5ad7ac3c29e1ad845f7f66f3b558c5fb0d6db0441ef7b3d727a9a23a9"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/world_tiers/world_tiers.json"
+hash = "20d52fa1ce02e23a758d2a8c61207d847e977576d3f3af4edbab4a65d38b04db"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/earths_boon.json"
+hash = "ed43f22ae667af72d6a903e969d5272eebc9dee55beba4c19e4a590b9e280641"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/table/enchantability.json"
+hash = "be627c386764f9f10045d4488df671b14905eb2e44e772609ba900db620915d9"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/effects/bleeding.json"
+hash = "4f039908eed5fcb855654427e2f8f43ccdd792585a3c8215595a58d3840ac832"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/spawner/runes.json"
+hash = "a8679313553930ad71f74f9a2c1b30c5fcd028b727ec53d7741aca843b6ac61f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apothic_attributes/lang/ja_jp.json"
+hash = "e4266af37d1f1692157bf3a37030073e7be1e964663f6ee033b79ce286c41efb"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apothic_enchanting/lang/ja_jp.json"
+hash = "2f73373e502ed0fd8b9dbb02d8a885a7ffef521a75268d0043f8006a15e4232f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apothic_spawners/lang/ja_jp.json"
+hash = "8e6519ac452273886e718044d6a9e026a1fe247dd315dfaebc36630e40d23b75"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/appleskin/lang/ja_jp.json"
+hash = "8ec36e2fbee1b5da0ca71017f0c912a67c93b67790ce7f46452470aee6c299af"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/aquaculture/lang/ja_jp.json"
+hash = "c56667ae57348681ae6ffcf52d9a9c6650510500380e85097be955005e4ce5ff"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/balm/lang/ja_jp.json"
+hash = "e56a11bfd8ffa7578fa814e9661f58b05c13a3b6644c32c4d633d829190c45aa"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/bettercombat/lang/ja_jp.json"
+hash = "e49e10daa02cc8cf7e1c3fb503e781ef332113341788aefa27b18a26460fe26f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/betterdungeons/lang/ja_jp.json"
+hash = "2187b0200711a658d017c70e46ff24673686bc0165d1ebebfb1c5b41d5d86c9f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/bookshelf/lang/ja_jp.json"
+hash = "f3209e523f8cec7976b3ce03b299dc26fda61a3c2e31f48edcf1bf90482a1df5"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/cataclysm/lang/ja_jp.json"
+hash = "22069273e6f2b5d1d7088260e57b1386cafb6b5b06670e1df12a2a1a128eeb05"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/clientsort/lang/ja_jp.json"
+hash = "7b9fe7b899b754d9244f58b216c86aa3c1ed626de3820cfca5d8209245af4b61"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/cloth-config2/lang/ja_jp.json"
+hash = "1ddc751b2162d7537deabc91a0b68a61e7d7bdebd87b0ad5ee724b612b634878"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/controlling/lang/ja_jp.json"
+hash = "b926fdfc2ce02fb6bca4ae5ecd557d2ac6f7a75779dcd0872108260e217e7f37"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/corpse/lang/ja_jp.json"
+hash = "4d637e3e7c34717618941792cc8f96ea1d3d1b9c7b95a00857f72b435126af29"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/curios/lang/ja_jp.json"
+hash = "40bc9a766094a4e93b7c2663a2313c7fcafd6ce7e45692cb665c89d29aed53c4"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/dnt/lang/ja_jp.json"
+hash = "7df4e76495af35d1e50761c58f26e942ea9614f99014569fb4eab41766f6ec79"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/dungeons_arise/lang/ja_jp.json"
+hash = "0627f1e2423ea12010b1eb0044913641317a3abb99d84b49b240ffd811be55c2"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/dynamic_fps/lang/ja_jp.json"
+hash = "0395f4da748e7ec4ad3d38e82215bea78ad0a2f239fdbd1ab2c4c8936bbe3753"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/enchdesc/lang/ja_jp.json"
+hash = "66cc8dbfba5aa925f67331fda531e0737f81175226c673b2b1e97b15ab061547"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/entityculling/lang/ja_jp.json"
+hash = "c054680c9c2de1bf49ca784a0ac12bbad22a616c25e074437b4ceb9c529f7515"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/fallingtree/lang/ja_jp.json"
+hash = "8cfd42d5edabc19571068a6e9a584e8e54ba7421492c9983615203b3024029fe"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/handcrafted/lang/ja_jp.json"
+hash = "9d1ec5f369b5d7d1b5fd8b3732c69e1dd0d39dd38813529c2c05e8ccae92ca9f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/irons_lib/lang/ja_jp.json"
+hash = "4186da7eeb10b45d84f3d139c1ea4559efd3da6a1651057689554302900ea875"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/irons_patreon_lib/lang/ja_jp.json"
+hash = "659f75a2231da2a0cb81d5ca4b72db68ff34f53bd5edc1505fcc4f9025403cb6"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/irons_spellbooks/lang/ja_jp.json"
+hash = "f807cfa5761842292cca428fbe7abc08d57aef5becb13452d5de878d52c4cfa6"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/jade/lang/ja_jp.json"
+hash = "186e8e269ccbec909a1cea82a5af0ebe8925d4d107ee6265f146b16dac5e8598"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/jei/lang/ja_jp.json"
+hash = "11a98adfef32794702fbcb10861a58b5daf181bbb89b4b76065035c5c1e5734d"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/lionfishapi/lang/ja_jp.json"
+hash = "704bcd044cbc9dfc17958caa5c889da379f6dfce39e7181c0d6c8b92170f36e7"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/lootr/lang/ja_jp.json"
+hash = "5f6039812c9d3678e7361919e0133016b7f1f60dffb20697359b07a5d0505196"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/modernfix/lang/ja_jp.json"
+hash = "ebdca899ae51712af200e5fb54530692cd461c36b3c7fba0a94e97981173ab83"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/mowziesmobs/lang/ja_jp.json"
+hash = "bb9e1ff52f4d6d3592c35f09e1e95fe03c681e98728707240f75bae78349a455"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/patchouli/lang/ja_jp.json"
+hash = "70608360535801d5eb5e80bd256b1c8c5674d2811f019b8aebe9841151716cd9"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/placebo/lang/ja_jp.json"
+hash = "f6d326f6c3813a07ca191ef0802b41a05190a69956f4c9c0280f6de8c1431879"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/polymorph/lang/ja_jp.json"
+hash = "cdbe042783823983d61b0748518de55266a6335fc514f08558b2d2ed067d6163"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/sophisticatedbackpacks/lang/ja_jp.json"
+hash = "0aab1d297f47d69bf166368220a6046831274ba591fd76cf97fe2c815eba5ef3"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/sophisticatedcore/lang/ja_jp.json"
+hash = "6e09946bb93b2c3051a7b2dc3fd1435db67b6b7ee33c637249e3ff7c1cd5e5f0"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/waystones/lang/ja_jp.json"
+hash = "6f8a223ef06aac0f5cef02733fdfc842e7cb1883d07b2b819ed7a48eb83160a4"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/yungsapi/lang/ja_jp.json"
+hash = "910aec4bb73ef705ba1152a25faa06aaf0321bdc5a9615ab55178b336a101161"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/pack.mcmeta"
+hash = "d80739d81d000da8d52c7fc47b6a1e974db917232c154598903d5389a0fbeaa7"

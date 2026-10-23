@@ -1,0 +1,33 @@
+{
+    "name": "Apothicの侵略者",
+    "icon": "minecraft:beacon",
+    "category": "apotheosis:adventure/mobs",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "奇妙な音、不思議な知らせ、そして空から降りる巨大な光の柱……$(p)そのすべてが、Apothicの侵略者の襲来を告げている！"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "出現の仕組み",
+            "text": "侵略者は、自然に湧くモンスターのごく一部と入れ替わって現れる。オーバーワールドでは地上か、地下ならあなたのいる深さの近くに。ネザーではどこにでも。エンドでは外側の島にだけ現れる。$(p)$(9)安全地帯$()では決して現れない。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "出現の仕組み",
+            "text": "侵略者が現れると、大きな音とメッセージ、そしてビーコンの光が知らせてくれる。$(p)ワールドレベルが高いほど侵略者は現れやすくなり、その割合はディメンションごとに違う。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "侵略者のレアリティ",
+            "text": "侵略者にはそれぞれレアリティがあり、名前と輪郭の色で分かる。$(p)レアリティの高い侵略者ほど強いが、そのぶん良い戦利品を落とす。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "戦利品",
+            "text": "侵略者は$(l:apotheosis:adventure/mobs/invader_items)特別な称号付きアイテム$()を必ず落とし、ふつうのモブより多くの戦利品を落とすこともある。$(p)ジェムも落としやすい。"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+ "item.held.two_handed": "両手持ち",
+ "text.autoconfig.bettercombat.option.client.firstPersonAnimations": "一人称のプレイヤーの動き",
+ "text.autoconfig.bettercombat.option.client.firstPersonAnimations.@Tooltip": "表示する攻撃のプレイヤーの動き。カメラを変えるMODを使っているとき以外は、変えないことをおすすめします。",
+ "text.autoconfig.bettercombat.option.client.isShowingWeaponTrails": "武器を振った軌跡を表示",
+ "text.autoconfig.bettercombat.option.client.isShowingWeaponTrails.@Tooltip": "どの視点でも、攻撃の武器の軌跡のパーティクルを描画する",
+ "text.autoconfig.bettercombat.option.client.isSwingThruGrassSmart": "草越しの攻撃を賢く行う",
+ "text.autoconfig.bettercombat.option.client.isSwingThruGrassSmart.@Tooltip": "攻撃範囲に敵がいるときだけ、草越しに攻撃する",
+ "text.autoconfig.bettercombat.option.client.isTooltipAttackRangeReformat": "説明欄：バニラのリーチの表記を変える",
+ "text.autoconfig.bettercombat.option.client.isTooltipAttackRangeReformat.@Tooltip": "「生き物に手が届く距離」を「攻撃範囲」と表記する",
+ "text.autoconfig.bettercombat.option.client.legAnimationThreshold": "脚の動きを止める",
+ "text.autoconfig.bettercombat.option.client.legAnimationThreshold.@Tooltip": "試験的：この速さより速く走っている間は、脚の動きを止める",
+ "text.autoconfig.bettercombat.option.client.mineWithWeaponWhitelist": "武器で採掘できるもの",
+ "text.autoconfig.bettercombat.option.client.mineWithWeaponWhitelist.@Tooltip": "IDがこの正規表現に一致する武器は、「武器で採掘」が無効でも、常にブロックを掘れる"
+}

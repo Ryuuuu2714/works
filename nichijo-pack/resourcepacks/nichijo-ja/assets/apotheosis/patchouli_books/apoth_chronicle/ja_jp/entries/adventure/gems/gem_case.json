@@ -1,0 +1,31 @@
+{
+    "name": "ジェムケース",
+    "icon": "apotheosis:gem_case",
+    "category": "apotheosis:adventure/gems",
+    "flag": "apotheosis:adventure",
+    "sortnum": 6,
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "apotheosis:gem_case",
+            "text": "$(9)ジェムケース$()は、$(l:apotheosis:adventure/gems/gems)ジェム$()をしまっておく入れ物だ。$(p)種類と純度ごとに3万2千個まで入り、強化すればさらに増やせる。"
+        },
+        {
+            "title": "絞り込み",
+            "type": "patchouli:text",
+            "text": "ジェムケースには、名前とアイテムの2つの絞り込みがある。$(p)名前の絞り込みでは、ジェムを名前で探せる。アイテムの絞り込みでは、特定のアイテムにはめ込めるジェムを探せる。"
+        },
+        {
+            "title": "ジェム加工",
+            "type": "patchouli:text",
+            "text": "ジェムケースには、強化の素材を入れておける補助のスロットも6つある。$(p)素材とジェムが十分にあれば、純度を上げるレシピに従って、ケースの中でそのままジェムの等級を上げられる。$(p)これで$(l:apotheosis:adventure/gems/gem_cutting)ジェム加工台$()は、ほぼお役御免だ。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "apotheosis:ender_gem_case",
+            "title": "至高のジェムケース",
+            "link_recipe": true,
+            "text": "$(9)ファベルジェ家のジェムケース$()は、$(6)容量$()が20億もある。$(p)直接クラフトはできず、$(l:apotheosis:enchanting/table/infusion)注入エンチャント$()で作る必要がある。"
+        }
+    ]
+}

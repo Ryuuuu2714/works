@@ -1,0 +1,17 @@
+{
+    "name": "オーバーヒール",
+    "icon": "minecraft:experience_bottle",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)オーバーヒール$()があると、与えた物理ダメージの一部が、衝撃吸収のシールドとして得られる。$(p)ライフスティールとは違い、オーバーヒールは体力が満タンのときに働く。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "吸収量の上限は最大体力の半分で、近接攻撃にだけ効く。$(p)このステータスは近接武器にだけ付く。"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "name": "ワールドレベル",
+    "description": "あなたが強くなるにつれ、まわりの世界もまた強くなっていく。$(p)この章では、Apothicのワールドレベルについて、何が変わるのか、どう解放するのか、どう切り替えるのかを説明する。",
+    "icon": "apotheosis:textures/gui/book/summit_icon.png",
+    "flag": "apotheosis:adventure",
+    "parent": "apotheosis:adventure/adventure"
+}
