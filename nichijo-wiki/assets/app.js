@@ -7,6 +7,12 @@
  *   #/p/名前       content/名前.md
  *   #/items?q=..  アイテム図鑑の検索
  *   #/item/ID     アイテムのページ
+ *
+ * Markdown の独自の書き方（README.md に例あり）:
+ *   [[アイテム名]]、[[表示名|名前かID]]   図鑑へのリンク
+ *   > 【注意】…                          囲み（注意・危険・ヒント・確認・メモ・目標・次の章へ）
+ *   ```概要 / ```段階 / ```順番           章の概要・ワールドレベルの道のり・矢印の流れ
+ *   {{進み具合}}、{{図鑑検索}}            進み具合の表、図鑑の検索窓
  */
 "use strict";
 (() => {
@@ -20,6 +26,9 @@
     waystones: ["Waystones", 172], handcrafted: ["Handcrafted", 88], lootr: ["Lootr", 54],
     patchouli: ["Patchouli", 0], minecraft: ["Minecraft", 110], note: ["メモ", 220],
   };
+  const TIERS = { 安全地帯: "haven", 冒険: "frontier", 進撃: "ascent", 頂点: "summit", 天上界: "pinnacle" };
+  const RARITIES = { コモン: "common", アンコモン: "uncommon", レア: "rare", エピック: "epic", ミシック: "mythic" };
+  const CALLOUTS = { 注意: "warn", 危険: "danger", ヒント: "tip", 確認: "check", メモ: "memo", 目標: "goal", 次の章へ: "next" };
 
   // ---- 小さな道具 -------------------------------------------------------------
   const $ = (s, el = document) => el.querySelector(s);
@@ -38,6 +47,7 @@
   const modHue = (m) => (MOD_INFO[m] ? MOD_INFO[m][1] : (hash(m).charCodeAt(0) * 37) % 360);
   const modBadge = (m) => `<span class="mod" style="--h:${modHue(m)}">${esc(modName(m))}</span>`;
   const itemHref = (id) => `#/item/${encodeURIComponent(id)}`;
+  const tierPill = (t) => `<span class="tier-pill tier-${TIERS[t]}">${esc(t)}</span>`;
 
   const texts = new Map();
   async function fetchText(path) {
@@ -45,7 +55,7 @@
       texts.set(path, fetch(path, { cache: "no-cache" }).then((r) => {
         if (!r.ok) throw new Error(`${r.status}`);
         return r.text();
-      }));
+      }).then((t) => t.replace(/\r\n?/g, "\n")));
     }
     try { return await texts.get(path); } catch (e) { texts.delete(path); throw e; }
   }
@@ -72,7 +82,7 @@
       if (!byName.has(it.n) || byName.get(it.n).v) byName.set(it.n, it);
     }
     // 図鑑のメモ（## 名前 の下に書いた文章を、そのアイテムに付ける。図鑑にない名前は新しい項目として足す）
-    for (const block of notesMd.replace(/\r/g, "").split(/^## /m).slice(1)) {
+    for (const block of notesMd.split(/^## /m).slice(1)) {
       const lines = block.split("\n");
       const title = lines.shift().trim();
       const meta = {};
@@ -148,25 +158,134 @@
   }
 
   // ---- Markdown -------------------------------------------------------------
+  const inline = (s) => window.marked.parseInline(s.trim());
+  const blockLines = (src) => src.split("\n").map((l) => l.trim()).filter(Boolean);
+
+  // ```名前 で始まる囲みを、図や表にする
+  const BLOCKS = {
+    // 章の概要。「キー: 値」を1行ずつ。キーが「レベル」なら色付きの札にする
+    概要(src) {
+      let tier = "";
+      let tierKey = "";
+      const rows = [];
+      for (const line of blockLines(src)) {
+        const m = line.match(/^([^:：]+)[:：]\s*(.*)$/);
+        if (!m) continue;
+        const k = m[1].trim();
+        const v = m[2].trim();
+        if (/^(レベル|ワールドレベル|位階)$/.test(k) && TIERS[v]) { tier = v; tierKey = k; }
+        else rows.push(`<div><dt>${esc(k)}</dt><dd>${inline(v)}</dd></div>`);
+      }
+      const cls = tier ? ` tier-${TIERS[tier]}` : "";
+      const head = tier ? `<p class="summary-tier"><span>${esc(tierKey)}</span>${tierPill(tier)}</p>` : "";
+      return `<div class="summary${cls}">${head}<dl>${rows.join("")}</dl></div>\n`;
+    },
+    // ワールドレベルの道のり。「レベル | 題 | 中身 | 次へ進む条件」を1行ずつ
+    段階(src) {
+      const steps = blockLines(src).map((line) => {
+        const [tier = "", title = "", desc = "", cond = ""] = line.split("|").map((s) => s.trim());
+        const cls = TIERS[tier] ? `tier-${TIERS[tier]}` : "tier-none";
+        return `<li class="route-step ${cls}"><span class="route-tier">${esc(tier)}</span><div class="route-body">`
+          + `<p class="route-title">${inline(title)}</p>`
+          + (desc ? `<p class="route-desc">${inline(desc)}</p>` : "")
+          + (cond ? `<p class="route-cond"><span>次へ</span>${inline(cond)}</p>` : "")
+          + `</div></li>`;
+      });
+      return `<ol class="route">${steps.join("")}</ol>\n`;
+    },
+    // 矢印の流れ。「A → B → C」を1行ずつ
+    順番(src) {
+      return blockLines(src).map((line) => `<p class="chain">${line.split(/\s*(?:→|->)\s*/)
+        .map((x) => `<span class="chain-item">${inline(x)}</span>`)
+        .join('<span class="chain-arrow">→</span>')}</p>`).join("") + "\n";
+    },
+  };
+  let markedReady = false;
+  function setupMarked() {
+    if (markedReady) return;
+    markedReady = true;
+    window.marked.use({
+      gfm: true,
+      breaks: true,   // 1回の改行も、そのまま改行として表示する
+      renderer: {
+        code(code, info) {
+          const f = BLOCKS[(info || "").trim()];
+          return f ? f(code) : false;
+        },
+      },
+    });
+  }
+
   function renderMarkdown(md, page) {
+    setupMarked();
+    md = md.replace(/\r\n?/g, "\n");
     // [[アイテム名]] / [[表示名|アイテム名かID]] を図鑑へのリンクにする
     md = md.replace(/\[\[([^\]|]+?)(?:\|([^\]]+?))?\]\]/g, (_, label, target) => {
       const t = (target || label).trim();
       return `<a class="ilink" data-q="${esc(t)}" href="#/items?q=${encodeURIComponent(t)}">${esc(label.trim())}</a>`;
     });
-    md = md.replace(/^\{\{\s*進み具合\s*\}\}\s*$/gm, '<div class="widget" data-widget="progress"></div>');
-    md = md.replace(/^\{\{\s*図鑑検索\s*\}\}\s*$/gm, '<div class="widget" data-widget="search"></div>');
-    const html = window.marked.parse(md, { gfm: true, breaks: false });
+    // 部品の行は前後を空けて置く（続く見出しが部品の一部と読まれないように）
+    md = md.replace(/^[ \t]*\{\{\s*進み具合\s*\}\}[ \t]*$/gm, '\n<div class="widget" data-widget="progress"></div>\n');
+    md = md.replace(/^[ \t]*\{\{\s*図鑑検索\s*\}\}[ \t]*$/gm, '\n<div class="widget" data-widget="search"></div>\n');
     const wrap = document.createElement("div");
     wrap.className = "prose";
-    wrap.innerHTML = html;
+    wrap.innerHTML = window.marked.parse(md);
+    decorate(wrap, page);
+    return wrap;
+  }
+
+  function decorate(wrap, page) {
     // 見出しに目印を付ける（目次用）
-    $$("h2, h3", wrap).forEach((h, i) => { h.id = `s${i + 1}`; });
+    $$("h2, h3", wrap).forEach((h, i) => { h.id = `s${i + 1}`; h.dataset.title = h.textContent.trim(); });
     // リンクの書き換え：xxx.md → #/p/xxx、外部リンクは別タブ
     $$("a[href]", wrap).forEach((a) => {
       const href = a.getAttribute("href");
       if (/^https?:\/\//.test(href)) { a.target = "_blank"; a.rel = "noopener"; }
       else if (/\.md(#.*)?$/.test(href) && !href.startsWith("#")) a.setAttribute("href", "#/p/" + href.replace(/\.md(#.*)?$/, ""));
+    });
+    // 【注意】などで始まる引用は囲みにする。1つの引用に【…】の段落が複数あれば、それぞれ別の囲みに分ける
+    const LABEL = /^\s*【([^】]{1,8})】\s*(<br>\s*)?/;
+    $$("blockquote", wrap).forEach((bq) => {
+      const ps = Array.from(bq.children);
+      const starts = ps.map((p, i) => (i > 0 && p.tagName === "P" && LABEL.test(p.innerHTML) ? i : -1)).filter((i) => i > 0);
+      let after = bq;
+      starts.forEach((s, k) => {
+        const nb = document.createElement("blockquote");
+        ps.slice(s, starts[k + 1] ?? ps.length).forEach((p) => nb.append(p));
+        after.after(nb);
+        after = nb;
+      });
+    });
+    $$("blockquote", wrap).forEach((bq) => {
+      const p = bq.firstElementChild;
+      const m = p && p.tagName === "P" && p.innerHTML.match(LABEL);
+      if (!m) return;
+      p.innerHTML = p.innerHTML.slice(m[0].length);
+      bq.classList.add("callout", `callout-${CALLOUTS[m[1]] || "memo"}`);
+      bq.insertAdjacentHTML("afterbegin", `<p class="callout-label">${esc(m[1])}</p>`);
+    });
+    // 表：スマホでカードにするための見出しの写し、レアリティとワールドレベルの色
+    $$("table", wrap).forEach((t) => {
+      const heads = $$("thead th", t).map((th) => th.textContent.trim());
+      const stack = heads.length >= 3;
+      $$("tbody tr", t).forEach((tr) => $$("td", tr).forEach((td, i) => {
+        if (heads[i]) td.dataset.label = heads[i];
+        const txt = td.textContent.trim();
+        if (TIERS[txt]) td.innerHTML = tierPill(txt);
+        else if (RARITIES[txt]) td.innerHTML = `<span class="rarity rarity-${RARITIES[txt]}">${esc(txt)}</span>`;
+        // カード表示では「見出し｜中身」の2つに並べるので、中身（文字とリンクのまざり）を1つにまとめる
+        if (stack && td.childNodes.length && txt) {
+          const v = document.createElement("span");
+          v.className = "cell-v";
+          v.append(...td.childNodes);
+          td.append(v);
+        }
+      }));
+      if (stack) t.classList.add("stack");
+      const box = document.createElement("div");
+      box.className = "table-wrap";
+      t.replaceWith(box);
+      box.append(t);
     });
     // 冒険手帳（チェック欄）を、この端末に保存できるようにする
     $$('input[type="checkbox"]', wrap).forEach((box) => {
@@ -182,7 +301,24 @@
         li.classList.toggle("done", box.checked);
       });
     });
-    return wrap;
+    // チェック欄の上の見出しに、いくつ済んだかを出す
+    $$("ul", wrap).forEach((ul) => {
+      const items = $$(":scope > li.task", ul);
+      if (!items.length) return;
+      ul.classList.add("tasks");
+      let h = ul.previousElementSibling;
+      while (h && !/^H[23]$/.test(h.tagName)) h = h.previousElementSibling;
+      if (!h) return;
+      const meter = document.createElement("span");
+      meter.className = "task-meter";
+      h.append(meter);
+      const update = () => {
+        const done = items.filter((li) => $("input", li).checked).length;
+        meter.innerHTML = `<span class="task-bar"><span style="width:${Math.round((done / items.length) * 100)}%"></span></span><span class="task-num">${done}/${items.length}</span>`;
+      };
+      items.forEach((li) => $("input", li).addEventListener("change", update));
+      update();
+    });
   }
 
   // 本文中の [[...]] リンクを、図鑑のデータが読めたら正しい行き先にする
@@ -210,12 +346,12 @@
       const tmp = document.createElement("div");
       tmp.innerHTML = html.replace(/\[\[([^\]|]+?)(?:\|[^\]]+?)?\]\]/g, "$1");
       const done = $$("li", tmp).filter((li) => store.get(`nw:task:${name}:${hash(li.textContent.trim())}`, $("input", li)?.checked || false)).length;
-      return { title: p.title, href: p.href, done, total: tasks.length };
+      return { title: p.title, href: p.href, tier: p.tier, done, total: tasks.length };
     }));
     const list = rows.filter(Boolean);
     el.innerHTML = `<div class="progress-list">${list.map((r) => {
       const pct = Math.round((r.done / r.total) * 100);
-      return `<a class="progress-row${r.done === r.total ? " complete" : ""}" href="${r.href}">
+      return `<a class="progress-row${r.done === r.total ? " complete" : ""}${r.tier ? ` tier-${TIERS[r.tier]}` : ""}" href="${r.href}">
         <span class="progress-title">${esc(r.title)}</span>
         <span class="progress-bar" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><span style="width:${pct}%"></span></span>
         <span class="progress-num">${r.done}/${r.total}</span></a>`;
@@ -236,17 +372,21 @@
     const md = await fetchText(CONTENT + "menu.md").catch(() => "");
     const groups = [];
     let cur = null;
-    for (const line of md.replace(/\r/g, "").split("\n")) {
+    for (const line of md.split("\n")) {
       let m;
       if ((m = line.match(/^##\s+(.+)/))) groups.push((cur = { title: m[1].trim(), items: [] }));
-      else if ((m = line.match(/^\s*[-*]\s+\[([^\]]+)\]\(([^)]+)\)/))) {
+      else if ((m = line.match(/^\s*[-*]\s+\[([^\]]+)\]\(([^)]+)\)\s*(\S*)/))) {
         if (!cur) groups.push((cur = { title: "", items: [] }));
         const t = m[2].trim();
-        cur.items.push({ title: m[1].trim(), href: t.startsWith("#") || /^https?:/.test(t) ? t : "#/p/" + t.replace(/\.md$/, "") });
+        cur.items.push({
+          title: m[1].trim(),
+          href: t.startsWith("#") || /^https?:/.test(t) ? t : "#/p/" + t.replace(/\.md$/, ""),
+          tier: TIERS[m[3]] ? m[3] : "",
+        });
       }
     }
     MENU = groups;
-    $("#sidebar").innerHTML = groups.map((g) => `<div class="nav-group">${g.title ? `<p class="nav-title">${esc(g.title)}</p>` : ""}<ul>${g.items.map((x) => `<li><a href="${esc(x.href)}"${/^https?:/.test(x.href) ? ' target="_blank" rel="noopener"' : ""}>${esc(x.title)}</a></li>`).join("")}</ul></div>`).join("");
+    $("#sidebar").innerHTML = `<p class="sidebar-brand">麻雀同好会 日常鯖 攻略Wiki</p>` + groups.map((g) => `<div class="nav-group">${g.title ? `<p class="nav-title">${esc(g.title)}</p>` : ""}<ul>${g.items.map((x) => `<li><a href="${esc(x.href)}"${/^https?:/.test(x.href) ? ' target="_blank" rel="noopener"' : ""}>${x.tier ? `<span class="nav-tier tier-${TIERS[x.tier]}" title="${esc(x.tier)}"></span>` : ""}${esc(x.title)}</a></li>`).join("")}</ul></div>`).join("");
   }
 
   function markActiveNav() {
@@ -257,6 +397,21 @@
       a.classList.toggle("active", on);
       if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
+  }
+
+  // 前後のページ（メニューの並び順）
+  function pager(name) {
+    const pages = MENU.flatMap((g) => g.items).filter((x) => x.href.startsWith("#/p/"));
+    const i = pages.findIndex((x) => x.href === `#/p/${name}`);
+    if (i < 0 || name === "home") return null;
+    const prev = pages[i - 1];
+    const next = pages[i + 1];
+    const nav = document.createElement("nav");
+    nav.className = "pager";
+    nav.setAttribute("aria-label", "前後のページ");
+    nav.innerHTML = (prev ? `<a class="pager-prev" href="${esc(prev.href)}"><span>前へ</span>${esc(prev.title)}</a>` : "")
+      + (next ? `<a class="pager-next" href="${esc(next.href)}"><span>次へ</span>${esc(next.title)}</a>` : "");
+    return nav;
   }
 
   // ---- 画面 ------------------------------------------------------------------
@@ -270,7 +425,14 @@
     if (withToc) {
       const hs = $$("h2, h3", node);
       if (hs.length >= 3) {
-        toc.innerHTML = `<p class="toc-title">このページの目次</p><ul>${hs.map((h) => `<li class="${h.tagName.toLowerCase()}"><a href="#${h.id}" data-jump="${h.id}">${esc(h.textContent)}</a></li>`).join("")}</ul>`;
+        const list = `<ul>${hs.map((h) => `<li class="${h.tagName.toLowerCase()}"><a href="#${h.id}" data-jump="${h.id}">${esc(h.dataset.title || h.textContent)}</a></li>`).join("")}</ul>`;
+        toc.innerHTML = `<p class="toc-title">このページの目次</p>${list}`;
+        // 横幅が狭いときは、本文の頭に開閉できる目次を置く
+        const h1 = $("h1", node);
+        const details = document.createElement("details");
+        details.className = "toc-inline";
+        details.innerHTML = `<summary>このページの目次</summary>${list}`;
+        if (h1) h1.after(details); else node.prepend(details);
       }
     }
     closeSidebar();
@@ -284,6 +446,7 @@
     if (!a) return;
     e.preventDefault();
     document.getElementById(a.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    a.closest("details")?.removeAttribute("open");
   });
 
   async function showPage(name) {
@@ -297,6 +460,8 @@
     }
     const node = renderMarkdown(md, name);
     const title = $("h1", node)?.textContent || name;
+    const nav = pager(name);
+    if (nav) node.append(nav);
     setView(node, name === "home" ? "" : title, { withToc: true });
     upgradeItemLinks(node);
     $$('[data-widget="progress"]', node).forEach(progressWidget);
@@ -308,10 +473,10 @@
     const node = document.createElement("div");
     node.className = "items-page";
     node.innerHTML = `<h1>アイテム図鑑</h1>
-      <p class="lead">名前の一部（ひらがなでも可）・英語名・ID で探せます。MODで絞り込むこともできます。</p>
+      <p class="lead">名前の一部・ひらがな・英語名・ID で探せます。</p>
       <form class="inline-search big"><input type="search" value="${esc(q)}" placeholder="例：秘術のエッセンス、ねぷつにうむ、Ignis" aria-label="アイテム図鑑を検索" autofocus><button type="submit">探す</button></form>
       <div class="filters" role="group" aria-label="MODで絞り込む"></div>
-      <label class="check"><input type="checkbox" class="vanilla"${vanilla ? " checked" : ""}> 一覧に、材料として出てくるバニラのアイテムも並べる（検索したときは常に含めます）</label>
+      <label class="check"><input type="checkbox" class="vanilla"${vanilla ? " checked" : ""}> バニラのアイテムも一覧に出す（検索したときは常に出ます）</label>
       <p class="count" aria-live="polite"></p>
       <ul class="result-list"></ul>`;
     setView(node, q ? `「${q}」の検索結果` : "アイテム図鑑");
@@ -325,7 +490,7 @@
       if (location.hash !== h) history.replaceState(null, "", h);
       render(nq, nm, nv);
     };
-    $("form", node).addEventListener("submit", (e) => { e.preventDefault(); go(input.value.trim(), mod, vanilla); });
+    $("form", node).addEventListener("submit", (e) => { e.preventDefault(); go(input.value.trim(), mod, vanilla); input.blur(); });
     let timer;
     input.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(() => go(input.value.trim(), mod, vanilla), 150); });
     $(".vanilla", node).addEventListener("change", (e) => { vanilla = e.target.checked; go(input.value.trim(), mod, vanilla); });
@@ -439,20 +604,20 @@
       sections.push(`<section><h2>手に入る場所</h2>${parts.join("")}</section>`);
     }
     if (used.length) sections.push(`<section><h2>これを材料に作れるもの（${used.length}）</h2><div class="chips">${moreChips(used)}</div></section>`);
-    if (!it.r && !it.s && !it.note && !used.length) sections.push(`<section><p class="muted">この図鑑のデータには、作り方や入手先が載っていません（ボスの報酬や交易、特殊な方法で手に入るものかもしれません）。下の検索ボタンで調べてみてください。</p></section>`);
+    if (!it.r && !it.s && !it.note && !used.length) sections.push(`<section><p class="muted">この図鑑には、作り方や入手先のデータがありません（ボスの報酬・交易・特殊な方法で手に入るものかもしれません）。下のボタンで調べてみてください。</p></section>`);
 
     const q1 = `${it.n} ${modName(it.m)} マイクラ`;
     const q2 = `${it.e || it.n} ${modName(it.m)} minecraft`;
     node.innerHTML = `<p class="crumbs"><a href="#/items">アイテム図鑑</a> ／ <a href="#/items?mod=${encodeURIComponent(it.m)}">${esc(modName(it.m))}</a></p>
       <header class="item-head">
-        <div>${modBadge(it.m)}${it.v ? '<span class="tag-v">バニラ</span>' : ""}${it.b ? '<span class="tag-v">ブロック</span>' : ""}</div>
+        <div class="item-tags">${modBadge(it.m)}${it.v ? '<span class="tag-v">バニラ</span>' : ""}${it.b ? '<span class="tag-v">ブロック</span>' : ""}</div>
         <h1>${esc(it.n)}</h1>
         <p class="item-sub">${it.e ? `<span>${esc(it.e)}</span>` : ""}${it.pseudo ? "" : `<code>${esc(it.id)}</code><button type="button" class="copy" data-copy="${esc(it.id)}">IDをコピー</button>`}</p>
       </header>
       ${sections.join("")}
       <section class="ext"><h2>もっと詳しく調べる</h2><p>
         <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(q1)}">日本語で検索</a>
-        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(q2)}">英語で検索</a></p></section>`;
+        <a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(q2)}">英語で検索</a></p></section>`;
     setView(node, it.n);
     upgradeItemLinks(node);
     $(".copy", node)?.addEventListener("click", async (e) => {
@@ -526,6 +691,7 @@
     menuBtn.setAttribute("aria-expanded", String(open));
   });
   scrim.addEventListener("click", closeSidebar);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeSidebar(); });
   $("#themeBtn").addEventListener("click", () => {
     const cur = document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     const next = cur === "dark" ? "light" : "dark";

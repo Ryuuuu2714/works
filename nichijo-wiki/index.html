@@ -2,12 +2,13 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>麻雀同好会 日常鯖 攻略Wiki</title>
 <meta name="description" content="麻雀同好会の日常鯖（Minecraft 1.21.1 / NeoForge）の世界観・攻略の流れ・アイテム図鑑">
+<meta name="theme-color" content="#23272d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="assets/style.css">
 <script>
   // テーマはページを描く前に決めて、ちらつきを防ぐ
@@ -20,15 +21,20 @@
 <a class="skip" href="#main">本文へ</a>
 <header class="topbar">
   <button class="icon-btn menu-btn" id="menuBtn" aria-label="メニュー" aria-expanded="false" aria-controls="sidebar">
-    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg>
   </button>
   <a class="brand" href="#/">
-    <span class="brand-mark" aria-hidden="true">✦</span>
+    <svg class="brand-mark" viewBox="0 0 8 8" width="28" height="28" shape-rendering="crispEdges" aria-hidden="true">
+      <rect width="8" height="8" fill="#7a5233"/><rect width="8" height="3" fill="#5f9e3a"/>
+      <rect x="1" y="3" width="1" height="1" fill="#5f9e3a"/><rect x="4" y="3" width="2" height="1" fill="#5f9e3a"/><rect x="7" y="3" width="1" height="2" fill="#5f9e3a"/>
+      <rect x="2" y="0" width="1" height="1" fill="#79b84d"/><rect x="5" y="1" width="1" height="1" fill="#79b84d"/><rect x="0" y="2" width="1" height="1" fill="#4b8130"/><rect x="6" y="0" width="1" height="1" fill="#4b8130"/>
+      <rect x="2" y="5" width="1" height="1" fill="#5c3c24"/><rect x="5" y="6" width="1" height="1" fill="#5c3c24"/><rect x="0" y="7" width="1" height="1" fill="#93693f"/><rect x="3" y="7" width="1" height="1" fill="#5c3c24"/><rect x="6" y="4" width="1" height="1" fill="#93693f"/>
+    </svg>
     <span class="brand-text"><span class="brand-sub">麻雀同好会</span><span class="brand-main">日常鯖 攻略Wiki</span></span>
   </a>
   <div class="search" role="search">
     <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-    <input id="q" type="search" placeholder="アイテム名・ページを検索（/）" autocomplete="off" aria-label="検索" aria-autocomplete="list" aria-controls="qResults">
+    <input id="q" type="search" placeholder="アイテム・ページを検索" autocomplete="off" enterkeyhint="search" aria-label="検索" aria-autocomplete="list" aria-controls="qResults">
     <div class="search-results" id="qResults" role="listbox" hidden></div>
   </div>
   <button class="icon-btn" id="themeBtn" aria-label="明るさの切り替え" title="明るさの切り替え">
@@ -42,7 +48,7 @@
   <aside class="toc" id="toc" aria-label="このページの目次"></aside>
 </div>
 <footer class="footer">
-  <p>麻雀同好会の日常鯖（Minecraft 1.21.1 / NeoForge）のための非公式の攻略Wikiです。Minecraft と各MODの名称・内容は、それぞれの権利者に帰属します。</p>
+  <p>麻雀同好会の日常鯖（Minecraft 1.21.1 / NeoForge）の非公式攻略Wiki。Minecraft と各MODの名称・内容は、それぞれの権利者に帰属します。</p>
 </footer>
 </body>
 </html>

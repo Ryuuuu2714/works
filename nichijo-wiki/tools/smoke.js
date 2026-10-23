@@ -59,6 +59,19 @@ function check(name, cond, info = "") { results.push(`${cond ? "OK  " : "NG  "} 
   check("進み具合の行（5章）", $$(".progress-row").length === 5, String($$(".progress-row").length));
   check("ホームの図鑑検索フォーム", !!$('[data-widget="search"] form'));
   check("ホームの [[ ]] リンクが図鑑へ", ($("a.ilink")?.getAttribute("href") || "").startsWith("#/item/"), $("a.ilink")?.getAttribute("href"));
+  const homeH2 = $$("main h2").map((h) => h.dataset.title || h.textContent);
+  check("ホームの見出しが崩れない（改行コードがCRLFでも）", homeH2.includes("冒険手帳の進み具合") && homeH2.includes("はじめての人へ"), homeH2.join(","));
+
+  // 独自の書き方
+  await go("#/p/flow");
+  check("位階の道のり（```段階）", $$(".route .route-step").length === 5 && !!$(".route-step.tier-pinnacle"), String($$(".route .route-step").length));
+  await go("#/p/join");
+  check("【注意】の囲み（1つの引用に2つあっても分かれる）", $$("blockquote.callout-warn").length >= 2, String($$("blockquote.callout-warn").length));
+  await go("#/p/magic");
+  check("矢印の流れ（```順番）", $$(".chain .chain-item").length >= 3, String($$(".chain .chain-item").length));
+  check("3列以上の表はスマホでカードにできる", !!$("table.stack td[data-label]"));
+  await go("#/p/gear");
+  check("レアリティの色", $$(".rarity.rarity-mythic").length >= 1);
 
   // 2. 物語のページ
   await go("#/p/lore");
@@ -71,6 +84,9 @@ function check(name, cond, info = "") { results.push(`${cond ? "OK  " : "NG  "} 
   await go("#/p/ch0");
   const boxes = $$('main input[type="checkbox"]');
   check("序章のチェック欄が7つ・操作できる", boxes.length === 7 && boxes.every((b) => !b.disabled), `${boxes.length}`);
+  check("章の概要（位階の札）", !!$(".summary.tier-haven .tier-pill"));
+  check("冒険手帳の見出しに済んだ数", $(".task-meter .task-num")?.textContent === "0/7", $(".task-meter .task-num")?.textContent);
+  check("前後のページ", !!$(".pager .pager-prev") && !!$(".pager .pager-next"));
   boxes[0].checked = true;
   boxes[0].dispatchEvent(new w.Event("change"));
   await go("#/", 700);
