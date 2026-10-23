@@ -1,0 +1,13 @@
+{
+    "name": "アーマー破壊",
+    "icon": "apothic_attributes:textures/mob_effect/sundering.png",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)アーマー破壊$()があると、攻撃するとき、相手の防御力を一定の割合だけ無視できる。$(p)$(9)アーマー破壊$()は、$(9)アーマー貫通$()より先に適用される。"
+        }
+    ]
+}

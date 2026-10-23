@@ -1,0 +1,29 @@
+{
+    "name": "解体の書物",
+    "icon": "apothic_enchanting:scrap_tome",
+    "category": "apotheosis:enchanting/utility",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 4,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "解体の書物は、アイテムからエンチャントを取り出す道具だ。$(p)金床でほかのアイテムと組み合わせると、そのアイテムは壊れ、エンチャントのいくつかがランダムに移った本ができる。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "apothic_enchanting:scrap_tome",
+            "text": "必ずエンチャントの半分（端数切り上げ）が手に入る。$(p)どのエンチャントが選ばれるかは、$(l:apotheosis:enchanting/table/seed)エンチャントのシード値$()で決まる。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "title": "上級の解体",
+            "item": "apothic_enchanting:improved_scrap_tome",
+            "text": "$(9)解体の上級書物$()は、解体の書物の強化版だ。$(p)半分ではなく、アイテムのエンチャントをすべて取り出す。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "apothic_enchanting:extraction_tome",
+            "text": "$(9)抽出の書物$()は、解体の書物の完成形だ。$(p)アイテムのエンチャントをすべて取り出し、しかもアイテムを壊さない。"
+        }
+    ]
+}

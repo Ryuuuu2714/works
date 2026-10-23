@@ -1,0 +1,24 @@
+{
+    "name": "エンチャントのパワー",
+    "icon": "minecraft:experience_bottle",
+    "category": "apotheosis:enchanting/table",
+    "flag": "apotheosis:enchanting",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "エンチャントでは、経験値とラピスラズリを使ってアイテムにエンチャントを付ける。$(p)このとき、いくつかの複雑な式でエンチャントがランダムに選ばれる。$(p)この章では、その流れを説明する。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "まず、エンチャントの選ばれ方を見ていこう。$(p)どのエンチャントにも$(5)パワー関数$()があり、どの$(#CC00CC)最終パワー$()で、どのレベルが出てくるようになるかを決めている。$(p)出てくるエンチャントがそろったら、その重みに従っていくつかがランダムに選ばれる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(#CC00CC)最終パワー$()は、次の手順で計算される。$(p)まず、エンチャントに使ったレベルである$(6)基本パワー$()がある。$(p)次に、$(quanta_jajp)が$(6)基本パワー$()を変化させ、$(#CC00CC)最終パワー$()になる。$(p)$(9)クアンタの安定$()があると、その変化のマイナス側がなくなる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "各属性が$(6)基本パワー$()をどう変えるかは、$(l:apotheosis:enchanting/table/stats#quanta)$(quanta_jajp)と$(l:apotheosis:enchanting/table/stats#rectification)クアンタの安定$()の項目に書いてある。$(p)たいていは、$(#CC00CC)最終パワー$()が高いほど、高いレベルのエンチャントが出るようになる。"
+        }
+    ]
+}

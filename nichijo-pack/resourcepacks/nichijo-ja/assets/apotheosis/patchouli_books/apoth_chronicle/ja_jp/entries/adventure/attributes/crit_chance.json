@@ -1,0 +1,17 @@
+{
+    "name": "クリティカル率",
+    "icon": "minecraft:netherite_sword",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)クリティカル率$()は、与えるダメージがクリティカルになる確率だ。100%を超えると、多重クリティカルが出せる。$(p)武器に付いている。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "クリティカルのダメージの大きさは、$(l:apotheosis:adventure/attributes/crit_damage)クリティカルダメージ$()で決まる。"
+        }
+    ]
+}

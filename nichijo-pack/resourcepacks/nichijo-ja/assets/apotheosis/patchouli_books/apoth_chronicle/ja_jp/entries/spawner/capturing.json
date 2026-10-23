@@ -1,0 +1,19 @@
+{
+    "name": "捕獲",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:spawner/spawner",
+    "flag": "apotheosis:spawner",
+    "sortnum": 2,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)スポーンエッグ$()を使うと、モンスタースポナーから出てくるモブを変えられる。$(p)ふつう、スポーンエッグは手に入らない。そこでApothic Spawnersは、$(9)捕獲$()のエンチャントを追加している。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "minecraft:cow_spawn_egg",
+            "title": "スポーンエッグ",
+            "text": "$(9)捕獲$()のレベル1つごとに、倒したモブがスポーンエッグを落とす確率が、ごくわずかに生まれる。$(p)スポーンエッグのないモブや、除外されているモブ（ボスなど）は落とさない。"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "name": "ブロック操作範囲",
+    "icon": "minecraft:iron_pickaxe",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)ブロック操作範囲$()は、ブロックに手が届く最大の距離だ。手が届けば、それを使ったり、ブロックなら壊したりできる。$(p)武器には役立たないので、たいていはブロックを壊す道具に付いている。"
+        }
+    ]
+}

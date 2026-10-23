@@ -1,0 +1,13 @@
+{
+    "name": "自然の恩恵",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:enchanting/enchantments",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)自然の恩恵$()は、クワ用のエンチャントだ。$(p)耐久値と引き換えに、クワを骨粉のように使えるようになる。$(p)レベルが高いほど、消費する耐久値が減る。$(p)スニーク中は働かない。"
+        }
+    ]
+}

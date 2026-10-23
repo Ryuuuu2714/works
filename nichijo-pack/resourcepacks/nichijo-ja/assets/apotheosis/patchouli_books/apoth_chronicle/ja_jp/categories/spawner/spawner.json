@@ -1,0 +1,6 @@
+{
+    "name": "スポナー",
+    "description": "$(9)Apothic Spawners$()を使うと、$(9)モンスタースポナー$()を運んだり、作り変えたりできる。$(p)Apotheosisでは、その強化のレシピがスポナーのルーンに置き換わっている。",
+    "icon": "minecraft:spawner",
+    "flag": "apotheosis:spawner"
+}

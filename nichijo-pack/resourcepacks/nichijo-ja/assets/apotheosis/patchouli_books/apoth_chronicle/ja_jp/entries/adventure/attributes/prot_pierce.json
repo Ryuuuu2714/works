@@ -1,0 +1,13 @@
+{
+    "name": "ダメージ軽減貫通",
+    "icon": "apothic_attributes:textures/mob_effect/sundering.png",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)ダメージ軽減貫通$()があると、攻撃するとき、相手のダメージ軽減ポイントを決まった量だけ無視できる。$(p)多すぎても、相手のダメージ軽減がマイナスになることはない。"
+        }
+    ]
+}

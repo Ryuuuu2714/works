@@ -1,0 +1,13 @@
+{
+    "name": "エンティティ操作範囲",
+    "icon": "minecraft:skeleton_skull",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)エンティティ操作範囲$()は、近接武器で攻撃が届く最大の距離だ。$(p)たいていは武器に付いている。"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "衰弱",
+    "icon": "minecraft:textures/mob_effect/wither.png",
+    "category": "apotheosis:potion/recipes",
+    "flag": "&apotheosis:potion,apotheosis:wstloaded",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(c)衰弱$()は敵対的な効果で、ふつうは作れない。$(p)この効果の間は、毎tickダメージを受ける。$(p)毒と違い、このダメージで死ぬこともある。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "title": "醸造レシピ",
+            "item": "wstweaks:fragment",
+            "text": "このポーションは、奇妙なポーションとウィザーの頭蓋骨の破片で作れる。$(p)いつもの材料で、効果時間の延長・効果の強化・スプラッシュ化ができる。"
+        }
+    ]
+}

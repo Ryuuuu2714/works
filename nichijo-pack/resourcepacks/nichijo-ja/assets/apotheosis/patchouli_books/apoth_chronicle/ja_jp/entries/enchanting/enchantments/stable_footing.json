@@ -1,0 +1,17 @@
+{
+    "name": "足場",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:enchanting/enchantments",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)足場$()は、ブーツ用のエンチャントだ。$(p)空中で採掘速度が下がるペナルティをなくす。$(p)地面に立っていないことによるペナルティは、すべて含まれる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(9)水中採掘$()と組み合わせると、泳いでいても全速で掘れる。"
+        }
+    ]
+}

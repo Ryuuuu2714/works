@@ -1,0 +1,17 @@
+{
+    "name": "みなぎる活力",
+    "icon": "apothic_attributes:textures/mob_effect/vitality.png",
+    "category": "apotheosis:potion/effects",
+    "flag": "apotheosis:potion",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)みなぎる活力$()は、回復増加のポーションでかかる良い効果だ。$(p)この効果の間は、受ける回復がすべて増える。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "回復はレベルごとに20%増える。"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "name": "新しい効果",
+    "parent": "apotheosis:potion/potion",
+    "description": "この章では、Apothic Attributesが追加する新しいポーション効果を紹介する。",
+    "icon": "minecraft:experience_bottle",
+    "flag": "apotheosis:potion"
+}

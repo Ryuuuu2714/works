@@ -1,0 +1,16 @@
+{
+    "name": "エンチャントのシード値",
+    "icon": "minecraft:wheat_seeds",
+    "category": "apotheosis:enchanting/table",
+    "flag": "apotheosis:enchanting",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "エンチャントのすべて（とほかのいくつかの仕組み）は、あなたの$(9)エンチャントのシード値$()をもとにしている。$(p)シード値は、エンチャントテーブルでアイテムにエンチャントするたびに変わる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "シード値が変わらない限り、シード値で決まるランダムな結果はすべて同じままだ。$(p)たとえば、あるスロットでどのエンチャントが選ばれるかは、シード値で決まるランダムな結果だ。"
+        }
+    ]
+}

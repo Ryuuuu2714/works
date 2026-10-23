@@ -1,0 +1,13 @@
+{
+    "name": "アーマー貫通",
+    "icon": "apothic_attributes:textures/mob_effect/sundering.png",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)アーマー貫通$()があると、攻撃するとき、相手の防御力を決まった量だけ無視できる。$(p)アーマー貫通が多すぎると、相手の防御力がマイナスになることもある。"
+        }
+    ]
+}

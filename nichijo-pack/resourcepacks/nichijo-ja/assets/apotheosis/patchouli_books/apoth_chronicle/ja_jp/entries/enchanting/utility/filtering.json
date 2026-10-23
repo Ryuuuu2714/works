@@ -1,0 +1,27 @@
+{
+    "name": "エンチャントの除外",
+    "icon": "apothic_enchanting:filtering_shelf",
+    "category": "apotheosis:enchanting/utility",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "エンチャントのとき、特定のエンチャントをまったく出したくないこともある。$(p)$(9)水生濾過の海の本棚$()を使えば、まさにそれができる。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "apothic_enchanting:filtering_shelf",
+            "title": "水生濾過",
+            "text": "この本棚には、エンチャントが1つだけの本を6冊まで入れられ、そのエンチャントが出なくなる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "使うには、出したくないエンチャントの、エンチャントが1つだけの本を入れるだけだ。$(p)そのエンチャントは、エンチャントテーブルで出なくなる。$(p)入れた本の数に応じて、本棚の$(eterna_jajp)と$(arcana_jajp)も増える。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "補足：本は模様入りの本棚と同じように入れられる。この本棚は、本棚として有効な位置に置かないと働かない。$(p)出なくしたエンチャントは、$(l:apotheosis:enchanting/table/info)エンチャントの情報画面$()にも反映される。"
+        }
+    ]
+}

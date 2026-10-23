@@ -1,0 +1,17 @@
+{
+    "name": "モンスタースポナー",
+    "icon": "minecraft:spawner",
+    "category": "apotheosis:spawner/spawner",
+    "flag": "apotheosis:spawner",
+    "sortnum": -1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)モンスタースポナー$()は、虚空からモブを呼び込む魔法のブロックだ。$(p)そんなことはもう知っているだろうから、新しい話に移ろう。$(p)Apothic Spawnersでは、$(9)シルクタッチ$()でスポナーを回収できる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "この方法でスポナーを回収すると、耐久値を余分に消費する。$(p)モンスタースポナーには、その働きを決める$(l:apotheosis:spawner/stats)スポナー属性$()がいくつもある。$(p)これらの属性は、$(l:apotheosis:spawner/runes)スポナーのルーン$()で変えられる。"
+        }
+    ]
+}

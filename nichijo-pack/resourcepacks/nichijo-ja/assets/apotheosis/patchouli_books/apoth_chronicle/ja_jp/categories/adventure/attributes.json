@@ -1,0 +1,7 @@
+{
+    "name": "属性",
+    "description": "バニラの属性に加えて、$(9)Apothic Attributes$()が新しい属性を数多く追加する。$(p)この章では、称号付きアイテムやジェムに付く属性を詳しく紹介する。",
+    "icon": "minecraft:diamond_chestplate",
+    "flag": "apotheosis:adventure",
+    "parent": "apotheosis:adventure/adventure"
+}

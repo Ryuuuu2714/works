@@ -1,0 +1,13 @@
+{
+    "name": "クレッシェンド",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:enchanting/enchantments",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(2)クレッシェンド$()は、クロスボウ用の傑作エンチャントだ。$(p)レベル1つごとに、1回の装填で撃てる数が1発増える。$(p)追加の射撃では矢を消費しない。"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "name": "ノックバック耐性",
+    "icon": "minecraft:shulker_shell",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)ノックバック耐性$()は、攻撃で吹き飛ばされにくさだ。最大値なら、まったく吹き飛ばされない。$(p)ふつうは防具や盾から得られる。"
+        }
+    ]
+}

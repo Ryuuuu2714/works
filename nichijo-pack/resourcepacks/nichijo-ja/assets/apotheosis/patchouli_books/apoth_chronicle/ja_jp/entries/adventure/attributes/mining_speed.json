@@ -1,0 +1,13 @@
+{
+    "name": "採掘速度",
+    "icon": "minecraft:netherite_pickaxe",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)採掘速度$()を上げると、ブロックを壊す速さが上がる。基準の1.0なら、ふつうの速さで壊す。$(p)ブロックを壊す道具やハサミに付いている。"
+        }
+    ]
+}

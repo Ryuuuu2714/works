@@ -1,0 +1,17 @@
+{
+    "name": "古の知識",
+    "icon": "minecraft:experience_bottle",
+    "category": "apotheosis:potion/effects",
+    "flag": "apotheosis:potion",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)古の知識$()のポーションは、良い効果だ。$(p)この効果の間は、倒したモブや掘ったブロックから出る経験値が何倍にもなる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "レベルIでは経験値が4倍になる。$(p)レベルIIでは8倍になる。$(p)強化版のポーションはレベルIVで、16倍だ。倍率は設定で変えられる。"
+        }
+    ]
+}

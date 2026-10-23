@@ -1,0 +1,17 @@
+{
+    "name": "幸運",
+    "icon": "minecraft:rabbit_foot",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)幸運$()は、あなたを幸運にする！ つまり、良い戦利品が手に入りやすくなる。$(p)どんなものにも幸運は付きうる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "幸運はマイナスにもなる。そうなると、良い戦利品はさらに手に入りにくくなる。"
+        }
+    ]
+}

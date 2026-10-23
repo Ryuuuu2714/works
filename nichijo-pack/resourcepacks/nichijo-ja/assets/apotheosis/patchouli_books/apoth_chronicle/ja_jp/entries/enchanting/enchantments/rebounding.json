@@ -1,0 +1,13 @@
+{
+    "name": "反発",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:enchanting/enchantments",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)反発$()は、チェストプレートとレギンス用のエンチャントだ。$(p)近くで近接攻撃してきた相手を、使い手から吹き飛ばす。$(p)レベルが高いほど遠くへ飛ばす。"
+        }
+    ]
+}

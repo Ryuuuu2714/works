@@ -1,0 +1,17 @@
+{
+    "name": "反射防御",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:enchanting/enchantments",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)反射防御$()は、盾用のエンチャントだ。$(p)攻撃を防ぐたびに、防いだダメージの一部を、確率で相手に跳ね返す。$(p)跳ね返すたびに、盾の耐久値を少し消費する。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "跳ね返したダメージは、魔法ダメージになる。$(p)$(9)反射防御$()のレベルが十分に高いと、元のダメージより大きなダメージを与える。"
+        }
+    ]
+}

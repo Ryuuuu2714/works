@@ -1,0 +1,13 @@
+{
+    "name": "移動速度",
+    "icon": "minecraft:leather_boots",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)移動速度$()は、プレイヤーのふつうの歩く速さに対する、動く速さだ。$(p)ほとんどどんなアイテムにも付きうる。"
+        }
+    ]
+}

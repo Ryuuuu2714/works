@@ -1,0 +1,13 @@
+{
+    "name": "攻撃速度",
+    "icon": "minecraft:golden_sword",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)攻撃速度$()は、どれだけ頻繁に攻撃できるかを決める。攻撃速度が2なら、1秒に2回攻撃できる。$(p)攻撃速度を上げるアイテムはいろいろある。"
+        }
+    ]
+}

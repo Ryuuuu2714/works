@@ -1,0 +1,39 @@
+{
+    "name": "強化精錬",
+    "icon": "apotheosis:augmenting_table",
+    "category": "apotheosis:adventure/affix_loot",
+    "flag": "apotheosis:adventure",
+    "sortnum": 5,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)強化精錬作業台$()は、アイテムの称号を1つずつ強化するための、終盤の作業台だ。$(p)ほかの称号はそのままに、1つの称号だけを強化したり、引き直したりできる。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "apotheosis:augmenting_table",
+            "text": "強化精錬作業台を作るには、$(9)エンチャントテーブル$()を土台に、$(9)ネザースター$()の力を2つの$(9)神々の真珠$()で束ねる必要がある。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "投入スロット",
+            "text": "強化精錬作業台には、投入スロットが2つある。$(p)上のスロットには、強化したいアイテムを入れる。称号付きアイテムでなければならない。$(p)ふつうは$(#ED7014)ミシック$()以上だけを強化すればよいが、$(#BB00BB)エピック$()を強化するのも手だ。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "apotheosis:sigil_of_enhancement",
+            "title": "投入スロット",
+            "text": "下のスロットには、強化精錬の燃料となる$(9)強化の紋章$()を入れる。$(p)最後に、ドロップダウンメニューで強化したい称号を選ぶ。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "強化",
+            "text": "強化精錬作業台でできることの1つ目は、称号の強化だ。$(p)$(9)強化の紋章$()2つと225レベルを使い、選んだ称号の内部の強さを25%上げる。$(p)レベルのない称号は強化できない。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "引き直し",
+            "text": "2つ目は、称号の引き直しだ。$(p)$(9)強化の紋章$()1つと175レベルを使い、選んだ称号を同じ種類の別の称号と入れ替える。$(p)入れ替え先の候補は左側に表示される。"
+        }
+    ]
+}

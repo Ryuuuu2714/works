@@ -1,0 +1,17 @@
+{
+    "name": "重傷",
+    "icon": "apothic_attributes:textures/mob_effect/grievous.png",
+    "category": "apotheosis:potion/effects",
+    "flag": "apotheosis:potion",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(c)重傷$()は、回復低下のポーションでかかる悪い効果だ。$(p)この効果の間は、受ける回復がすべて減る。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "回復はレベルごとに40%減る。$(p)レベルIII以上では、回復をまったく受けられない。"
+        }
+    ]
+}

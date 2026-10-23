@@ -1,0 +1,13 @@
+{
+    "name": "攻撃力",
+    "icon": "minecraft:diamond_sword",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)攻撃力$()は、攻撃でどれだけダメージを与えるかを決める属性だ。$(p)ふつうは武器から得られる。"
+        }
+    ]
+}

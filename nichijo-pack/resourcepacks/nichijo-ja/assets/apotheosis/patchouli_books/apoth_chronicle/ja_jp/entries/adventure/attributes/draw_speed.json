@@ -1,0 +1,13 @@
+{
+    "name": "射撃動作速度",
+    "icon": "minecraft:bow",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)射撃動作速度$()は、遠距離武器を引き絞る速さで、もとの速さに対する倍率で表す。1 = 100%、2 = 200%、といった具合だ。$(p)遠距離武器に付いている。"
+        }
+    ]
+}

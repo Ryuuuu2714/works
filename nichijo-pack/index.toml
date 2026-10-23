@@ -278,6 +278,18 @@ file = "resourcepacks/nichijo-ja/assets/apotheosis/lang/ja_jp.json"
 hash = "e6cbdc248c076250b5817185722c3a53d66edb542fb10a5fb0826144af0ff530"
 
 [[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/adventure/adventure.json"
+hash = "f755eb9c4125f3db8a47f0551bd28ef5a4d9da7c5f893b523da6c981ff24cac7"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/adventure/affix_loot.json"
+hash = "bd2ff62b718fb6fd37d0c19adef7ea6552d7eb925060c8bad9a5f3c13c037a9b"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/adventure/attributes.json"
+hash = "0eaadfec1cbcdf5d4e065788a2ef149ad55a1f8e6307254af7d4884deb512632"
+
+[[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/adventure/gems.json"
 hash = "55560b96db4e6a30384d379dc8688dc1299510572e04542619fbe89ad6aeeb84"
 
@@ -286,20 +298,192 @@ file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronic
 hash = "4e1393aa586cd74bb8d34437d52fa49c825662c6b0f09d56b2e10775155e18d9"
 
 [[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/adventure/rogue_spawners.json"
+hash = "e3fc2ea1f951720edc174610ff590ae2ecf94c00af33fdbb5edb6b847d527d1d"
+
+[[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/adventure/world_tiers.json"
 hash = "e137d2d3ae34b9cfbd08821b84e4faf3c903c5799b1002bb38ae17a48baeeb5f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/enchanting/changes.json"
+hash = "d767850cb5aeaf1ba259297df2b7d817cfb601f9f6fa329774af2ac59fe04e64"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/enchanting/enchanting.json"
+hash = "b17f81aded097c22fa925058ae0885509c69cebb614a7746658e87c809069a42"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/enchanting/enchantments.json"
+hash = "ddce03c6be36dd69cc2c96209bc0cf5ea6d60520fcab633bc3954f193eb474db"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/enchanting/progression.json"
+hash = "3e7ecbd964b8e73c2b7bff2eb036b148f133bcf8d49bf15c379193f0b2b2432a"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/enchanting/table.json"
+hash = "8e219ab18839e912ec6a3109b68d41646b4c58d20b2c95a2c6b3ec124f20d57b"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/enchanting/utility.json"
+hash = "34b317751faa2a5e93827dee239902d0da726aa507a0a5b3d6a39ea50ef3b007"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/potion/charms.json"
+hash = "8c16a94349a7c5ffe9eab586bfebe7c32a385719a2960ae9dc645205d6557233"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/potion/effects.json"
+hash = "25dd259631348d413159c40d6692aac4ef407e1e1560ff4c2479c3b135062b54"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/potion/potion.json"
+hash = "2a70a8b3e48623200fcce19e9a01971056ac29eec9abc552a740ebda596b0a37"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/potion/recipes.json"
+hash = "3b9678481ac73dbffad164b59eb4939a1d313b31ff94c2d7c5fdeeeda6967e25"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/spawner/spawner.json"
+hash = "6f2ca2222c9d540109a1bb1d2db8042d1b1dc5bd3e894bbdaf682def60c94a51"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/categories/village/village.json"
+hash = "df03f513fb1c6938f80da6d881b7fec5494b768b8d36a310a73d2e6ff4df263d"
 
 [[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/affix_loot/affixes.json"
 hash = "42d8477d76a62d92fdb5fb4bcbc5efac25a37d7356419886d1f41f0440636019"
 
 [[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/affix_loot/augmenting.json"
+hash = "eb4c7e6156ed740b7238df127142ab379c3d47485b42147938f2c58fb72804a4"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/affix_loot/rarities.json"
+hash = "e3c386f31ae0d3a3d39cb5e7cd09a8d4b1be49143a1eeff947671c19affa11c4"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/affix_loot/reforging.json"
+hash = "58eb7723187224e2307e61090aab5eaf628f126224c41ffda904efe9782c4c45"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/affix_loot/salvaging.json"
+hash = "1c00a3901950c985e8b5333a629b708363827d5841d83161f1d0f08ba563ceb6"
+
+[[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/affix_loot/wandering_trader.json"
 hash = "e1d58cdba91a24fd2c4e38c4832c720f51b1325874fdbd5e6be662b13f454e55"
 
 [[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/armor.json"
+hash = "0767f3ada1be2128b11ae31a62555ae82e32d85b6e6c2788bbad8415092838c0"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/armor_pierce.json"
+hash = "b808f9c2bfa07d1364318194e3d4a3ef24def1435026383a7f8cb70b8920ca04"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/armor_shred.json"
+hash = "e3713e0e43b6569f7a106ef5c1ca0aa58d495c3b792ac62491981337c91dddce"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/armor_toughness.json"
+hash = "45d6a5f476b107d3ae615ee572d0bc66d874a58729caf7e7e9d09ae94467758a"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/attack_damage.json"
+hash = "edf64a7839eb4b336b51dc5bd0d40621bc5c540e4dab4aa3af0a61b07d256e4a"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/attack_range.json"
+hash = "2c88c4a7b5f87a74f60f35652f65e2f0e82400589d77dbfa5779ebf47d8563dd"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/attack_speed.json"
+hash = "6bb7ed3cf8a16b58c6aac5d172d4be27ee825081964d95129396f488ecb7d988"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/cold_damage.json"
+hash = "c595e08fc1b88fd8c316b12697cf4856299041d28aefafca87f999111691846c"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/crit_chance.json"
+hash = "e73a645953cbc30768daade4d6047d504e238c799fc340a5bf07952292a815b9"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/crit_damage.json"
+hash = "70018798eb413e54eb3447a279fd644b2ce60eda9b2b68cedaf649f92daa3925"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/current_hp_damage.json"
+hash = "29b82cc2ab9866ae8a6a242cd6d0dbbf0451199c17267f3bd849c08fb82c4ffd"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/draw_speed.json"
+hash = "61c85a10b311f8228d39736ae94f85a158c4a6ed059998c8652de72f53cba8cf"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/fire_damage.json"
+hash = "834a630ff9de32b14fe50c1c3442fa68e5ac669e67eb22e14ec1dc3530d6d917"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/gravity.json"
+hash = "ad6931bf683e011eb5deac8c1ddd7d148c5389ec3fbb952fb88c5b847e192385"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/knockback.json"
+hash = "060c290546009c687ad389da851981c32cc3b018eb36319455086c0bbaf2e1b9"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/knockback_resistance.json"
+hash = "2ea102e74026831aa1d3131ff81f0d3e5a3d2ede5d3beb789143a943629d3027"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/life_steal.json"
+hash = "c7a16618557e08570f57968872358200883a2099cdf18e8b1102c6b5083bec2d"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/luck.json"
+hash = "c4b6316d1b425e05e0eff6a80c9922b9619955523241f54af76ea7fc998c1fa5"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/max_health.json"
+hash = "211641eddb19990a396b98cc9b385bedab98b0ecfb50ea9d978caa56e0ba22c2"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/mining_speed.json"
+hash = "78a4b59dc0f505a35ebc043d9a27985d769c55b5cf1ce7aa33f05007018820d7"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/movement_speed.json"
+hash = "5f6ef784505de582e8decfe7b673f54e1d966414cd46347392c2b4794bd91577"
+
+[[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/overheal.json"
 hash = "f00b3b4cd1d640e9cc2cc0ec107b1ea995e7caf282188876b2d7c2ad2b1f117f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/prot_pierce.json"
+hash = "cc044f6aae5bf68140de2cdc9465f0736f5e00a4d1ed1342ef2ec2ffee3f2a45"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/prot_shred.json"
+hash = "8ade680a67ada88ef9b0021b41cb06bb33ef7b7e7f16bfe97943b349fe14ff03"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/reach_distance.json"
+hash = "1813d94c2c74f10f22b78ebf8d3d962b1bb4d402de99ead5501644adb76a4473"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/step_height.json"
+hash = "38d82b9b2e1d17e9dcbe605e68f03198d4d575f3636372d67e821331acb1ce4c"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/attributes/swim_speed.json"
+hash = "fe8292ec51d053b5c9c2340cd764bfc6e2776fb17c849af04e6c6dc62c5f7a45"
 
 [[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/gems/gem_case.json"
@@ -334,6 +518,14 @@ file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronic
 hash = "3e3fb6be5021bccc41bc1bff32d9f7a8e9683f5c405104424dadcac565cf80df"
 
 [[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/rogue_spawners/brutal_spawners.json"
+hash = "007a700d9fa6b166e1d7b387d2982b5db88604b12d06454642c05aad8ff5fdeb"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/rogue_spawners/swarm_spawners.json"
+hash = "56b06b0a30aa475d6d3c2682044b97cd132b73cad302161162e0f9280c5d6a98"
+
+[[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/adventure/world_tiers/select_screen.json"
 hash = "dd4ae68890cc8d61ad830c4fe064a358517bbee6f2c12b9b5e9a22e997c3a3c4"
 
@@ -346,20 +538,256 @@ file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronic
 hash = "20d52fa1ce02e23a758d2a8c61207d847e977576d3f3af4edbab4a65d38b04db"
 
 [[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/changes/enchantability.json"
+hash = "88a46cc512e0e6a50d46c6264b6048e2610e4b7c9a70d9a93a30497f9b7ae223"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/changes/experience_costs.json"
+hash = "81af1ee056a33bf28fd9d9d6b861f6d083d454fb7ac23bbcd13bc259d0f38ec9"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/changes/protection.json"
+hash = "3fd0ebab4c1e2614531489736508d25834ae99654a92be085011bc92c2287daf"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/changes/sharpness.json"
+hash = "fc585ab05e6c2c07946a95ba2546844f67e4d2df884bd28eb759f14b3ea2626c"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/changes/shears.json"
+hash = "e7ebccec6c75d9e48b247822c0d2fe9e791fe8dafa2f20d2f01bd9fbad4cf4ff"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/changes/tridents.json"
+hash = "ec86b9ddb721b4f896f58b0a6aefabaf33e99eee383aa0e0d70587eaebd4c51f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/berserkers_fury.json"
+hash = "8e5a1dfeaa90574043359d575c6ee20e7d3b28c5621fd7f3f802f533a350eef5"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/chainsaw.json"
+hash = "073c981fdd48811141f317d6126fd9c18722794643f488a8edf61db83d915839"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/chromatic.json"
+hash = "be2559a25cee80345585652fab785478c29dd7ca68453be92632fe70a18d4f70"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/crescendo.json"
+hash = "0ccd3e45da7cb8e2c7bbef2049cc67c89e758300d474141b3a0ee2192d03f4f5"
+
+[[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/earths_boon.json"
-hash = "ed43f22ae667af72d6a903e969d5272eebc9dee55beba4c19e4a590b9e280641"
+hash = "c856b9fff6987f932ea471506d9405d0607b00bdbc018a3d29940821692b522e"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/endless_quiver.json"
+hash = "24ac1c1589ad3b5eb53fb9d53b5a45bdc3383dc310e4a0cfdefea27afcb12605"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/exploitation.json"
+hash = "a60762920cc1fccace8171f282a39a110063d00e105861ce1bcb99ac84ab104c"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/growth_serum.json"
+hash = "69be6844fb8ec452e7e9759bbb4ac1d124dca0504fba75b08ab8ede2edff3e58"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/icy_thorns.json"
+hash = "232eb8fb2c7f191590c5787cc8faf5baf0244711a34f8adb94f598c9fc68fac0"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/knowledge.json"
+hash = "31601af6b9e04da3f0c9117d3c534133a72522b255bd702149e717a6ccd61af3"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/life_mending.json"
+hash = "e2c8adfd265149a85328f4236edc9a6eb218730f6f49c342503b935d4ab84180"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/miners_fervor.json"
+hash = "e0553c5ccfe5b7d2c25f2c8836b7adfab93e848415a7c60da4f74de1c5bdbf1d"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/natures_blessing.json"
+hash = "710e0910f9e0808e91233e9ea43eb20b3d1487892131492dfff5f53907c0f94f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/rebounding.json"
+hash = "fa57e16465e2fb6d655d805558cb7b7f0a3a7a60233b20657b5543c3a6501a8d"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/reflective.json"
+hash = "0993f59a01d475c81410f0ff533f3200373564d25c4c0df8b13fcf323a894c10"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/scavenger.json"
+hash = "79df28ff00767ec5f671d641ab98f9beffcc1f09e933c63bc67249cee0a7b9ef"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/shield_bash.json"
+hash = "202d8b84f0326e9775b6e0eeae55995d5ecd07ba4f9d4af4af177a9bac520d5b"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/spearfishing.json"
+hash = "9d6bb7abb3fda929c84a6e6524e9e175c8885294b0dcea66219a9c839b06875b"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/stable_footing.json"
+hash = "f9a163b35f5c8b9b3efed4e37d2e2f9406707cfc2a32496cfe329a324c420548"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/tempting.json"
+hash = "fd2f61fbc52d40f6c8111a20b1c55932955d9f714b9b435aacfd8dc0db84a19a"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/enchantments/types.json"
+hash = "93ecf863f86951a2731d47ac40b934f77a0858f15e4ffc7ccae42286360e32c7"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/progression/levels1_30.json"
+hash = "d07918047c83fbf0329e472d270c7614f6af9862de065fb16e2456c69b984bbe"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/progression/levels30_60.json"
+hash = "024e8a738aba0d4e14c74b6a98ed80f3699d9867e2b2a2e27826bd56465b1276"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/progression/levels60_80.json"
+hash = "88108359b23ea9063808f23ce03f100626e7edfcbd7fbab8c8144cf76b12e009"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/progression/levels80_100.json"
+hash = "e66d065ed2c4bd151a7e7c221f1f9a78ea6beb8ac1d4326fd18b8757af9f8063"
 
 [[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/table/enchantability.json"
-hash = "be627c386764f9f10045d4488df671b14905eb2e44e772609ba900db620915d9"
+hash = "3c15219a3431c72cf23276ddfbc566b986198e8b0a44f86999d0c058b82bf1ac"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/table/info.json"
+hash = "41ca5858a476e581625ad3ec0576374d1ffdbe271b5ec22ad9d39caf7c4047cb"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/table/infusion.json"
+hash = "d4de4a265690457e730fd532bec5af05b3b6e5099c57f2ba1b87f5ca9ed5205b"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/table/power.json"
+hash = "f28f76176d1b970a32e3d08759fd4b998cc82e54a8c502870a16d6626a7bb1f0"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/table/seed.json"
+hash = "a572b86f74f232fcdce788e49f1c87aa91fc55001ba214eaf3e4cb04a64c5ff9"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/table/stats.json"
+hash = "b96b479d7e46d1523267594a69edf7b25eaaecce984ef7a9e7a7f16f399b2031"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/utility/cobwebs.json"
+hash = "99894304461450865cc047776cdac80c0c47f80335a084af978d7d6a151546e2"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/utility/filtering.json"
+hash = "c8a40b6f4991e2d204ad1c57ce5f419bce0db0de1cd4c6a39a6bd184c96764e1"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/utility/library.json"
+hash = "8a2e6f7d00ce981d2df53b02e6fe40706f790f74814574ad9fd8f1834a3752c0"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/utility/scrapping.json"
+hash = "22eee4afe98786bc79fa2fa0e93be270ac05a090fa6f65f94423ad11763626a3"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/utility/tomes.json"
+hash = "c47d9d859c7a3c97d2aa3d34ca152d305f3d1e18d4c87ebb75555e331b51eea9"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/enchanting/utility/treasure.json"
+hash = "0c5b4202a186effbc2948029d46a8fc56dc1204ddb0a24d1edddf1a63dd25c6d"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/charms/charm.json"
+hash = "3153f62977f9534633466edca6bbd42df3b9d01c39b0649e0c08b75de0d2375a"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/charms/curios.json"
+hash = "03c0f08a7b2a8d97ad28847c1307209fcdc2bba24ae587007ebfed5391c7dd7f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/charms/unbreakable.json"
+hash = "1b04c5fd14a5afe70ab5f0ae940f438c0826e6c9592be2eaf8221f4a7af5799e"
 
 [[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/effects/bleeding.json"
 hash = "4f039908eed5fcb855654427e2f8f43ccdd792585a3c8215595a58d3840ac832"
 
 [[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/effects/grievous.json"
+hash = "64db3eb4d4bd46257b3fa8bf72a7cc9fa541b25e9daa077b8c2cb142b26b402c"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/effects/knowledge.json"
+hash = "752b7dd84124c21dc3a2930c2e73bb09211b05a684b71b47e2d8cd92cb494c89"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/effects/sundering.json"
+hash = "5233cf530aa14aa91bda7aac1b737fc053d059d4380ed0b26840cf63ba323664"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/effects/vitality.json"
+hash = "bb2a69334d701befcf430b172ec92c129ab9689dc13660f0ffe8402309e6511b"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/recipes/absorption.json"
+hash = "6fac10b005e0b6bb4d91484d0e864407283e8210cd97270e92fc04217987c588"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/recipes/fatigue.json"
+hash = "2d21ff488511bb9a3ad3e6e2457222812b7ceb9f4b863f8c216576c9e29d853d"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/recipes/haste.json"
+hash = "ea17f95601e6579851f3fbcf92b2ac645ce57add2781790ea93eeb3e24f12434"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/recipes/resistance.json"
+hash = "35c2186d8edfb44be71851588c1801e44f43afcbd605ff4d2fe586c3083df13d"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/recipes/wither.json"
+hash = "30c1ff0e2787c1f219841052f4db151eecbbf4748170e81c70971c36f5b54471"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/potion/recipes/wither_wst.json"
+hash = "1a9da11b41c93c155fc29926432104531fd1d9a3b86a8dac9ce28f91cde37caa"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/spawner/capturing.json"
+hash = "72a9fd8845d6bb9c8001a476f5221430cecfff212906eafd12d61258653f1af1"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/spawner/modifiers.json"
+hash = "a5209b0166410ca4fffe0826bb004f7d884a66dfcfb95c124ca5bbef79d5e509"
+
+[[files]]
 file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/spawner/runes.json"
 hash = "a8679313553930ad71f74f9a2c1b30c5fcd028b727ec53d7741aca843b6ac61f"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/spawner/spawners.json"
+hash = "3c074fa1147ddbc6a0bc6c0166b5f92751b1e6ac9956c798d604af720d278b97"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/spawner/stats.json"
+hash = "a3c4ff6f13e1b2c2e66f421df0170c0a204df39d2c7c002522680cae77c5c72b"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/apotheosis/patchouli_books/apoth_chronicle/ja_jp/entries/village/wandering_trader.json"
+hash = "6ae8d6d01df1fd70babc0e7187d34538a41f3fc64dc94049ed62fc55bd69e684"
 
 [[files]]
 file = "resourcepacks/nichijo-ja/assets/apothic_attributes/lang/ja_jp.json"

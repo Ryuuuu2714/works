@@ -1,0 +1,17 @@
+{
+    "name": "防具強度",
+    "icon": "minecraft:netherite_chestplate",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)防具強度$()は、受ける防御力の低下の効き目を弱めるステータスだ。$(p)ふつうは防具や盾から得られる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "防具強度1ポイントごとに、アーマー貫通とアーマー破壊の効き目を2%弱める。最大で60%まで。$(p)この働きはApotheosis独自のものだ。バニラでは、防具強度はダメージの軽減に使われる。"
+        }
+    ]
+}

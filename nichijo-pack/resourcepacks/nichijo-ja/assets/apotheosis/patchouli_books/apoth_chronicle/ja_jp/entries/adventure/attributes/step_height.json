@@ -1,0 +1,13 @@
+{
+    "name": "段差上限",
+    "icon": "minecraft:iron_boots",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)段差上限$()は、自動で段差を上れる高さを変える。$(p)ブーツにだけ付く。"
+        }
+    ]
+}

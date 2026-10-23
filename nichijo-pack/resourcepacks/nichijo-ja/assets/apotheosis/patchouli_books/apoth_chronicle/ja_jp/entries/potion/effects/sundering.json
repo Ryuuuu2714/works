@@ -1,0 +1,17 @@
+{
+    "name": "崩壊",
+    "icon": "apothic_attributes:textures/mob_effect/sundering.png",
+    "category": "apotheosis:potion/effects",
+    "flag": "apotheosis:potion",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(c)崩壊$()のポーションは、悪い効果だ。$(p)この効果の間は、受けるダメージがすべてレベルごとに20%増える。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "耐性とちょうど打ち消し合う効果で、耐性と足し算で合わさる。$(p)崩壊IIと耐性IIが同時にかかっていれば、ふつうのダメージを受ける。"
+        }
+    ]
+}

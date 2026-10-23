@@ -1,0 +1,8 @@
+{
+    "name": "ポーションチャーム",
+    "parent": "apotheosis:potion/potion",
+    "description": "この章では、$(9)ポーションチャーム$()とその使い方、細かな仕様を説明する。$(p)入っていないMODがあると、この章は少し寂しくなるかもしれない。",
+    "icon": "apotheosis:potion_charm",
+    "flag": "apotheosis:potion",
+    "sortnum": 1
+}

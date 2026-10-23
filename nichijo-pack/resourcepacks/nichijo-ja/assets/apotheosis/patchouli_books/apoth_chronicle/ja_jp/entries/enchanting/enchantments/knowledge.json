@@ -1,0 +1,17 @@
+{
+    "name": "温故知新",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:enchanting/enchantments",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(2)温故知新$()は、剣と斧に付けられる傑作エンチャントだ。$(p)モブを倒すと、落とすアイテムがすべて経験値に変わる。$(p)アイテム1個あたりの経験値は、どのアイテムでも同じだ。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "そのため、アイテムをたくさん落とすモブを倒すのがもっとも効率がよい。$(p)アイテム1個あたりの経験値は、エンチャントのレベルとともに増える。$(p)念のため、プレイヤーを倒してもそのアイテムは変換されない。"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "name": "トライデント",
+    "icon": "minecraft:trident",
+    "category": "apotheosis:enchanting/changes",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "新しいエンチャントに加えて、トライデントには$(9)ダメージ増加$()・$(9)ドロップ増加$()・$(9)貫通$()も付けられるようになった。$(p)ダメージ増加は剣と同じように働く。ドロップ増加は近接攻撃に効く。$(p)貫通があると、投げたトライデントがさらに別の敵にも当たる。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "title": "トライデントの作り方",
+            "item": "apothic_enchanting:inert_trident",
+            "link_recipe": true,
+            "text": "Apotheosisでは、トライデントを作る方法も追加される。$(p)$(9)不活性なトライデント$()を作り、$(l:apotheosis:enchanting/table/infusion)注入エンチャント$()で強化するだけだ。"
+        }
+    ]
+}

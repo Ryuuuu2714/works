@@ -1,0 +1,19 @@
+{
+    "name": "衰弱",
+    "icon": "minecraft:textures/mob_effect/wither.png",
+    "category": "apotheosis:potion/recipes",
+    "flag": "apotheosis:potion",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(c)衰弱$()は敵対的な効果で、ふつうは作れない。$(p)この効果の間は、2秒ごとにダメージを受ける（レベルIIでは1秒ごと）。$(p)毒と違い、このダメージで死ぬこともある。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "title": "醸造レシピ",
+            "item": "minecraft:wither_skeleton_skull",
+            "text": "このポーションは、奇妙なポーションとウィザースケルトンの頭蓋骨で作れる。$(p)いつもの材料で、効果時間の延長・効果の強化・スプラッシュ化ができる。"
+        }
+    ]
+}

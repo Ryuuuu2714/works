@@ -1,0 +1,17 @@
+{
+    "name": "ゴミあさり",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:enchanting/enchantments",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(2)ゴミあさり$()は、剣と斧用の傑作エンチャントだ。$(p)モブを倒したとき、レベルごとに2.5%の確率で、ドロップ品の抽選をもう1回行う。$(p)成功すると、同じモブを2体倒したのと同じになる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "このエンチャントは、$(8)ウィザー$()のようなボスを含め、すべてのモブに効く。$(p)$(9)ドロップ増加$()とも重ねて効く。"
+        }
+    ]
+}

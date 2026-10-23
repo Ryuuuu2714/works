@@ -1,0 +1,44 @@
+{
+    "name": "解体",
+    "icon": "apotheosis:salvaging_table",
+    "category": "apotheosis:adventure/affix_loot",
+    "flag": "apotheosis:adventure",
+    "sortnum": 3,
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "apotheosis:salvaging_table",
+            "text": "$(9)解体作業台$()は、称号付きアイテムを解体して、対応する$(9)レアリティ素材$()にするのに使う。$(p)ふつうの装備やジェムも解体できる。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "apotheosis:mysterious_scrap_metal",
+            "link_recipe": true,
+            "text": "正体の分からない金属の、奇妙な形のかけら。$(p)コモンのアイテムを解体すると手に入る。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "apotheosis:timeworn_fabric",
+            "link_recipe": true,
+            "text": "数えきれない時を経てすり減った、驚くほど丈夫な生地。ほつれ一つない。$(p)アンコモンのアイテムを解体すると見つかる。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "apotheosis:luminous_crystal_shard",
+            "link_recipe": true,
+            "text": "かつて存在した中でもっとも明るい水晶のかけら。かけらにすぎないが、強い魔力を秘めている。$(p)レアのアイテムを解体すると手に入る。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "apotheosis:arcane_sands",
+            "link_recipe": true,
+            "text": "秘術の魔法があらゆる命をゆがめる、魔法の世界の砂粒。$(p)エピックのアイテムを解体すると、この姿になる。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "apotheosis:godforged_pearl",
+            "link_recipe": true,
+            "text": "清められた神のごときエネルギーの真珠。内に封じられた膨大な力のせいで、とても不安定だ。$(p)この類まれな品は、ミシックのアイテムを解体すると手に入る。"
+        }
+    ]
+}

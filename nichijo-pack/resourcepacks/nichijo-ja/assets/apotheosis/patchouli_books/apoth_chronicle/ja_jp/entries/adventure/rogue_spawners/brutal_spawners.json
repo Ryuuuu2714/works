@@ -1,0 +1,17 @@
+{
+    "name": "残忍なスポナー",
+    "icon": "minecraft:zombie_head",
+    "category": "apotheosis:adventure/rogue_spawners",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "残忍なスポナーは、ふつうより強いモブを出すローグスポナーの一種だ。$(p)出てくるモブは、ふつうのものより体力・速さ・ダメージが高く、火にも強い。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "唯一の救いは、増援を呼ぶまでにかなりの間があることだ。"
+        }
+    ]
+}

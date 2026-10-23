@@ -1,0 +1,17 @@
+{
+    "name": "壊れないチャーム",
+    "icon": "minecraft:enchanting_table",
+    "category": "apotheosis:potion/charms",
+    "flag": "&apotheosis:potion,apotheosis:enchanting",
+    "sortnum": -1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(l:apotheosis:enchanting/table/infusion)注入エンチャント$()で、チャームを壊れなくできる。$(p)これで、どんなポーション効果でも無限に続けられる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "壊れないチャームの注入のレシピは、かなり難しい。$(p)完成させるには、$(l:apotheosis:enchanting/table/stats)エンチャント属性$()をしっかり理解している必要がある。さらに、ワールドレベルが$(9)天上界$()でなければならない。"
+        }
+    ]
+}

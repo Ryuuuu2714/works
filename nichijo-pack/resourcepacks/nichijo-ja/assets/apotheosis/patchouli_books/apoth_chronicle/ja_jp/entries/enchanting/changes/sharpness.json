@@ -1,0 +1,13 @@
+{
+    "name": "ダメージ増加",
+    "icon": "minecraft:netherite_sword",
+    "category": "apotheosis:enchanting/changes",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)ダメージ増加$()は、ほかのダメージ系エンチャントと両立できるようになった。$(p)つまり、$(9)ダメージ増加$()に加えて、ふつうは両立しないダメージ系エンチャントをもう1つ付けられる。"
+        }
+    ]
+}

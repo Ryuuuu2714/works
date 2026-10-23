@@ -1,0 +1,20 @@
+{
+    "name": "レベル1〜30",
+    "icon": "minecraft:bookshelf",
+    "category": "apotheosis:enchanting/progression",
+    "flag": "apotheosis:enchanting",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "title": "レベル30まで",
+            "recipe": "minecraft:bookshelf",
+            "text": "レベル30までは、いつもどおり本棚15個で届く。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "title": "ほかの属性",
+            "item": "minecraft:skeleton_skull",
+            "text": "この段階でも、ほかの属性を上げる簡単な方法がいくつかある。$(p)ろうそくで$(arcana_jajp)を、モブの頭で$(quanta_jajp)を上げられる。"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "トレジャーエンチャント",
+    "icon": "apothic_enchanting:treasure_shelf",
+    "category": "apotheosis:enchanting/utility",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "トレジャーエンチャントは特別なエンチャントで、ふつうはエンチャントテーブルでは出てこない。$(p)しかし、$(9)秘宝の深淵の本棚$()があれば、それを変えられる。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "apothic_enchanting:treasure_shelf",
+            "title": "秘宝",
+            "text": "この本棚を有効な位置に置くと、トレジャーエンチャントも出るようになる。$(p)ほとんどの$(4)呪い$()もトレジャーエンチャントなので注意。"
+        }
+    ]
+}

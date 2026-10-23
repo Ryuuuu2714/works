@@ -1,0 +1,7 @@
+{
+    "name": "新しいエンチャント",
+    "description": "この章の各項目では、Apothic Enchantingが追加する新しいエンチャントを紹介する。$(p)「捕獲」のような、ほかのApothic系MODのエンチャントは、それぞれの章で扱う。",
+    "icon": "minecraft:enchanted_book",
+    "flag": "apotheosis:enchanting",
+    "parent": "apotheosis:enchanting/enchanting"
+}

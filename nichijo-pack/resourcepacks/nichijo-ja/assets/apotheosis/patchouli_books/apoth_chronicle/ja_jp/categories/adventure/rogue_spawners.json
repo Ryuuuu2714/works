@@ -1,0 +1,7 @@
+{
+    "name": "ローグスポナー",
+    "description": "洞窟のあちこちに、ぽつんとスポナーが置かれていることがある。上は頑丈なブロックで覆われ、下にはチェストが隠されている。$(p)由来も目的も持ち主も分からないため、私たちはこれを$(9)ローグスポナー$()と呼んでいる。",
+    "icon": "minecraft:spawner",
+    "flag": "apotheosis:adventure",
+    "parent": "apotheosis:adventure/adventure"
+}

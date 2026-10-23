@@ -1,0 +1,20 @@
+{
+    "name": "注入エンチャント",
+    "icon": "apothic_enchanting:infused_hellshelf",
+    "category": "apotheosis:enchanting/table",
+    "flag": "apotheosis:enchanting",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)注入エンチャント$()は、エンチャントテーブルを使った新しいクラフトの方法だ。$(p)注入のレシピには、それぞれアイテムが1つと、属性の条件が3つある。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "属性の条件には、たいてい最低限の値があり、最大の値が決められていることもある。$(p)注入エンチャントは3番目のスロットだけを使い、ラピスラズリを3つ消費し、レシピの$(eterna_jajp)の条件と同じだけのレベル（最低3）を消費する。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "注入エンチャントをするには、アイテムをスロットに置くだけだ。$(p)属性が条件を満たしていれば3番目のスロットが光り、クリックすると注入が行われる。"
+        }
+    ]
+}

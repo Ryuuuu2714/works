@@ -1,0 +1,44 @@
+{
+    "name": "レベル30〜60",
+    "icon": "apothic_enchanting:hellshelf",
+    "category": "apotheosis:enchanting/progression",
+    "flag": "apotheosis:enchanting",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "title": "レベル45まで",
+            "recipe": "apothic_enchanting:hellshelf",
+            "text": "レベル45を目指すなら、$(9)地獄の本棚$()を作って、今ある本棚に加えよう。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "title": "レベル45まで",
+            "recipe": "apothic_enchanting:seashelf",
+            "text": "ネザーが苦手なら、海へ出かけて、代わりに$(9)海の本棚$()を作ってもよい。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "title": "レベル60まで",
+            "item": "apothic_enchanting:infused_hellshelf",
+            "text": "レベル45に届いたら、$(l:apotheosis:enchanting/table/infusion)注入エンチャント$()で本棚を強化する必要がある。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "title": "レベル60まで",
+            "item": "apothic_enchanting:infused_seashelf",
+            "text": "使ってきた種類の本棚をもう少し作り、注入して強化しよう。$(p)この新しい本棚を古いものに加えれば、レベル60に届く。"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "title": "エンチャントのヒント",
+            "item": "apothic_enchanting:sightshelf",
+            "text": "ほかの属性を上げる、よりよい方法も使えるようになった。$(p)地獄の本棚と海の本棚のボーナスに加えて、$(9)洞察する地獄の本棚$()を作れば、$(clues_jajp)を増やせる。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "title": "クアンタの安定",
+            "recipe": "apothic_enchanting:geode_shelf",
+            "text": "注入で芽生えたアメジストを作れば、$(9)晶洞の本棚$()をクラフトできる。$(p)これがあると、$(quanta_jajp)でマイナスの値を引かなくなる。"
+        }
+    ]
+}

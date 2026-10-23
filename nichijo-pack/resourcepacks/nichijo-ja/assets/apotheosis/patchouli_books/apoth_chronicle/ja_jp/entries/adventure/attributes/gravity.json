@@ -1,0 +1,13 @@
+{
+    "name": "重力",
+    "icon": "minecraft:elytra",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)重力$()は、毎tickかかる、落ちる速さだ（バニラは0.08）。$(p)チェストプレートや、一部の基本のジェムに付いている。$(p)注意：重力はマイナスにもなる。重力がマイナスだと、上に浮いていく。"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "name": "低温ダメージ",
+    "icon": "minecraft:blue_ice",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)低温ダメージ$()は、近接攻撃に上乗せされる魔法ダメージだ。ダメージの強さに応じて、相手の動きも遅くする。$(p)近接武器に付いている。"
+        }
+    ]
+}

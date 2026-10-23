@@ -1,0 +1,17 @@
+{
+    "name": "命の修復",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:enchanting/enchantments",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(4)命の修復$()は、耐久値のあるすべてのアイテムに付けられる代償エンチャントだ。$(p)$(9)修繕$()は受け取った経験値を耐久値に変えるが、$(4)命の修復$()は受けた回復を耐久値に変える。$(p)体力1ポイントあたりの耐久値は、レベルとともに増える。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "また、このエンチャントはエンチャントテーブルでも出てくる。"
+        }
+    ]
+}

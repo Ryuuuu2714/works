@@ -1,0 +1,43 @@
+{
+    "name": "レベル60〜80",
+    "icon": "apothic_enchanting:dormant_deepshelf",
+    "category": "apotheosis:enchanting/progression",
+    "flag": "apotheosis:enchanting",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "title": "レベル70まで",
+            "recipe": "apothic_enchanting:dormant_deepshelf",
+            "text": "レベル70を目指すには、レベル60のエンチャントテーブルと、深層岩が必要だ。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "レベル70まで",
+            "text": "$(9)眠る深淵の本棚$()を作ったら、注入する必要がある。$(p)この注入のレシピで条件の属性に届くには、追加のブロックがいくつか要る。$(p)注入が終わると$(9)深淵の本棚$()になり、レベル70に届く。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "レベル75まで",
+            "text": "レベル75を目指すには、深淵の本棚を強化する必要がある。$(p)そのためには、$(9)ディープダーク$()でしか手に入らない素材が要る。$(p)$(9)残響の欠片$()は古代都市の宝箱から、$(9)スカルク$()はシルクタッチで集められる。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "title": "レベル75まで",
+            "recipe": "apothic_enchanting:echoing_deepshelf",
+            "recipe2": "apothic_enchanting:soul_touched_deepshelf"
+        },
+        {
+            "type": "patchouli:entity",
+            "entity": "minecraft:warden",
+            "title": "レベル80まで",
+            "scale": 0.95,
+            "text": "レベル80への最後の一歩には、$(9)ウォーデン$()を倒す必要がある。倒すと$(9)スカルクの本棚$()を作れるようになる。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "title": "レベル80まで",
+            "recipe": "apothic_enchanting:echoing_sculkshelf",
+            "recipe2": "apothic_enchanting:soul_touched_sculkshelf"
+        }
+    ]
+}

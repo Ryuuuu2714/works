@@ -1,0 +1,6 @@
+{
+    "name": "エンチャント",
+    "description": "$(9)Apothic Enchanting$()は、エンチャントの仕組みのあらゆる変更を担っている。$(p)内容が多いので、じっくり見て回ってほしい。",
+    "icon": "minecraft:enchanting_table",
+    "flag": "apotheosis:enchanting"
+}

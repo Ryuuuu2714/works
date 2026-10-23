@@ -1,0 +1,6 @@
+{
+    "name": "アドベンチャー",
+    "description": "Apotheosisでは、強力なボーナスを持つ、自動で生成された戦利品で装備を整えられる。$(p)だが気をつけろ。新たな敵もまた現れる。",
+    "icon": "minecraft:netherite_sword",
+    "flag": "apotheosis:adventure"
+}

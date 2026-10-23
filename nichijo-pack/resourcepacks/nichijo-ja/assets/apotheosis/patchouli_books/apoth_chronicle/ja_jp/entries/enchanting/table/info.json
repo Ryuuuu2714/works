@@ -1,0 +1,64 @@
+{
+    "name": "情報画面",
+    "icon": "apotheosis:textures/gui/book/question_mark.png",
+    "category": "apotheosis:enchanting/table",
+    "flag": "apotheosis:enchanting",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "エンチャントテーブルには、どんなエンチャントが出るかを調べられる便利な画面がある。$(p)開くには、エンチャントテーブルにアイテムを置き、右上の「?」をクリックする。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "この章では、その画面を紹介し、使い方を案内する。$(p)この画面をしっかり理解すれば、もうエンチャントで迷うことはない。"
+        },
+        {
+            "type": "patchouli:image",
+            "title": "スロットの選択",
+            "images": [
+                "apotheosis:textures/gui/book/slot_selector.png"
+            ],
+            "text": "どのエンチャントのスロットを調べるかを選ぶ。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "選んでいるスロットは強調され、使えないスロットは灰色になる。$(p)スロットにカーソルを合わせると、レベルと$(4)最小パワー$()、$(9)最大パワー$()が表示される。"
+        },
+        {
+            "type": "patchouli:image",
+            "title": "エンチャントの一覧",
+            "images": [
+                "apotheosis:textures/gui/book/enchantments_window.png"
+            ],
+            "text": "どのエンチャントが出るかを表示する。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "今のアイテムと、選んでいるパワーで、出てくるエンチャントの組み合わせが決まる。$(p)この一覧には、各エンチャントのレベル・レアリティ・選ばれる確率が表示される。$(p)どのエンチャントどうしが両立しないかも表示される。"
+        },
+        {
+            "type": "patchouli:image",
+            "title": "パワーのスライダー",
+            "images": [
+                "apotheosis:textures/gui/book/power_slider.png"
+            ],
+            "text": "試算するパワーを変える。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "スロットを選ぶと、パワーのスライダーは自動でパワーの範囲のちょうど真ん中を選ぶ。$(p)スライダーは、そのスロットの$(4)最小パワー$()から$(9)最大パワー$()までしか動かせない。"
+        },
+        {
+            "type": "patchouli:image",
+            "title": "レアリティの重み",
+            "images": [
+                "apotheosis:textures/gui/book/weights.png"
+            ],
+            "text": "レアリティごとの重みを表示する。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "どのエンチャントにもレアリティがあり、レアリティごとに重みがある。$(p)エンチャントが選ばれる確率は、その重みを、（出てくるエンチャントすべての重みを足した）全体で割ったものだ。$(p)$(arcana_jajp)でレアリティの重みを変えられる。"
+        }
+    ]
+}

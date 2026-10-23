@@ -1,0 +1,8 @@
+{
+    "name": "レベルの上げ方",
+    "description": "この章では、エンチャントテーブルを強化していく流れをまとめる。",
+    "icon": "apothic_enchanting:dormant_deepshelf",
+    "flag": "apotheosis:enchanting",
+    "parent": "apotheosis:enchanting/enchanting",
+    "sortnum": -1
+}

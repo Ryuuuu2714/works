@@ -1,0 +1,13 @@
+{
+    "name": "大群のスポナー",
+    "icon": "minecraft:spider_eye",
+    "category": "apotheosis:adventure/rogue_spawners",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "大群のスポナーは、モブを大量に、すばやく出す、たちの悪いローグスポナーの一種だ。$(p)たいていは弱いモブ、それもクモの仲間に限られるので、手に負えないほどではない。"
+        }
+    ]
+}

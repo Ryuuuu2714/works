@@ -1,0 +1,17 @@
+{
+    "name": "ノックバック",
+    "icon": "minecraft:piston",
+    "category": "apotheosis:adventure/attributes",
+    "flag": "apotheosis:adventure",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(9)ノックバック$()は、攻撃したときに敵をどれだけ吹き飛ばすかだ。$(p)1ポイントごとに、攻撃した敵を半ブロック押しやる。$(p)近接武器に付いていることがある。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "エンチャントの「ノックバック」は、この属性と同じだけのボーナスを与えるが、最大値の上限には数えられない。"
+        }
+    ]
+}

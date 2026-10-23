@@ -1,0 +1,17 @@
+{
+    "name": "狂戦士の怒り",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:enchanting/enchantments",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(4)狂戦士の怒り$()は、チェストプレートに付けられる代償エンチャントだ。$(p)このエンチャントがあると、ダメージを受けたとき、追加のダメージを受ける代わりに、耐性・移動速度上昇・攻撃力上昇を得る。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "発動するには攻撃してきた相手からのダメージが必要で、クールダウンもある。$(p)受ける追加のダメージはレベルごとに急激に増え、防具と耐性を無視する。$(p)効果は25秒続き、強さはエンチャントのレベルと同じだ。"
+        }
+    ]
+}

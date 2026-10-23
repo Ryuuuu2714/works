@@ -1,12 +1,12 @@
 {
-    "name": "エンチャント適性",
+    "name": "アイテムのエンチャント適性",
     "category": "apotheosis:enchanting/table",
     "icon": "minecraft:golden_sword",
     "flag": "apotheosis:enchanting",
     "pages": [
         {
             "type": "patchouli:text",
-            "text": "バニラでは、アイテムのエンチャント適性は$(fpower_jajp)に加わる。$(p)Apotheosisではそれをなくし、代わりにエンチャント適性を、付いたエンチャントそれぞれを強める確率として扱う。"
+            "text": "バニラでは、アイテムのエンチャント適性は$(#CC00CC)最終パワー$()に加わる。$(p)Apotheosisではそれをなくし、代わりにエンチャント適性を、付いたエンチャントそれぞれを強める確率として扱う。"
         },
         {
             "type": "patchouli:text",

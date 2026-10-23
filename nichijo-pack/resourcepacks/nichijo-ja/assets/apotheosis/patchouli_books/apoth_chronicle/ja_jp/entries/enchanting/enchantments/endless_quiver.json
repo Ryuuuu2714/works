@@ -1,0 +1,17 @@
+{
+    "name": "無限の矢筒",
+    "icon": "minecraft:enchanted_book",
+    "category": "apotheosis:enchanting/enchantments",
+    "flag": "apotheosis:enchanting",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(2)無限の矢筒$()は、弓用の傑作エンチャントだ。$(p)弓を撃っても、種類に関係なく矢を消費しない。$(p)$(9)無限$()のそのまま上位版といえる。"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "ほかのMODの矢でさえ、無限になるはずだ。"
+        }
+    ]
+}
