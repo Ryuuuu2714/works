@@ -944,3 +944,8 @@ hash = "910aec4bb73ef705ba1152a25faa06aaf0321bdc5a9615ab55178b336a101161"
 [[files]]
 file = "resourcepacks/nichijo-ja/pack.mcmeta"
 hash = "d80739d81d000da8d52c7fc47b6a1e974db917232c154598903d5389a0fbeaa7"
+
+[[files]]
+file = "world/datapacks/nichijo-data.pw.toml"
+hash = "580f6466e38f52126783a06f4c096fbc7ac939315c103709b3bc881bb8a8c58b"
+metafile = true

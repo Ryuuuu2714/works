@@ -80,6 +80,12 @@ function check(name, cond, info = "") { results.push(`${cond ? "OK  " : "NG  "} 
   check("物語ページの未解決リンクなし", unresolved.length === 0, unresolved.join(","));
   check("目次が出る", $$("#toc li").length >= 2, String($$("#toc li").length));
   check("八つの大災厄の生い立ち", $$("main h3").filter((h) => /イグニス|リヴァイアサン|スキュラ|マレディクタス|骸|ネザライトの怪物|ハービンジャー|エンダーガーディアン/.test(h.textContent)).length === 8, String($$("main h3").length));
+  await go("#/p/magic");
+  const ougi = $$("main h2").find((h) => h.textContent.trim() === "奥義");
+  let ougiTable = ougi?.nextElementSibling;
+  while (ougiTable && !/^H[23]$/.test(ougiTable.tagName) && !ougiTable.querySelector("table") && ougiTable.tagName !== "TABLE") ougiTable = ougiTable.nextElementSibling;
+  const ougiRows = ougiTable && !/^H[23]$/.test(ougiTable.tagName) ? Array.from(ougiTable.querySelectorAll("tbody tr")) : [];
+  check("奥義の表（8系統）", ougiRows.length === 8, String(ougiRows.length));
 
   // 3. 冒険手帳
   await go("#/p/ch0");
