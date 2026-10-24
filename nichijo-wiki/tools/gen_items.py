@@ -1,7 +1,9 @@
 """日常鯖 攻略Wiki のアイテム図鑑データ（items.json）を MOD の jar から作る。
 
 使い方:
-  python3 -I gen_items.py <modsディレクトリ> <バニラのextra.jar> <neoforgeのuniversal.jar> <バニラのja_jp.json> <出力json>
+  python3 -I gen_items.py <modsディレクトリ> <バニラのextra.jar> <neoforgeのuniversal.jar> <バニラのja_jp.json> <出力json> [リソースパックのフォルダ ...]
+
+リソースパック（日本語化パック nichijo-ja など）を渡すと、その ja_jp.json の訳を、ゲームと同じく MOD の訳より優先する。
 
 抜き出すもの:
   - アイテム: models/item/*.json を登録の目安にし、名前（日本語優先）と説明文を付ける
@@ -19,6 +21,7 @@ from collections import defaultdict
 import tomllib
 
 mods_dir, vanilla_jar, neoforge_jar, vanilla_ja_path, out_path = sys.argv[1:6]
+pack_dirs = sys.argv[6:]
 
 FMT = re.compile(r"§.")
 
@@ -75,6 +78,11 @@ for z in mod_jars + [vz]:
             (en if mm.group(1) == "en_us" else ja).update(load_json(z, n) or {})
 with open(vanilla_ja_path, encoding="utf-8") as f:
     ja.update(json.load(f))
+for d in pack_dirs:
+    for root, _, files in os.walk(os.path.join(d, "assets")):
+        if os.path.basename(root) == "lang" and "ja_jp.json" in files:
+            with open(os.path.join(root, "ja_jp.json"), encoding="utf-8-sig") as f:
+                ja.update(json.load(f))
 
 
 def lang(key):

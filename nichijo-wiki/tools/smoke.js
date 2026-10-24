@@ -117,6 +117,8 @@ function check(name, cond, info = "") { results.push(`${cond ? "OK  " : "NG  "} 
   check("並べ方自由のレシピ", $$(".recipe .ings .chip").length === 2, $$(".recipe .ings .chip").map((c) => c.textContent).join("+"));
   await go("#/item/" + encodeURIComponent("apotheosis:gem"), 400);
   check("メモだけの項目（ジェム）", $("main h1")?.textContent === "ジェム" && !!$(".note-sec"));
+  await go("#/item/" + encodeURIComponent("waystones:portal_scroll"), 400);
+  check("日本語化パックの名前（門の巻物）", $("main h1")?.textContent === "門の巻物", $("main h1")?.textContent);
   await go("#/item/" + encodeURIComponent("apothic_enchanting:infused_hellshelf"), 400);
   check("注入エンチャントの条件表示", ($(".recipe .extra")?.textContent || "").includes("eterna"), $(".recipe .extra")?.textContent);
 

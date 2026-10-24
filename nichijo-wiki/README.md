@@ -78,13 +78,14 @@ MODを足したり版を上げたりしたときは、作り直します。補�
 `tools/gen_items.py` を、MODのjarがあるサーバー上で動かします（Python 3.11以上）。
 
 ```
-python3 -I tools/gen_items.py <modsのフォルダ> <バニラの extra.jar> <NeoForge の universal.jar> <バニラの ja_jp.json> data/items.json
+python3 -I tools/gen_items.py <modsのフォルダ> <バニラの extra.jar> <NeoForge の universal.jar> <バニラの ja_jp.json> data/items.json <日本語化パックのフォルダ>
 ```
 
 - modsのフォルダ：日常鯖の `mods/`（パックと同じ版のjar）
 - extra.jar：サーバーの `libraries/net/minecraft/server/<版>/server-<版>-extra.jar`
 - universal.jar：サーバーの `libraries/net/neoforged/neoforge/<版>/neoforge-<版>-universal.jar`
 - ja_jp.json：Prism の `assets/indexes/17.json` で `minecraft/lang/ja_jp.json` のハッシュを調べ、`assets/objects/` から取り出したもの
+- 日本語化パックのフォルダ：`../nichijo-pack/resourcepacks/nichijo-ja`。ゲームと同じく、MODの訳よりこちらの訳を優先します（図鑑の名前をゲーム内の表示にそろえるため）
 
 ### 動作の確かめ方
 
