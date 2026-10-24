@@ -79,6 +79,7 @@ function check(name, cond, info = "") { results.push(`${cond ? "OK  " : "NG  "} 
   const unresolved = $$("a.ilink.missing").map((a) => a.textContent);
   check("物語ページの未解決リンクなし", unresolved.length === 0, unresolved.join(","));
   check("目次が出る", $$("#toc li").length >= 2, String($$("#toc li").length));
+  check("八つの大災厄の生い立ち", $$("main h3").filter((h) => /イグニス|リヴァイアサン|スキュラ|マレディクタス|骸|ネザライトの怪物|ハービンジャー|エンダーガーディアン/.test(h.textContent)).length === 8, String($$("main h3").length));
 
   // 3. 冒険手帳
   await go("#/p/ch0");
