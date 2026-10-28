@@ -49,6 +49,11 @@ hash = "438170e7e704a1b8ed67bf0521dc5d77cdeeaabf6f729dba9f8dfdad75330acf"
 metafile = true
 
 [[files]]
+file = "mods/better-ping-display.pw.toml"
+hash = "cc2e6dda94a7a6f5487843cafe569d8044bf9482cbf03f062cf4595f1fb05281"
+metafile = true
+
+[[files]]
 file = "mods/bookshelf-lib.pw.toml"
 hash = "3c48ad3a52e2ceae4d7e7b09f90b632e233fa78d4280e263b81a36bed555bfb5"
 metafile = true
@@ -189,8 +194,18 @@ hash = "cf5d87f046590b99d92096a79f6ea2f456290ba5d423c256f06674d2d10a1592"
 metafile = true
 
 [[files]]
+file = "mods/mmmmmmmmmmmm.pw.toml"
+hash = "616a78e83977651454abca863e6ec9766ea4ce8d559269cd4a7d9aa8bf0223aa"
+metafile = true
+
+[[files]]
 file = "mods/modernfix.pw.toml"
 hash = "d10fbef1555f5277563b9cbf7683811ac0f38c1af41646e6ce5c3aaa2149425d"
+metafile = true
+
+[[files]]
+file = "mods/moonlight.pw.toml"
+hash = "709bfedec583aee1370ad11210b75a454b1e3f10c0a1da7fe25abd1c28a8681d"
 metafile = true
 
 [[files]]
@@ -206,6 +221,11 @@ metafile = true
 [[files]]
 file = "mods/patchouli.pw.toml"
 hash = "d7f360ebb9f009d6dc0b368cd8fa399bdff70c0f6ef931687b2a35137f72715d"
+metafile = true
+
+[[files]]
+file = "mods/ping-wheel.pw.toml"
+hash = "650330109d21831664d2ff597c7a90200eda69a1efaca4e9b0b6b6297ac3c364"
 metafile = true
 
 [[files]]
@@ -864,6 +884,10 @@ file = "resourcepacks/nichijo-ja/assets/dnt/lang/ja_jp.json"
 hash = "7df4e76495af35d1e50761c58f26e942ea9614f99014569fb4eab41766f6ec79"
 
 [[files]]
+file = "resourcepacks/nichijo-ja/assets/dummmmmmy/lang/ja_jp.json"
+hash = "bacb125f24381990741b8857ab4bf1128759743cabf1988e5ce922f58dfdcdb0"
+
+[[files]]
 file = "resourcepacks/nichijo-ja/assets/dungeons_arise/lang/ja_jp.json"
 hash = "0627f1e2423ea12010b1eb0044913641317a3abb99d84b49b240ffd811be55c2"
 
@@ -926,6 +950,10 @@ hash = "bb9e1ff52f4d6d3592c35f09e1e95fe03c681e98728707240f75bae78349a455"
 [[files]]
 file = "resourcepacks/nichijo-ja/assets/patchouli/lang/ja_jp.json"
 hash = "70608360535801d5eb5e80bd256b1c8c5674d2811f019b8aebe9841151716cd9"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/pingwheel/lang/ja_jp.json"
+hash = "37771b36b24cd5a71833454ee1e44f177e5bbf87977eaeb4212539ed69a452cb"
 
 [[files]]
 file = "resourcepacks/nichijo-ja/assets/placebo/lang/ja_jp.json"
