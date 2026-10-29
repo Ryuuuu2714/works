@@ -921,7 +921,7 @@ hash = "659f75a2231da2a0cb81d5ca4b72db68ff34f53bd5edc1505fcc4f9025403cb6"
 
 [[files]]
 file = "resourcepacks/nichijo-ja/assets/irons_spellbooks/lang/ja_jp.json"
-hash = "f807cfa5761842292cca428fbe7abc08d57aef5becb13452d5de878d52c4cfa6"
+hash = "6f023a1c726a7c73034949d40eba91c4e7677cc6afc924095897a79957e8a217"
 
 [[files]]
 file = "resourcepacks/nichijo-ja/assets/jade/lang/ja_jp.json"
@@ -985,5 +985,5 @@ hash = "d80739d81d000da8d52c7fc47b6a1e974db917232c154598903d5389a0fbeaa7"
 
 [[files]]
 file = "world/datapacks/nichijo-data.pw.toml"
-hash = "580f6466e38f52126783a06f4c096fbc7ac939315c103709b3bc881bb8a8c58b"
+hash = "fd96dc6f66a9b65b476dc8e43df359b9691e94a46dc38212e410f25a61627421"
 metafile = true
