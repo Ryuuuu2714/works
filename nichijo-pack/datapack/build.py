@@ -8,6 +8,7 @@
   - 奥義（系統を代表する強い呪文）をスクロールフォージで作れなくする（Iron's の呪文ごとの設定）
   - 大災厄を倒すと、その奥義のスクロールが1枚出る（NeoForge のルート追加）
   - 魔術のジェム13種（Apotheosis のジェム。Iron's の 1.21.1 版には名前と絵だけが入っている）
+  - 魔法の称号6種（Apotheosis の接辞。同じく名前と和訳だけが入っている）
 作った zip のハッシュを world/datapacks/nichijo-data.pw.toml に書き込む。
 """
 import hashlib
@@ -50,13 +51,46 @@ SPELL_GEMS = {   # ジェムID → (属性, 演算, 純度ごとの値)
 }
 GEM_WEIGHT = 25   # 出やすさ（Apotheosis のジェムは1種類100）
 
+# 魔法の称号（Apotheosis の接辞。これも Iron's の 1.21.1 版には名前と和訳だけが入っている）
+# 値と付く場所は作者の 1.20.1 版（1.20.1-legacy ブランチ）のもの。今の Apotheosis にはエンシェントがないので外す
+# 1.20.1 の「sword」は今の melee_weapon（近接武器をまとめた分類）に当たる
+ARMOR = ["apotheosis:helmet", "apotheosis:chestplate", "apotheosis:leggings", "apotheosis:boots"]
+WEAPON = ["apotheosis:melee_weapon", "apotheosis:trident"]
+RARITIES = ["common", "uncommon", "rare", "epic", "mythic"]
+SPELL_AFFIXES = {   # 接辞ID → (属性, 演算, 付く場所, レア度ごとの (最小, 最大))
+    "armor/attribute/cooldown": ("irons_spellbooks:cooldown_reduction", "add_multiplied_base",
+                                 ARMOR + ["apotheosis:shield"] + WEAPON,
+                                 [(0.05, 0.05), (0.10, 0.10), (0.15, 0.15), (0.20, 0.20), (0.25, 0.25)]),
+    "armor/attribute/mana": ("irons_spellbooks:max_mana", "add_value", ARMOR + ["apotheosis:shield"],
+                             [(25, 30), (35, 40), (45, 50), (55, 60), (65, 70)]),
+    "armor/attribute/spell_power": ("irons_spellbooks:spell_power", "add_multiplied_base", ARMOR,
+                                    [(0.02, 0.02), (0.04, 0.04), (0.06, 0.06), (0.08, 0.08), (0.10, 0.10)]),
+    "armor/attribute/spell_resist": ("irons_spellbooks:spell_resist", "add_multiplied_base", ARMOR,
+                                     [(0.02, 0.02), (0.04, 0.04), (0.06, 0.06), (0.08, 0.08), (0.10, 0.10)]),
+    "sword/attribute/mana_regen": ("irons_spellbooks:mana_regen", "add_multiplied_base", WEAPON,
+                                   [(0.10, 0.10), (0.15, 0.15), (0.20, 0.20), (0.25, 0.25), (0.30, 0.30)]),
+    "sword/attribute/spell_power": ("irons_spellbooks:spell_power", "add_multiplied_base", WEAPON,
+                                    [(0.10, 0.10), (0.12, 0.12), (0.14, 0.14), (0.16, 0.16), (0.18, 0.18)]),
+}
+AFFIX_WEIGHT = 25   # 出やすさ（Apotheosis の接辞と同じ）
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ZIP_PATH = os.path.join(HERE, "nichijo-data.zip")
 META_PATH = os.path.join(HERE, "..", "world", "datapacks", "nichijo-data.pw.toml")
 
 
 def files():
-    yield "pack.mcmeta", {"pack": {"pack_format": 48, "description": "日常鯖：奥義のスクロールと魔術のジェム"}}
+    yield "pack.mcmeta", {"pack": {"pack_format": 48, "description": "日常鯖：奥義のスクロール、魔術のジェムと称号"}}
+    for affix, (attribute, operation, categories, values) in SPELL_AFFIXES.items():
+        yield f"data/irons_spellbooks/affixes/{affix}.json", {
+            "type": "apotheosis:attribute",
+            "attribute": attribute,
+            "categories": categories,
+            "definition": {"affix_type": "stat", "exclusive_set": [],
+                           "weights": {"quality": 0.1, "weight": AFFIX_WEIGHT}},
+            "operation": operation,
+            "values": {f"apotheosis:{r}": {"min": lo, "max": hi} for r, (lo, hi) in zip(RARITIES, values)},
+        }
     for gem, (attribute, operation, values) in SPELL_GEMS.items():
         yield f"data/irons_spellbooks/gems/{gem}.json", {
             "type": "apotheosis:gem",

@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/simplytooltips/config.toml"
+hash = "8d841088fcf91c96c3c4bff112f604961129c55687906fa0e8fd3968cc45002a"
+
+[[files]]
 file = "config/waystones-common.toml"
 hash = "78bbab695755f0af494dfd848fc4630f99b31c5e39d34f29d6218718f64cddb4"
 
@@ -36,6 +40,11 @@ metafile = true
 [[files]]
 file = "mods/aquaculture.pw.toml"
 hash = "6b26155807b2f3825db22e5be51a9ab330c8a70500a702740726053cb4678349"
+metafile = true
+
+[[files]]
+file = "mods/architectury-api.pw.toml"
+hash = "187eafde5974beee1263538b462b7b8fe2fc8948c5d413980d9796d55928580b"
 metafile = true
 
 [[files]]
@@ -129,6 +138,11 @@ hash = "73360e397134d238ee8fd21d33fd7f9275e9441f74f8f1b6ed92278877c0b9f1"
 metafile = true
 
 [[files]]
+file = "mods/fzzy-config.pw.toml"
+hash = "f2849c357f9c82d017ff71c6d5e91ac8e51d6b0f2de9e7ae8d95bfb81759cd63"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "35779b39ddc06059ec483b33de2ecfdc3adb95c0a49e69b6701fb0024827e2f5"
 metafile = true
@@ -161,6 +175,11 @@ metafile = true
 [[files]]
 file = "mods/jei.pw.toml"
 hash = "2ffd0c6ed2e981835168a60cb3418482223ee02d22dd35d0bb541774fa89f81c"
+metafile = true
+
+[[files]]
+file = "mods/kotlin-for-forge.pw.toml"
+hash = "712a69b3569a8055979de6eea262068535fe182dffb3833e53e5833e9cbf9766"
 metafile = true
 
 [[files]]
@@ -256,6 +275,21 @@ metafile = true
 [[files]]
 file = "mods/searchables.pw.toml"
 hash = "ce9ddada6ffd55a512149cc474c6a453281a997a5fdf1b7b4a2cc73f875e704a"
+metafile = true
+
+[[files]]
+file = "mods/simply-swords.pw.toml"
+hash = "f11837c4f049aeb3b7ceb086f4c7b1347bfad1826f47722cbdc8b2b38df0067e"
+metafile = true
+
+[[files]]
+file = "mods/simply-tooltips.pw.toml"
+hash = "bb5dc8ac909aee1955532a65145f7ebfc3a88289610298e821a974fdda5f1822"
+metafile = true
+
+[[files]]
+file = "mods/simplycataclysm.pw.toml"
+hash = "4fd1283e3f2e8dad4c3023f8a77cb071086e5ebcc83f022a1cb060f41b18695a"
 metafile = true
 
 [[files]]
@@ -964,6 +998,18 @@ file = "resourcepacks/nichijo-ja/assets/polymorph/lang/ja_jp.json"
 hash = "cdbe042783823983d61b0748518de55266a6335fc514f08558b2d2ed067d6163"
 
 [[files]]
+file = "resourcepacks/nichijo-ja/assets/simplycataclysm/lang/ja_jp.json"
+hash = "2a4d3a74da77513b837d4ea261662dc32ce3e330f33f767a7652b2bb3989cb4b"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/simplyswords/lang/ja_jp.json"
+hash = "5b778a9ffae1ee4ceaaf4af10a36a76f1c7a793ee62ff3c1ee5068c27f07c941"
+
+[[files]]
+file = "resourcepacks/nichijo-ja/assets/simplytooltips/lang/ja_jp.json"
+hash = "6cd2c0a7784e3a4d09825a3cbf9efb3adc9945e1760ef4cdf3d3da530163430b"
+
+[[files]]
 file = "resourcepacks/nichijo-ja/assets/sophisticatedbackpacks/lang/ja_jp.json"
 hash = "0aab1d297f47d69bf166368220a6046831274ba591fd76cf97fe2c815eba5ef3"
 
@@ -985,5 +1031,5 @@ hash = "d80739d81d000da8d52c7fc47b6a1e974db917232c154598903d5389a0fbeaa7"
 
 [[files]]
 file = "world/datapacks/nichijo-data.pw.toml"
-hash = "fd96dc6f66a9b65b476dc8e43df359b9691e94a46dc38212e410f25a61627421"
+hash = "9e5ee91664cdb6b6480425497c8520043a601ff6bd0dc9e766eba5d3a55f6e68"
 metafile = true
