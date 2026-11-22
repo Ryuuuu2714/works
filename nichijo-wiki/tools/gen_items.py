@@ -68,6 +68,11 @@ for z in mod_jars:
     for ns in data_ns:
         if owner and ns not in ("minecraft", "c", "neoforge", "curios"):
             ns_owner.setdefault(ns, owner)
+# 名前空間と同じ modId の MOD があれば、その MOD を持ち主にする
+# （アドオンが本体の名前空間にデータを足していると、jar を読む順で持ち主を取られるため。例: Simply Swords: Cataclysm）
+for ns in list(ns_owner):
+    if ns in mod_names and ns != "minecraft":
+        ns_owner[ns] = ns
 
 # ---- 言語 ---------------------------------------------------------------------
 en, ja = {}, {}
