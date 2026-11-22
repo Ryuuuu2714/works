@@ -9,6 +9,8 @@
   - 大災厄を倒すと、その奥義のスクロールが1枚出る（NeoForge のルート追加）
   - 魔術のジェム13種（Apotheosis のジェム。Iron's の 1.21.1 版には名前と絵だけが入っている）
   - 魔法の称号6種（Apotheosis の接辞。同じく名前と和訳だけが入っている）
+  - 浮いたままの矢の掃除（When Dungeons Arise の Voltaic Shot は矢を重力なしにするので、
+    外れた矢が空中で止まり、刺さらないので消えずに残る。30秒たっても刺さっていないものを消す）
 作った zip のハッシュを world/datapacks/nichijo-data.pw.toml に書き込む。
 """
 import hashlib
@@ -74,13 +76,28 @@ SPELL_AFFIXES = {   # 接辞ID → (属性, 演算, 付く場所, レア度ご�
 }
 AFFIX_WEIGHT = 25   # 出やすさ（Apotheosis の接辞と同じ）
 
+# 浮いたままの矢の掃除。ARROW_CHECK_SECONDS 秒ごとに数え、ARROW_LIMIT 回続けて浮いていたら消す（25〜30秒）
+ARROW_CHECK_SECONDS = 5
+ARROW_LIMIT = 6
+ARROW_SCORE = "nichijo_arrow"
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ZIP_PATH = os.path.join(HERE, "nichijo-data.zip")
 META_PATH = os.path.join(HERE, "..", "world", "datapacks", "nichijo-data.pw.toml")
 
 
 def files():
-    yield "pack.mcmeta", {"pack": {"pack_format": 48, "description": "日常鯖：奥義のスクロール、魔術のジェムと称号"}}
+    yield "pack.mcmeta", {"pack": {"pack_format": 48, "description": "日常鯖：奥義のスクロール、魔術のジェムと称号、浮いた矢の掃除"}}
+    # 浮いたままの矢の掃除。起動時と /reload のときに load が動き、あとは check が自分を予約し直して回り続ける
+    # （予約を先に書くのは、途中の命令が対象なしで失敗しても止まらないようにするため）
+    yield "data/minecraft/tags/function/load.json", {"values": ["nichijo:arrow_cleanup/load"]}
+    yield "data/nichijo/function/arrow_cleanup/load.mcfunction", (
+        f"scoreboard objectives add {ARROW_SCORE} dummy\n"
+        f"schedule function nichijo:arrow_cleanup/check {ARROW_CHECK_SECONDS}s replace\n")
+    yield "data/nichijo/function/arrow_cleanup/check.mcfunction", (
+        f"schedule function nichijo:arrow_cleanup/check {ARROW_CHECK_SECONDS}s replace\n"
+        f"scoreboard players add @e[type=#minecraft:arrows,nbt={{NoGravity:1b,inGround:0b}}] {ARROW_SCORE} 1\n"
+        f"kill @e[type=#minecraft:arrows,scores={{{ARROW_SCORE}={ARROW_LIMIT}..}}]\n")
     for affix, (attribute, operation, categories, values) in SPELL_AFFIXES.items():
         yield f"data/irons_spellbooks/affixes/{affix}.json", {
             "type": "apotheosis:attribute",
@@ -144,7 +161,8 @@ with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
     for name, data in files():
         info = zipfile.ZipInfo(name, date_time=(2026, 1, 1, 0, 0, 0))   # 時刻を固定して、中身が同じならハッシュも同じにする
         info.compress_type = zipfile.ZIP_DEFLATED
-        z.writestr(info, json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+        text = data if isinstance(data, str) else json.dumps(data, ensure_ascii=False, indent=2) + "\n"   # 関数（.mcfunction）はそのまま
+        z.writestr(info, text)
 blob = buf.getvalue()
 with open(ZIP_PATH, "wb") as f:
     f.write(blob)

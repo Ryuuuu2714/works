@@ -1,12 +1,12 @@
 name = "nichijo"
 author = "Ryuu"
-version = "1.0.9"
+version = "1.0.10"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "72a00f9999ecafcfb8aa1678cca386cb09f0f8023414d9c2c571fad4293213f8"
+hash = "2b421c18d4b372f02296c5305b50fe9e8cb711c015f75fa8f3d534ee3a26e1f6"
 
 [versions]
 minecraft = "1.21.1"
