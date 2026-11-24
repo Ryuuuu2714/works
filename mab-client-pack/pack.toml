@@ -1,0 +1,13 @@
+name = "mab-client"
+author = "Ryuu"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "7b94064931a05c611484faadb07688488892ab5e543cc5db9cf0bd09e963ba4c"
+
+[versions]
+minecraft = "1.21.11"
+fabric = "0.20.1"

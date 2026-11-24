@@ -1,0 +1,31 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/dynamic-fps.pw.toml"
+hash = "481192fb349be87304022d2801bdf77be7082217fcdedf15a8f5da0a4e1a5ba5"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "578361d3e09011c45d1d8a8444c96e76506ed67d472ce8947ddff742396455c0"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "5a16e8b17e0a78a409fc9e9c6eccc07b5569641ae201ffdc9600cb898e32b1e9"
+metafile = true
+
+[[files]]
+file = "mods/immediatelyfast.pw.toml"
+hash = "9cb9fbb7431ed58a8bb7bf25d1b9fcc8706fc57400db7acffef06e25971552fa"
+metafile = true
+
+[[files]]
+file = "mods/notenoughcrashes.pw.toml"
+hash = "0a170944c40ce6e47eca6d70d04b1b174cea6970a5a5d3070aa040f7e44bb4e0"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "6c8575610994168a7c23eef1022c5bc11e69f16ca297a9e0f67d830258fba21b"
+metafile = true
